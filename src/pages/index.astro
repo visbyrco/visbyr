@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderReact from '../components/HeaderReact.tsx';
+import Footer from '../components/Footer.astro';
+import SurgicalAccent from '../components/SurgicalAccent.astro';
+---
+
+<BaseLayout title="Visbyr | Nordic Tech Innovation">
+  <HeaderReact client:load />
+  <main class="pt-20">
+    <!-- Editorial Hero Section -->
+    <section class="relative py-xxl px-margin-mobile md:px-margin-desktop overflow-hidden border-b border-outline-variant/30">
+      <div class="max-w-max-width mx-auto">
+        <div class="asymmetric-grid gap-y-xl">
+          <div class="col-span-12 lg:col-span-8 flex flex-col justify-end pt-12 md:pt-24 order-2 lg:order-1">
+            <div class="flex items-center gap-md mb-lg">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="mono-label text-on-surface-variant">Swedish Precision</span>
+            </div>
+            <h1 class="text-[clamp(3.5rem,10vw,7rem)] font-extrabold mb-xl">
+              The Future of <br />
+              <span class="text-primary italic font-light">Nordic Tech</span> <br />
+              Innovation
+            </h1>
+            <div class="flex flex-col md:flex-row gap-xxl md:items-start border-t border-outline-variant/30 pt-xl">
+              <p class="max-w-md text-lg body-text text-on-surface-variant">
+                Streamlining complex workflows with surgical precision. We build the digital backbone for the world's most ambitious enterprises from our Stockholm studio.
+              </p>
+              <div class="flex flex-col gap-sm">
+                <a href="/solutions" class="text-left mono-label group flex items-center gap-md py-2 border-b border-transparent hover:border-primary transition-all">
+                  Explore Solutions <span class="material-symbols-outlined text-sm">north_east</span>
+                </a>
+                <a href="#" class="text-left mono-label group flex items-center gap-md py-2 border-b border-transparent hover:border-primary transition-all">
+                  View Case Studies <span class="material-symbols-outlined text-sm">north_east</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-4 order-1 lg:order-2 flex justify-end">
+            <div class="relative w-full aspect-[4/5] lg:w-[400px] border border-outline-variant/30 p-2 bg-white shadow-2xl">
+              <img
+                class="w-full h-full object-cover grayscale brightness-105"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC23p5x0HlZapnFJd9HSAMfT4hRvRtyDc97SvMOOuPB-Z16xwCU1EHYDpM0S3jJOFlA4ajK5-fQ9cF6zw5nRjSjaVAyAW9X6SqNBWCnk34bOhGqsZnGe9dh5r3XJfCTS0OmEhGkKNJpyvAbVB0lyu2DhFRQJbnEO6SvyWVNAs6KMGdx2TYvgQsxvBHZYmxEK7v0YRuu6KS--WV4rh7gX7tl3AByMydT-ZDBS0FIJlZsnueFRRSZG9Iw"
+                alt="Minimalist Stockholm architectural office"
+              />
+              <div class="absolute -top-4 -right-4 mono-label bg-primary text-white px-3 py-1">Est. 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted Partners Strip -->
+    <section class="bg-white py-xl px-margin-mobile border-b border-outline-variant/30">
+      <div class="max-w-max-width mx-auto flex flex-col md:flex-row items-center justify-between gap-xl">
+        <span class="mono-label text-on-surface-variant opacity-60">Trusted Partners</span>
+        <div class="flex flex-wrap justify-center items-center gap-xxl opacity-20 grayscale scale-90">
+          <div class="h-4 w-24 bg-on-surface"></div>
+          <div class="h-4 w-32 bg-on-surface"></div>
+          <div class="h-4 w-28 bg-on-surface"></div>
+          <div class="h-4 w-36 bg-on-surface"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineered Solutions Section -->
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
+      <div class="max-w-max-width mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-xxl gap-lg">
+          <div class="max-w-2xl">
+            <SurgicalAccent />
+            <h2 class="text-5xl font-bold mb-lg mt-lg">Precision Engineered Systems</h2>
+            <p class="text-xl text-on-surface-variant body-text">Modular integration layers designed to scale with your organization's inherent complexity. Each component operates in perfect synchronicity.</p>
+          </div>
+          <div class="mono-label text-primary font-bold">[ 01 — Capabilities ]</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-outline-variant/30">
+          <div class="p-xl border-b md:border-b-0 md:border-r border-outline-variant/30 group hover:bg-surface-container-low transition-colors duration-500">
+            <div class="mono-label text-on-surface-variant mb-xl">Architecture.01</div>
+            <h3 class="text-3xl font-bold mb-lg">Cloud Infrastructure</h3>
+            <p class="body-text text-on-surface-variant mb-xl">Scalable, low-latency infrastructure optimized for the Nordic regulatory landscape and performance requirements.</p>
+            <a class="group-hover:text-primary transition-colors flex items-center gap-sm mono-label font-bold" href="/solutions">
+              Documentation <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </a>
+          </div>
+          <div class="p-xl border-b md:border-b-0 md:border-r border-outline-variant/30 group hover:bg-surface-container-low transition-colors duration-500">
+            <div class="mono-label text-on-surface-variant mb-xl">Intelligence.02</div>
+            <h3 class="text-3xl font-bold mb-lg">AI-Driven Analytics</h3>
+            <p class="body-text text-on-surface-variant mb-xl">Turn raw data into strategic foresight with our proprietary machine learning models built on local expertise.</p>
+            <a class="group-hover:text-primary transition-colors flex items-center gap-sm mono-label font-bold" href="/solutions">
+              Model Architecture <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </a>
+          </div>
+          <div class="p-xl group hover:bg-surface-container-low transition-colors duration-500">
+            <div class="mono-label text-on-surface-variant mb-xl">Defense.03</div>
+            <h3 class="text-3xl font-bold mb-lg">Secure Networking</h3>
+            <p class="body-text text-on-surface-variant mb-xl">Zero-trust architecture ensuring your sensitive intellectual property remains impenetrable across all touchpoints.</p>
+            <a class="group-hover:text-primary transition-colors flex items-center gap-sm mono-label font-bold" href="/solutions">
+              Security Audit <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Testimonial -->
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-on-surface text-white">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-xl items-center">
+        <div class="w-48 h-64 flex-shrink-0 bg-white p-1">
+          <img
+            class="w-full h-full object-cover grayscale brightness-90"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA112QztJkpg-qQlRMqE6sATzF6Bzy4pkQOzYKj2WRvbriR3gaIsvvkKB3iu0EeqhwCHPlATQgEjHDBi9ztui-_MnuQdBYatZ0ghfCXa9kINcgN_Dv-oOVxXPIsK3nZWtMLpM2oU_Nd4sl_5Lc6ybW19E7diTv5TIFPGEpgY09dKzzlDHA6hTVBWL78ze0IAuPBza6lItSN2_zddGDC6mg7g0E95LD72TzJyD3ILfA5rmJh6eTBJ0pP"
+            alt="Swedish technology executive"
+          />
+        </div>
+        <div class="space-y-lg">
+          <span class="material-symbols-outlined text-primary text-5xl">format_quote</span>
+          <p class="text-3xl md:text-4xl font-light italic leading-tight">
+            "Visbyr didn't just provide a tool; they redefined our entire operational framework. Their commitment to <span class="text-primary not-italic font-bold">Nordic functionalism</span> is evident in every line of code."
+          </p>
+          <div>
+            <p class="mono-label font-bold text-white">Anders Lindström</p>
+            <p class="mono-label text-white/50">CTO, Svea Dynamics</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Visbyr Method -->
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white overflow-hidden">
+      <div class="max-w-max-width mx-auto">
+        <div class="asymmetric-grid border-l border-outline-variant/30">
+          <div class="col-span-12 lg:col-span-4 p-margin-mobile lg:p-xl lg:sticky lg:top-32 h-fit">
+            <SurgicalAccent />
+            <h2 class="text-5xl font-bold mb-lg mt-lg">The Visbyr <br />Method</h2>
+            <p class="text-lg text-on-surface-variant body-text mb-xl">A measured, deliberate transition from legacy systems to digital excellence.</p>
+            <div class="mono-label text-on-surface-variant opacity-40 font-mono text-[10px]">Reference: SE-STHLM-24</div>
+          </div>
+          <div class="col-span-12 lg:col-span-8 border-l border-outline-variant/30">
+            <div class="p-margin-mobile lg:p-xxl border-b border-outline-variant/30 hover:bg-surface transition-colors">
+              <div class="flex flex-col md:flex-row gap-xl">
+                <div class="mono-label text-primary font-bold shrink-0 mt-2">Phase_01</div>
+                <div class="space-y-md">
+                  <h4 class="text-4xl font-bold">Audit & Discovery</h4>
+                  <p class="text-lg text-on-surface-variant body-text max-w-xl">We map your current ecosystem to identify bottlenecks and latent opportunities for optimization using precision auditing tools.</p>
+                  <div class="flex gap-md pt-lg">
+                    <div class="w-1.5 h-1.5 bg-primary"></div>
+                    <div class="w-1.5 h-1.5 bg-outline-variant"></div>
+                    <div class="w-1.5 h-1.5 bg-outline-variant"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-margin-mobile lg:p-xxl border-b border-outline-variant/30 hover:bg-surface transition-colors">
+              <div class="flex flex-col md:flex-row gap-xl">
+                <div class="mono-label text-primary font-bold shrink-0 mt-2">Phase_02</div>
+                <div class="space-y-md">
+                  <h4 class="text-4xl font-bold">Modular Integration</h4>
+                  <p class="text-lg text-on-surface-variant body-text max-w-xl">Our engineers deploy targeted solutions that integrate seamlessly with your existing stack without downtime or operational friction.</p>
+                  <div class="flex gap-md pt-lg">
+                    <div class="w-1.5 h-1.5 bg-outline-variant"></div>
+                    <div class="w-1.5 h-1.5 bg-primary"></div>
+                    <div class="w-1.5 h-1.5 bg-outline-variant"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-margin-mobile lg:p-xxl hover:bg-surface transition-colors">
+              <div class="flex flex-col md:flex-row gap-xl">
+                <div class="mono-label text-primary font-bold shrink-0 mt-2">Phase_03</div>
+                <div class="space-y-md">
+                  <h4 class="text-4xl font-bold">Optimization & Scale</h4>
+                  <p class="text-lg text-on-surface-variant body-text max-w-xl">Continuous monitoring and AI-assisted updates ensure your system remains at peak performance in an ever-evolving market.</p>
+                  <div class="flex gap-md pt-lg">
+                    <div class="w-1.5 h-1.5 bg-outline-variant"></div>
+                    <div class="w-1.5 h-1.5 bg-outline-variant"></div>
+                    <div class="w-1.5 h-1.5 bg-primary"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-y border-outline-variant/30">
+      <div class="max-w-max-width mx-auto text-center">
+        <div class="inline-block mono-label text-primary mb-xl border border-primary px-4 py-1.5">Engagement_Protocol</div>
+        <h2 class="text-[clamp(2.5rem,8vw,5rem)] font-extrabold mb-lg leading-none">Ready to evolve your <br />digital landscape?</h2>
+        <p class="text-xl text-on-surface-variant body-text mb-xl max-w-2xl mx-auto">Join the leading Swedish firms leveraging Visbyr to outpace the global market through Nordic engineering.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-xl">
+          <button class="bg-primary text-white px-xxl py-4 mono-label font-bold hover:brightness-110 transition-all">
+            Book a Demo
+          </button>
+          <button class="border border-on-surface text-on-surface px-xxl py-4 mono-label hover:bg-on-surface hover:text-white transition-all">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

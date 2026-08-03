@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fb;
+  color: #191c1e;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.mono-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.surgical-accent {
+  height: 1px;
+  background-color: #0052ff;
+  width: 24px;
+}
+
+.border-fine {
+  border-width: 0.5px;
+  border-color: rgba(115, 118, 136, 0.2);
+}
+
+.body-text {
+  line-height: 1.7;
+}
+
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.input-focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #0052ff;
+}
