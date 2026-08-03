@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderReact from '../components/HeaderReact.tsx';
+import Footer from '../components/Footer.astro';
+import SecurityGraphic from '../components/SecurityGraphic.tsx';
+---
+
+<BaseLayout title="Visbyr | Advanced Solutions">
+  <HeaderReact client:load />
+  <main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xxl pt-32">
+    <!-- Hero Section -->
+    <section class="mb-xxl text-center md:text-left">
+      <div class="flex items-center gap-md mb-lg">
+        <span class="w-2 h-2 rounded-full bg-primary"></span>
+        <span class="mono-label text-on-surface-variant">Enterprise Solutions</span>
+      </div>
+      <h1 class="text-[clamp(3.5rem,8vw,6rem)] font-extrabold mb-xl leading-none max-w-4xl">
+        Architecting the future of <span class="text-primary">digital infrastructure.</span>
+      </h1>
+      <p class="text-lg text-on-surface-variant max-w-2xl mb-xl body-text">
+        Visbyr provides precision-engineered technology frameworks for modern enterprises, focusing on high-performance cloud ecosystems and secure intelligent networks.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg mt-xxl">
+        <a class="group p-xl bg-white border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-500" href="#cloud">
+          <div class="w-12 h-12 bg-surface-container rounded-none flex items-center justify-center mb-xl group-hover:bg-primary-fixed transition-colors">
+            <span class="material-symbols-outlined text-primary">cloud_done</span>
+          </div>
+          <h3 class="text-headline-md text-headline-md mb-xs">Cloud Infrastructure</h3>
+          <p class="text-body-sm text-on-surface-variant">Scalable, low-latency architectures designed for Nordic performance standards.</p>
+        </a>
+        <a class="group p-xl bg-white border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-500" href="#ai">
+          <div class="w-12 h-12 bg-surface-container rounded-none flex items-center justify-center mb-xl group-hover:bg-primary-fixed transition-colors">
+            <span class="material-symbols-outlined text-primary">analytics</span>
+          </div>
+          <h3 class="text-headline-md text-headline-md mb-xs">AI-Driven Analytics</h3>
+          <p class="text-body-sm text-on-surface-variant">Transforming raw telemetry into predictive business intelligence.</p>
+        </a>
+        <a class="group p-xl bg-white border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-500" href="#networking">
+          <div class="w-12 h-12 bg-surface-container rounded-none flex items-center justify-center mb-xl group-hover:bg-primary-fixed transition-colors">
+            <span class="material-symbols-outlined text-primary">verified_user</span>
+          </div>
+          <h3 class="text-headline-md text-headline-md mb-xs">Secure Networking</h3>
+          <p class="text-body-sm text-on-surface-variant">Zero-trust frameworks for distributed enterprise perimeters.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Solution 1: Cloud Infrastructure -->
+    <section class="py-xxl border-t border-outline-variant" id="cloud">
+      <div class="flex flex-col md:flex-row gap-xl items-center">
+        <div class="w-full md:w-1/2">
+          <span class="mono-label text-primary block mb-sm">Cloud Systems</span>
+          <h2 class="text-5xl font-bold mb-lg">High-Availability Cloud Architecture</h2>
+          <p class="text-body-md text-on-surface-variant mb-lg leading-relaxed">
+            We deploy hybrid and multi-cloud strategies that prioritize data sovereignty and extreme uptime. Our Nordic-engineered frameworks ensure your infrastructure grows seamlessly with your demand.
+          </p>
+          <ul class="space-y-md mb-xl">
+            <li class="flex items-start gap-md">
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              <div class="text-body-md"><strong>Auto-Scaling Clusters:</strong> Respond to load spikes in milliseconds without manual intervention.</div>
+            </li>
+            <li class="flex items-start gap-md">
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              <div class="text-body-md"><strong>Edge-Native Delivery:</strong> Minimize latency with localized computing nodes across Europe.</div>
+            </li>
+          </ul>
+          <button class="border border-outline text-on-surface px-lg py-sm rounded-lg mono-label hover:bg-surface-container transition-all">Explore Documentation</button>
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="relative rounded-xl overflow-hidden shadow-xl aspect-video">
+            <img
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNRY01VD2n53xWxyUnPTDo-J84OrNCLTcAmCBWlGVuwvIbNhsA7KdA0FcoM7WPyXcJ9Z7KzKpe-yXt3W7jEStN1SpugELHo4if0mm0mLtvoiwLQCRaAJxhXc7qdNlc8_SMnJMDmdYNiFEUOFXy3X9dAX-zr5qSCU4ah0VPN5fvJ0Nr77Q0_eTx1cXBPq8NigD01g9zifrSTrVQB5JiQjr4BZVJJnxwBv33ovnt3lD-daA6NJj72yuj"
+              alt="Server room"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            <div class="absolute -bottom-4 -right-4 p-lg bg-white border border-outline-variant/30 shadow-2xl max-w-xs">
+              <p class="mono-label text-primary mb-xs">CASE STUDY</p>
+              <p class="text-headline-md">Svea Logistics Hub</p>
+              <p class="text-body-sm text-on-surface-variant">Reduced operational overhead by 42% through automated migration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution 2: AI Analytics (Bento Layout) -->
+    <section class="py-xxl border-t border-outline-variant" id="ai">
+      <div class="text-center mb-xl">
+        <span class="mono-label text-primary block mb-sm">Predictive Intelligence</span>
+        <h2 class="text-5xl font-bold mb-lg">AI-Driven Decision Analytics</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-lg">
+        <div class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-xl p-xl border border-outline-variant flex flex-col justify-between">
+          <div>
+            <h3 class="text-headline-md mb-md">Advanced Neural Telemetry</h3>
+            <p class="text-body-md text-on-surface-variant mb-lg">Our AI models process millions of data points per second to identify patterns invisible to traditional monitoring tools.</p>
+          </div>
+          <div class="w-full h-48 bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden relative"></div>
+        </div>
+        <div class="md:col-span-2 bg-primary text-on-primary rounded-xl p-xl flex flex-col justify-center">
+          <h4 class="text-headline-md mb-xs">89% Accuracy</h4>
+          <p class="text-body-sm opacity-80">In predictive maintenance forecasting for industrial IoT fleets.</p>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant hover:border-primary transition-all">
+          <span class="material-symbols-outlined text-primary mb-md">insights</span>
+          <h4 class="mono-label font-bold mb-xs">Real-time Flux</h4>
+          <p class="text-body-sm text-on-surface-variant">Live stream analytics with zero window buffering.</p>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant hover:border-primary transition-all">
+          <span class="material-symbols-outlined text-primary mb-md">hub</span>
+          <h4 class="mono-label font-bold mb-xs">Model Mesh</h4>
+          <p class="text-body-sm text-on-surface-variant">Interconnected neural nodes for distributed learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution 3: Secure Networking -->
+    <section class="py-xxl border-t border-outline-variant mb-xxl" id="networking">
+      <div class="flex flex-col md:flex-row-reverse gap-xl items-center">
+        <div class="w-full md:w-1/2">
+          <span class="mono-label text-primary block mb-sm">Secure Core</span>
+          <h2 class="text-5xl font-bold mb-lg">Zero-Trust Network Perimeter</h2>
+          <p class="text-body-md text-on-surface-variant mb-lg leading-relaxed">
+            Security is not a layer; it is the foundation. Visbyr employs end-to-end encrypted tunnels and hardware-level authentication to protect your most sensitive data transfers.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-md mb-xl">
+            <div class="p-md bg-surface-container rounded-lg">
+              <p class="text-headline-md text-primary">AES-256</p>
+              <p class="mono-label text-on-surface-variant">Post-Quantum Encryption</p>
+            </div>
+            <div class="p-md bg-surface-container rounded-lg">
+              <p class="text-headline-md text-primary">&lt;1ms</p>
+              <p class="mono-label text-on-surface-variant">Auth Handshake Latency</p>
+            </div>
+          </div>
+          <button class="bg-primary text-on-primary px-xl py-sm rounded-lg mono-label hover:opacity-90 active:scale-95 transition-all">Download Whitepaper</button>
+        </div>
+        <div class="w-full md:w-1/2">
+          <SecurityGraphic client:load />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-on-surface text-white py-xxl px-margin-mobile md:px-margin-desktop text-center border-y border-outline-variant/30">
+      <div class="relative z-10">
+        <h2 class="text-5xl font-bold mb-lg">Ready to optimize your infrastructure?</h2>
+        <p class="text-body-md opacity-80 mb-xl max-w-xl mx-auto">Join the leading Nordic enterprises leveraging Visbyr's technical precision to drive global growth.</p>
+        <div class="flex flex-col sm:flex-row gap-md justify-center">
+          <button class="bg-primary text-on-primary px-xl py-md rounded-lg mono-label hover:opacity-90 active:scale-95 transition-all">Schedule a Consult</button>
+          <button class="border border-inverse-on-surface text-inverse-on-surface px-xl py-md rounded-lg mono-label hover:bg-white/10 transition-all">View All Services</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
