@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderReact from '../components/HeaderReact.tsx';
+import Footer from '../components/Footer.astro';
+import SurgicalAccent from '../components/SurgicalAccent.astro';
+---
+
+<BaseLayout title="Case Studies | Visbyr">
+  <HeaderReact client:load />
+  <main class="pt-20">
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-b border-outline-variant/30">
+      <div class="max-w-max-width mx-auto">
+        <div class="flex items-center gap-md mb-lg">
+          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          <span class="mono-label text-on-surface-variant">Proven Results</span>
+        </div>
+        <h1 class="text-[clamp(3.5rem,10vw,6rem)] font-extrabold mb-xl leading-none max-w-4xl">
+          Case <span class="text-primary">Studies.</span>
+        </h1>
+        <p class="text-lg text-on-surface-variant max-w-2xl body-text">
+          Real outcomes from real engagements. See how Nordic enterprises have transformed their operations through Visbyr's precision-engineered solutions.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
+      <div class="max-w-max-width mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-xxl gap-lg">
+          <div class="max-w-2xl">
+            <SurgicalAccent />
+            <h2 class="text-5xl font-bold mb-lg mt-lg">Client Engagements</h2>
+            <p class="text-xl text-on-surface-variant body-text">Selected projects demonstrating measurable impact across industries.</p>
+          </div>
+          <div class="mono-label text-primary font-bold">[ 01 — Portfolio ]</div>
+        </div>
+
+        <div class="space-y-xxl border-t border-outline-variant/30 pt-xl">
+          <article class="group">
+            <div class="flex flex-col md:flex-row gap-xl items-start">
+              <div class="w-full md:w-1/3">
+                <div class="relative aspect-video overflow-hidden border border-outline-variant/30">
+                  <img
+                    class="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-700"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNRY01VD2n53xWxyUnPTDo-J84OrNCLTcAmCBWlGVuwvIbNhsA7KdA0FcoM7WPyXcJ9Z7KzKpe-yXt3W7jEStN1SpugELHo4if0mm0mLtvoiwLQCRaAJxhXc7qdNlc8_SMnJMDmdYNiFEUOFXy3X9dAX-zr5qSCU4ah0VPN5fvJ0Nr77Q0_eTx1cXBPq8NigD01g9zifrSTrVQB5JiQjr4BZVJJnxwBv33ovnt3lD-daA6NJj72yuj"
+                    alt="Svea Logistics Hub"
+                  />
+                  <div class="absolute top-sm left-sm mono-label bg-primary text-white px-2 py-0.5 text-[10px]">Cloud</div>
+                </div>
+              </div>
+              <div class="w-full md:w-2/3 space-y-lg">
+                <div class="flex items-center gap-md">
+                  <span class="mono-label text-on-surface-variant">Svea Logistics Hub</span>
+                  <span class="mono-label text-on-surface-variant">—</span>
+                  <span class="mono-label text-on-surface-variant">Logistics</span>
+                </div>
+                <h3 class="text-3xl font-bold group-hover:text-primary transition-colors">Automated Cloud Migration for National Logistics Network</h3>
+                <p class="body-text text-on-surface-variant">Migrated a legacy on-premise logistics platform to a hybrid cloud architecture, implementing auto-scaling clusters and edge-native delivery across 14 Nordic distribution centers.</p>
+                <div class="grid grid-cols-3 gap-md pt-lg border-t border-outline-variant/30">
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">42%</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Cost Reduction</p>
+                  </div>
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">99.97%</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Uptime Achieved</p>
+                  </div>
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">8wk</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Migration Time</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="group">
+            <div class="flex flex-col md:flex-row gap-xl items-start">
+              <div class="w-full md:w-1/3">
+                <div class="relative aspect-video overflow-hidden border border-outline-variant/30 bg-surface-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-on-surface-variant text-6xl">analytics</span>
+                  <div class="absolute top-sm left-sm mono-label bg-primary text-white px-2 py-0.5 text-[10px]">AI</div>
+                </div>
+              </div>
+              <div class="w-full md:w-2/3 space-y-lg">
+                <div class="flex items-center gap-md">
+                  <span class="mono-label text-on-surface-variant">Svea Dynamics</span>
+                  <span class="mono-label text-on-surface-variant">—</span>
+                  <span class="mono-label text-on-surface-variant">Manufacturing</span>
+                </div>
+                <h3 class="text-3xl font-bold group-hover:text-primary transition-colors">AI-Driven Predictive Maintenance for Industrial Fleet</h3>
+                <p class="body-text text-on-surface-variant">Deployed proprietary machine learning models to monitor 2,400+ industrial IoT sensors in real-time, achieving 89% accuracy in equipment failure prediction and reducing unplanned downtime by 67%.</p>
+                <div class="grid grid-cols-3 gap-md pt-lg border-t border-outline-variant/30">
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">89%</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Prediction Accuracy</p>
+                  </div>
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">67%</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Downtime Reduced</p>
+                  </div>
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">2.4K</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Sensors Monitored</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="group">
+            <div class="flex flex-col md:flex-row gap-xl items-start">
+              <div class="w-full md:w-1/3">
+                <div class="relative aspect-video overflow-hidden border border-outline-variant/30 bg-surface-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-on-surface-variant text-6xl">verified_user</span>
+                  <div class="absolute top-sm left-sm mono-label bg-primary text-white px-2 py-0.5 text-[10px]">Security</div>
+                </div>
+              </div>
+              <div class="w-full md:w-2/3 space-y-lg">
+                <div class="flex items-center gap-md">
+                  <span class="mono-label text-on-surface-variant">Norrköping Financial Group</span>
+                  <span class="mono-label text-on-surface-variant">—</span>
+                  <span class="mono-label text-on-surface-variant">Finance</span>
+                </div>
+                <h3 class="text-3xl font-bold group-hover:text-primary transition-colors">Zero-Trust Network Overhaul for Regional Bank</h3>
+                <p class="body-text text-on-surface-variant">Implemented end-to-end encrypted tunnels and hardware-level authentication across 32 branch offices, achieving full zero-trust compliance within a single quarter.</p>
+                <div class="grid grid-cols-3 gap-md pt-lg border-t border-outline-variant/30">
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">&lt;1ms</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Auth Latency</p>
+                  </div>
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">32</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Branches Secured</p>
+                  </div>
+                  <div>
+                    <p class="text-3xl font-extrabold text-primary">0</p>
+                    <p class="mono-label text-on-surface-variant text-[10px]">Security Incidents</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-on-surface text-white border-y border-outline-variant/30">
+      <div class="max-w-max-width mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-lg">Ready to be our next success story?</h2>
+        <p class="text-body-md opacity-80 mb-xl max-w-xl mx-auto">Let's discuss how Visbyr can engineer a solution tailored to your organization's unique challenges.</p>
+        <div class="flex flex-col sm:flex-row gap-md justify-center">
+          <a href="/contact" class="bg-primary text-on-primary px-xl py-md mono-label hover:opacity-90 transition-all inline-block text-center">Start a Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
