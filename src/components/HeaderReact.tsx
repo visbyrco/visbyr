@@ -27,20 +27,20 @@ export default function HeaderReact() {
           />
         </div>
         <div className="hidden md:flex items-center gap-xl">
-          <a className="mono-label hover:text-primary transition-colors" href="#">
+          <a className="mono-label hover:text-primary transition-colors" href="/philosophy">
             Philosophy
           </a>
           <a className="mono-label hover:text-primary transition-colors" href="/solutions">
             Solutions
           </a>
-          <a className="mono-label hover:text-primary transition-colors" href="#">
+          <a className="mono-label hover:text-primary transition-colors" href="/insights">
             Insights
           </a>
         </div>
         <div className="flex items-center gap-lg">
-          <button className="border border-on-surface px-lg py-2.5 mono-label hover:bg-on-surface hover:text-white transition-all">
+          <a href="/contact" className="border border-on-surface px-lg py-2.5 mono-label hover:bg-on-surface hover:text-white transition-all">
             Get Started
-          </button>
+          </a>
         </div>
       </nav>
     </header>

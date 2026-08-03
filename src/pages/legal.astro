@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderReact from '../components/HeaderReact.tsx';
+import Footer from '../components/Footer.astro';
+import SurgicalAccent from '../components/SurgicalAccent.astro';
+---
+
+<BaseLayout title="Legal | Visbyr">
+  <HeaderReact client:load />
+  <main class="pt-20">
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-b border-outline-variant/30">
+      <div class="max-w-max-width mx-auto max-w-3xl">
+        <div class="flex items-center gap-md mb-lg">
+          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          <span class="mono-label text-on-surface-variant">Legal</span>
+        </div>
+        <h1 class="text-[clamp(2.5rem,6vw,4rem)] font-extrabold mb-xl">Terms of Service.</h1>
+        <p class="mono-label text-on-surface-variant">Last updated: January 2024</p>
+      </div>
+    </section>
+
+    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
+      <div class="max-w-max-width mx-auto max-w-3xl space-y-xxl">
+        <div>
+          <SurgicalAccent />
+          <h2 class="text-2xl font-bold mt-lg mb-md">1. Acceptance of Terms</h2>
+          <p class="body-text text-on-surface-variant leading-relaxed">By accessing or using Visbyr's services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services. These terms apply to all visitors, users, and clients of the Visbyr platform.</p>
+        </div>
+
+        <div>
+          <SurgicalAccent />
+          <h2 class="text-2xl font-bold mt-lg mb-md">2. Description of Services</h2>
+          <p class="body-text text-on-surface-variant leading-relaxed">Visbyr provides enterprise technology solutions including cloud infrastructure architecture, AI-driven analytics, and secure networking services. All services are provided on a contractual basis and are subject to the terms of individual service agreements.</p>
+        </div>
+
+        <div>
+          <SurgicalAccent />
+          <h2 class="text-2xl font-bold mt-lg mb-md">3. Intellectual Property</h2>
+          <p class="body-text text-on-surface-variant leading-relaxed">All content, designs, code, and methodologies developed by Visbyr remain the intellectual property of Visbyr Nordic Functionalism AB unless otherwise specified in a service agreement. Client-specific deliverables are governed by the terms of the respective contract.</p>
+        </div>
+
+        <div>
+          <SurgicalAccent />
+          <h2 class="text-2xl font-bold mt-lg mb-md">4. Limitation of Liability</h2>
+          <p class="body-text text-on-surface-variant leading-relaxed">Visbyr shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services. Our total liability shall not exceed the fees paid by you for the specific service giving rise to the claim.</p>
+        </div>
+
+        <div>
+          <SurgicalAccent />
+          <h2 class="text-2xl font-bold mt-lg mb-md">5. Governing Law</h2>
+          <p class="body-text text-on-surface-variant leading-relaxed">These terms shall be governed by and construed in accordance with the laws of Sweden. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the Swedish courts.</p>
+        </div>
+
+        <div>
+          <SurgicalAccent />
+          <h2 class="text-2xl font-bold mt-lg mb-md">6. Contact</h2>
+          <p class="body-text text-on-surface-variant leading-relaxed">For legal inquiries, please contact us at <a href="/contact" class="text-primary hover:underline">our Stockholm office</a> or via the contact form on our website.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
