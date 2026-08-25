@@ -10,65 +10,57 @@ import VisionSection from '../components/VisionSection.tsx';
 <BaseLayout title="Contact & Connect | Visbyr">
   <HeaderReact client:load />
   <main class="pt-20">
-    <!-- Hero Section -->
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-b border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex items-center gap-md mb-lg">
-          <span class="w-2 h-2 rounded-full bg-primary"></span>
-          <span class="mono-label text-on-surface-variant">Connect</span>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
+          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Connect</span>
         </div>
-        <h1 class="text-[clamp(2.5rem,6vw,4rem)] font-extrabold mb-xl max-w-4xl">Precision Engineering for Enterprise Communication.</h1>
-        <p class="text-xl leading-relaxed text-on-surface-variant max-w-2xl border-l border-primary pl-lg">
+        <h1 class="font-display text-[clamp(2rem,5vw,3rem)] font-bold tracking-[-0.015em] mb-4 max-w-3xl leading-tight">Precision Engineering for Enterprise Communication.</h1>
+        <p class="font-body text-body-base text-on-surface-variant max-w-2xl border-l-2 border-primary dark:border-cyber-cyan pl-6 leading-relaxed">
           We bridge the gap between complex Nordic data infrastructure and global strategic operations. Reach out to the Visbyr team in Stockholm.
         </p>
       </div>
     </section>
 
-    <!-- Content Grid -->
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
-      <div class="max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xxl">
-        <!-- Engagement Protocol Form -->
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
+      <div class="max-w-[56rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div class="lg:col-span-7">
-          <div class="flex flex-col gap-lg mb-xl">
+          <div class="flex flex-col gap-4 mb-8">
             <SurgicalAccent />
-            <h2 class="text-4xl font-bold">Engagement Protocol</h2>
+            <h2 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Engagement Protocol</h2>
           </div>
           <ContactForm client:load />
         </div>
-        <!-- HQ Details -->
-        <div class="lg:col-span-5 space-y-xxl">
-          <div class="border-fine p-xl bg-surface transition-all hover:border-primary/40 group">
-            <div class="flex items-center gap-md mb-lg">
-              <span class="w-2 h-2 rounded-full bg-primary"></span>
-              <h3 class="text-3xl font-bold">Stockholm HQ</h3>
+        <div class="lg:col-span-5 space-y-6">
+          <div class="glass-mid rounded-xl p-6 transition-all hover:shadow-ambient-sm ease-spring">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
+              <h3 class="font-display text-headline-md font-semibold">Stockholm HQ</h3>
             </div>
-            <div class="space-y-md mb-xl">
-              <p class="mono-label text-on-surface-variant">Operational Base</p>
-              <address class="not-italic font-sans text-on-surface-variant leading-relaxed">
+            <div class="space-y-3 mb-6">
+              <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Operational Base</p>
+              <address class="not-italic font-body text-body-sm text-on-surface-variant leading-relaxed">
                 Kungsgatan 18, 111 35<br />
                 Stockholm, Sweden
               </address>
-              <p class="flex items-center gap-sm font-sans font-medium text-primary">
+              <p class="flex items-center gap-2 font-body text-body-sm font-medium text-primary dark:text-cyber-cyan">
                 <span class="material-symbols-outlined text-sm">call</span>
                 +46 8 123 45 67
               </p>
             </div>
-            <div class="relative aspect-video overflow-hidden border-fine">
-              <img
-                alt="Stockholm Map"
-                class="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBCCARZV_QJB4jsu9jCWLw73Q08pxDlBoUzX0IKTqj_KsEY0xUgdy6HOzI3h8qRoa9vtd_l-MBrzf-voucJ93oc7OgAK578IspU5mGX7iW-aMmFoxisq2tMlet212GX6XeXCN6iZv2LGGbbHaHv_auFBCz8k0OBGl8IXZmC4ys2GMBOFiVIFU-GK3YeoD1M-lnExJfx94gnZ-2oWQxvq69mZ6iFjz1EUMTXO5K0J8g_IkmIxEnMwrL"
-              />
-              <div class="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-[2px] opacity-100 group-hover:opacity-0 transition-opacity">
-                <div class="bg-white border-fine px-lg py-2 mono-label text-xs">View Coordinates</div>
+            <div class="relative aspect-video overflow-hidden rounded-lg border border-outline-variant dark:border-white/[0.08]">
+              <img alt="Stockholm Map" class="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBCCARZV_QJB4jsu9jCWLw73Q08pxDlBoUzX0IKTqj_KsEY0xUgdy6HOzI3h8qRoa9vtd_l-MBrzf-voucJ93oc7OgAK578IspU5mGX7iW-aMmFoxisq2tMlet212GX6XeXCN6iZv2LGGbbHaHv_auFBCz8k0OBGl8IXZmC4ys2GMBOFiVIFU-GK3YeoD1M-lnExJfx94gnZ-2oWQxvq69mZ6iFjz1EUMTXO5K0J8g_IkmIxEnMwrL" />
+              <div class="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-[2px]">
+                <div class="glass-mid rounded-full px-4 py-1.5 font-label text-[12px] tracking-[0.02em] uppercase">View Coordinates</div>
               </div>
             </div>
           </div>
-          <div class="bg-on-surface p-xl text-white">
+          <div class="bg-inverse-surface dark:bg-surface-container-lowest rounded-xl p-6 text-inverse-on-surface dark:text-mist-text">
             <SurgicalAccent />
-            <h3 class="text-3xl font-bold mb-md mt-lg">Access Insights</h3>
-            <p class="text-white/70 mb-xl font-sans">Explore our latest strategic whitepapers and Nordic market analysis from our proprietary repository.</p>
-            <a class="inline-flex items-center gap-sm mono-label text-primary hover:gap-md transition-all font-bold" href="/insights">
+            <h3 class="font-display text-headline-md font-semibold mb-2 mt-4">Access Insights</h3>
+            <p class="font-body text-body-sm opacity-70 mb-6">Explore our latest strategic whitepapers and Nordic market analysis from our proprietary repository.</p>
+            <a class="inline-flex items-center gap-2 font-label text-[12px] tracking-[0.02em] uppercase text-cyber-cyan hover:gap-3 transition-all ease-spring" href="/insights">
               Browse Repository <span class="material-symbols-outlined">arrow_forward</span>
             </a>
           </div>
@@ -76,35 +68,35 @@ import VisionSection from '../components/VisionSection.tsx';
       </div>
     </section>
 
-    <!-- Global Protocols -->
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-surface border-y border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex items-center gap-md mb-xxl">
-          <span class="mono-label text-on-surface-variant">Global Protocols</span>
-          <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-low dark:bg-surface-container border-y border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Global Protocols</span>
+          <div class="h-px flex-grow bg-outline-variant dark:bg-white/[0.08]"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-          <div class="p-xl border-fine bg-white hover:border-primary transition-all group">
-            <span class="material-symbols-outlined text-primary mb-lg block text-3xl">schedule</span>
-            <h4 class="text-2xl font-bold mb-md">Standard Time</h4>
-            <p class="font-sans text-on-surface-variant leading-relaxed">08:00 – 17:00 CET. Operational support remains active for enterprise clients 24/7.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-6 glass-mid rounded-xl hover:shadow-ambient-sm transition-all ease-spring">
+            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">schedule</span>
+            <h4 class="font-display text-headline-md font-semibold mb-2">Standard Time</h4>
+            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">08:00 – 17:00 CET. Operational support remains active for enterprise clients 24/7.</p>
           </div>
-          <div class="p-xl border-fine bg-white hover:border-primary transition-all group">
-            <span class="material-symbols-outlined text-primary mb-lg block text-3xl">verified_user</span>
-            <h4 class="text-2xl font-bold mb-md">Secure Line</h4>
-            <p class="font-sans text-on-surface-variant leading-relaxed">Encrypted communication protocols are available for sensitive data transfers and consulting.</p>
+          <div class="p-6 glass-mid rounded-xl hover:shadow-ambient-sm transition-all ease-spring">
+            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">verified_user</span>
+            <h4 class="font-display text-headline-md font-semibold mb-2">Secure Line</h4>
+            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Encrypted communication protocols are available for sensitive data transfers and consulting.</p>
           </div>
-          <div class="p-xl border-fine bg-white hover:border-primary transition-all group">
-            <span class="material-symbols-outlined text-primary mb-lg block text-3xl">public</span>
-            <h4 class="text-2xl font-bold mb-md">Digital Presence</h4>
-            <p class="font-sans text-on-surface-variant leading-relaxed">Engage with us via LinkedIn or our proprietary stakeholder portal for real-time updates.</p>
+          <div class="p-6 glass-mid rounded-xl hover:shadow-ambient-sm transition-all ease-spring">
+            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">public</span>
+            <h4 class="font-display text-headline-md font-semibold mb-2">Digital Presence</h4>
+            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Engage with us via LinkedIn or our proprietary stakeholder portal for real-time updates.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Vision Section -->
-    <VisionSection client:load />
+    <div class="py-6">
+      <VisionSection client:load />
+    </div>
   </main>
   <Footer />
 </BaseLayout>
