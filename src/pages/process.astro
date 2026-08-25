@@ -8,125 +8,86 @@ import SurgicalAccent from '../components/SurgicalAccent.astro';
 <BaseLayout title="Process | Visbyr">
   <HeaderReact client:load />
   <main class="pt-20">
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-b border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex items-center gap-md mb-lg">
-          <span class="w-2 h-2 rounded-full bg-primary"></span>
-          <span class="mono-label text-on-surface-variant">Methodology</span>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
+          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Methodology</span>
         </div>
-        <h1 class="text-[clamp(3.5rem,10vw,6rem)] font-extrabold mb-xl leading-none max-w-4xl">
-          The Visbyr <span class="text-primary">Process.</span>
+        <h1 class="font-display text-[clamp(2.5rem,8vw,4rem)] font-bold leading-none tracking-[-0.015em] mb-4 max-w-3xl">
+          The Visbyr <span class="text-primary dark:text-cyber-cyan">Process.</span>
         </h1>
-        <p class="text-lg text-on-surface-variant max-w-2xl body-text">
+        <p class="font-body text-body-base text-on-surface-variant max-w-2xl leading-relaxed">
           A measured, deliberate methodology that transforms legacy complexity into digital excellence. Every engagement follows a proven three-phase framework.
         </p>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-xxl gap-lg">
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
           <div class="max-w-2xl">
             <SurgicalAccent />
-            <h2 class="text-5xl font-bold mb-lg mt-lg">Engagement Framework</h2>
-            <p class="text-xl text-on-surface-variant body-text">From initial audit to sustained optimization — a structured path to operational transformation.</p>
+            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">Engagement Framework</h2>
+            <p class="font-body text-body-base text-on-surface-variant">From initial audit to sustained optimization — a structured path to operational transformation.</p>
           </div>
-          <div class="mono-label text-primary font-bold">[ 01 — Phases ]</div>
+          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Phases ]</div>
         </div>
 
-        <div class="border-t border-outline-variant/30">
-          <div class="p-xl md:p-xxl border-b border-outline-variant/30 hover:bg-surface transition-colors">
-            <div class="flex flex-col md:flex-row gap-xl">
+        <div class="rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08] divide-y divide-outline-variant dark:divide-white/[0.08]">
+          <div class="p-6 md:p-8 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.03] transition-colors ease-spring">
+            <div class="flex flex-col md:flex-row gap-6">
               <div class="md:w-1/4">
-                <div class="mono-label text-primary font-bold mb-md">Phase_01</div>
-                <h3 class="text-4xl font-bold">Audit & Discovery</h3>
-                <p class="mono-label text-on-surface-variant mt-sm">Duration: 2–4 weeks</p>
+                <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan font-semibold mb-2">Phase_01</div>
+                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Audit & Discovery</h3>
+                <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mt-1">Duration: 2–4 weeks</p>
               </div>
-              <div class="md:w-3/4 space-y-lg">
-                <p class="text-lg text-on-surface-variant body-text">We begin with a comprehensive assessment of your existing technology ecosystem. Our engineers map every integration point, identify bottlenecks, and uncover latent opportunities for optimization.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-md">
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">System Architecture Map</p>
-                  </div>
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">Performance Baseline Report</p>
-                  </div>
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">Optimization Roadmap</p>
-                  </div>
+              <div class="md:w-3/4 space-y-4">
+                <p class="font-body text-body-base text-on-surface-variant leading-relaxed">We begin with a comprehensive assessment of your existing technology ecosystem. Our engineers map every integration point, identify bottlenecks, and uncover latent opportunities for optimization.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">System Architecture Map</p></div>
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Performance Baseline Report</p></div>
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Optimization Roadmap</p></div>
                 </div>
-                <div class="flex gap-md pt-lg">
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                  <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-                  <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-                </div>
+                <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div></div>
               </div>
             </div>
           </div>
 
-          <div class="p-xl md:p-xxl border-b border-outline-variant/30 hover:bg-surface transition-colors">
-            <div class="flex flex-col md:flex-row gap-xl">
+          <div class="p-6 md:p-8 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.03] transition-colors ease-spring">
+            <div class="flex flex-col md:flex-row gap-6">
               <div class="md:w-1/4">
-                <div class="mono-label text-primary font-bold mb-md">Phase_02</div>
-                <h3 class="text-4xl font-bold">Modular Integration</h3>
-                <p class="mono-label text-on-surface-variant mt-sm">Duration: 4–12 weeks</p>
+                <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan font-semibold mb-2">Phase_02</div>
+                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Modular Integration</h3>
+                <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mt-1">Duration: 4–12 weeks</p>
               </div>
-              <div class="md:w-3/4 space-y-lg">
-                <p class="text-lg text-on-surface-variant body-text">Our engineers deploy targeted solutions that integrate seamlessly with your existing stack. Each module is built, tested, and validated independently before being connected to the broader system — ensuring zero downtime.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-md">
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">Deployed Solution Modules</p>
-                  </div>
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">Integration Test Suite</p>
-                  </div>
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">Documentation Package</p>
-                  </div>
+              <div class="md:w-3/4 space-y-4">
+                <p class="font-body text-body-base text-on-surface-variant leading-relaxed">Our engineers deploy targeted solutions that integrate seamlessly with your existing stack. Each module is built, tested, and validated independently before being connected to the broader system — ensuring zero downtime.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Deployed Solution Modules</p></div>
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Integration Test Suite</p></div>
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Documentation Package</p></div>
                 </div>
-                <div class="flex gap-md pt-lg">
-                  <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                  <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-                </div>
+                <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div></div>
               </div>
             </div>
           </div>
 
-          <div class="p-xl md:p-xxl hover:bg-surface transition-colors">
-            <div class="flex flex-col md:flex-row gap-xl">
+          <div class="p-6 md:p-8 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.03] transition-colors ease-spring">
+            <div class="flex flex-col md:flex-row gap-6">
               <div class="md:w-1/4">
-                <div class="mono-label text-primary font-bold mb-md">Phase_03</div>
-                <h3 class="text-4xl font-bold">Optimization & Scale</h3>
-                <p class="mono-label text-on-surface-variant mt-sm">Duration: Ongoing</p>
+                <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan font-semibold mb-2">Phase_03</div>
+                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Optimization & Scale</h3>
+                <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mt-1">Duration: Ongoing</p>
               </div>
-              <div class="md:w-3/4 space-y-lg">
-                <p class="text-lg text-on-surface-variant body-text">Continuous monitoring and AI-assisted updates ensure your system remains at peak performance. We provide proactive maintenance, quarterly reviews, and strategic guidance as your organization evolves.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-md">
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">Performance Dashboards</p>
-                  </div>
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">Quarterly Strategy Reviews</p>
-                  </div>
-                  <div class="p-md bg-surface-container-low border border-outline-variant/30">
-                    <p class="mono-label text-primary mb-xs">Deliverable</p>
-                    <p class="text-body-sm">24/7 Support Channel</p>
-                  </div>
+              <div class="md:w-3/4 space-y-4">
+                <p class="font-body text-body-base text-on-surface-variant leading-relaxed">Continuous monitoring and AI-assisted updates ensure your system remains at peak performance. We provide proactive maintenance, quarterly reviews, and strategic guidance as your organization evolves.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Performance Dashboards</p></div>
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Quarterly Strategy Reviews</p></div>
+                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">24/7 Support Channel</p></div>
                 </div>
-                <div class="flex gap-md pt-lg">
-                  <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-                  <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
+                <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div></div>
               </div>
             </div>
           </div>
@@ -134,35 +95,20 @@ import SurgicalAccent from '../components/SurgicalAccent.astro';
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-surface border-y border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg text-center">
-          <div class="p-xl">
-            <p class="text-5xl font-extrabold text-primary mb-sm">98%</p>
-            <p class="mono-label text-on-surface-variant">Client Retention Rate</p>
-          </div>
-          <div class="p-xl">
-            <p class="text-5xl font-extrabold text-primary mb-sm">42%</p>
-            <p class="mono-label text-on-surface-variant">Avg. Cost Reduction</p>
-          </div>
-          <div class="p-xl">
-            <p class="text-5xl font-extrabold text-primary mb-sm">&lt;1ms</p>
-            <p class="mono-label text-on-surface-variant">Integration Downtime</p>
-          </div>
-        </div>
+    <section class="py-12 px-4 md:px-6 bg-surface-container-low dark:bg-surface-container border-y border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="p-6"><p class="font-display text-4xl font-bold text-primary dark:text-cyber-cyan mb-1">98%</p><p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Client Retention Rate</p></div>
+        <div class="p-6"><p class="font-display text-4xl font-bold text-primary dark:text-cyber-cyan mb-1">42%</p><p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Avg. Cost Reduction</p></div>
+        <div class="p-6"><p class="font-display text-4xl font-bold text-primary dark:text-cyber-cyan mb-1">&lt;1ms</p><p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Integration Downtime</p></div>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-y border-outline-variant/30">
-      <div class="max-w-max-width mx-auto text-center">
-        <div class="inline-block mono-label text-primary mb-xl border border-primary px-4 py-1.5">Engagement_Protocol</div>
-        <h2 class="text-[clamp(2.5rem,8vw,5rem)] font-extrabold mb-lg leading-none">Begin your transformation.</h2>
-        <p class="text-xl text-on-surface-variant body-text mb-xl max-w-2xl mx-auto">Schedule a discovery session with our engineering team to explore how the Visbyr process applies to your organization.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-xl">
-          <a href="/contact" class="bg-primary text-white px-xxl py-4 mono-label font-bold hover:brightness-110 transition-all inline-block text-center">
-            Start Phase 01
-          </a>
-        </div>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low border-y border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto text-center">
+        <div class="inline-flex font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-6 border border-primary/20 dark:border-cyber-cyan/20 px-4 py-1.5 rounded-full glass-mid">Engagement_Protocol</div>
+        <h2 class="font-display text-[clamp(2rem,6vw,3.5rem)] font-bold leading-none tracking-[-0.015em] mb-4">Begin your transformation.</h2>
+        <p class="font-body text-body-base text-on-surface-variant mb-8 max-w-2xl mx-auto">Schedule a discovery session with our engineering team to explore how the Visbyr process applies to your organization.</p>
+        <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-8 py-4 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Start Phase 01</a>
       </div>
     </section>
   </main>

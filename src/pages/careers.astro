@@ -8,137 +8,92 @@ import SurgicalAccent from '../components/SurgicalAccent.astro';
 <BaseLayout title="Careers | Visbyr">
   <HeaderReact client:load />
   <main class="pt-20">
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-b border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex items-center gap-md mb-lg">
-          <span class="w-2 h-2 rounded-full bg-primary"></span>
-          <span class="mono-label text-on-surface-variant">Join the Studio</span>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
+          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Join the Studio</span>
         </div>
-        <h1 class="text-[clamp(3.5rem,10vw,6rem)] font-extrabold mb-xl leading-none max-w-4xl">
-          Build the <span class="text-primary">future</span> with us.
+        <h1 class="font-display text-[clamp(2.5rem,8vw,4rem)] font-bold leading-none tracking-[-0.015em] mb-4 max-w-3xl">
+          Build the <span class="text-primary dark:text-cyber-cyan">future</span> with us.
         </h1>
-        <p class="text-lg text-on-surface-variant max-w-2xl body-text">
+        <p class="font-body text-body-base text-on-surface-variant max-w-2xl leading-relaxed">
           We are a collective of engineers, designers, and strategists united by a shared commitment to Nordic functionalism. If you believe technology should be purposeful, precise, and enduring — you belong here.
         </p>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-xxl gap-lg">
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
           <div class="max-w-2xl">
             <SurgicalAccent />
-            <h2 class="text-5xl font-bold mb-lg mt-lg">Open Positions</h2>
-            <p class="text-xl text-on-surface-variant body-text">Current opportunities at our Stockholm studio.</p>
+            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">Open Positions</h2>
+            <p class="font-body text-body-base text-on-surface-variant">Current opportunities at our Stockholm studio.</p>
           </div>
-          <div class="mono-label text-primary font-bold">[ 01 — Roles ]</div>
+          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Roles ]</div>
         </div>
 
-        <div class="border-t border-outline-variant/30">
-          <div class="p-xl border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors group">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-lg">
-              <div>
-                <div class="flex items-center gap-md mb-sm">
-                  <span class="mono-label text-primary bg-primary-fixed px-3 py-1">Engineering</span>
-                  <span class="mono-label text-on-surface-variant">Stockholm</span>
+        <div class="rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08] divide-y divide-outline-variant dark:divide-white/[0.08]">
+          {
+            [
+              { tag: 'Engineering', loc: 'Stockholm', title: 'Senior Cloud Infrastructure Engineer', desc: 'Design and implement scalable cloud architectures for enterprise clients across the Nordic region.' },
+              { tag: 'AI / ML', loc: 'Stockholm', title: 'Machine Learning Researcher', desc: 'Develop predictive models and neural architectures for industrial IoT and enterprise analytics.' },
+              { tag: 'Security', loc: 'Stockholm / Remote', title: 'Zero-Trust Security Architect', desc: 'Architect end-to-end encrypted systems and hardware-level authentication frameworks for distributed enterprises.' },
+              { tag: 'Design', loc: 'Stockholm', title: 'Enterprise UX Designer', desc: 'Craft intuitive interfaces for complex enterprise systems. Nordic functionalism experience preferred.' },
+            ].map((r) => (
+              <div class="p-6 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors ease-spring group">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <div class="flex items-center gap-3 mb-2">
+                      <span class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan bg-primary-fixed/30 dark:bg-cyber-cyan/15 px-3 py-1 rounded-full border border-primary/10 dark:border-cyber-cyan/20">{r.tag}</span>
+                      <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">{r.loc}</span>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">{r.title}</h3>
+                    <p class="font-body text-body-sm text-on-surface-variant mt-1 max-w-xl">{r.desc}</p>
+                  </div>
+                  <a href="/contact" class="font-label text-[12px] tracking-[0.02em] uppercase font-semibold text-primary dark:text-cyber-cyan flex items-center gap-2 hover:gap-3 transition-all shrink-0">
+                    Apply <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
                 </div>
-                <h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Senior Cloud Infrastructure Engineer</h3>
-                <p class="body-text text-on-surface-variant mt-sm max-w-xl">Design and implement scalable cloud architectures for enterprise clients across the Nordic region.</p>
               </div>
-              <a href="/contact" class="mono-label font-bold text-primary flex items-center gap-sm hover:gap-md transition-all shrink-0">
-                Apply <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
-          <div class="p-xl border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors group">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-lg">
-              <div>
-                <div class="flex items-center gap-md mb-sm">
-                  <span class="mono-label text-primary bg-primary-fixed px-3 py-1">AI / ML</span>
-                  <span class="mono-label text-on-surface-variant">Stockholm</span>
-                </div>
-                <h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Machine Learning Researcher</h3>
-                <p class="body-text text-on-surface-variant mt-sm max-w-xl">Develop predictive models and neural architectures for industrial IoT and enterprise analytics.</p>
-              </div>
-              <a href="/contact" class="mono-label font-bold text-primary flex items-center gap-sm hover:gap-md transition-all shrink-0">
-                Apply <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-low dark:bg-surface-container border-y border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
+          <h2 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Why Visbyr</h2>
+          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 02 — Benefits ]</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-6 glass-mid rounded-xl">
+            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">workspace_premium</span>
+            <h4 class="font-display text-headline-md font-semibold mb-2">Ownership & Autonomy</h4>
+            <p class="font-body text-body-sm text-on-surface-variant">Full project ownership from audit to deployment. No micromanagement — just trust and accountability.</p>
           </div>
-
-          <div class="p-xl border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors group">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-lg">
-              <div>
-                <div class="flex items-center gap-md mb-sm">
-                  <span class="mono-label text-primary bg-primary-fixed px-3 py-1">Security</span>
-                  <span class="mono-label text-on-surface-variant">Stockholm / Remote</span>
-                </div>
-                <h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Zero-Trust Security Architect</h3>
-                <p class="body-text text-on-surface-variant mt-sm max-w-xl">Architect end-to-end encrypted systems and hardware-level authentication frameworks for distributed enterprises.</p>
-              </div>
-              <a href="/contact" class="mono-label font-bold text-primary flex items-center gap-sm hover:gap-md transition-all shrink-0">
-                Apply <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
+          <div class="p-6 glass-mid rounded-xl">
+            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">self_improvement</span>
+            <h4 class="font-display text-headline-md font-semibold mb-2">Continuous Learning</h4>
+            <p class="font-body text-body-sm text-on-surface-variant">Dedicated research time, conference budgets, and access to our proprietary training programs.</p>
           </div>
-
-          <div class="p-xl hover:bg-surface-container-low transition-colors group">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-lg">
-              <div>
-                <div class="flex items-center gap-md mb-sm">
-                  <span class="mono-label text-primary bg-primary-fixed px-3 py-1">Design</span>
-                  <span class="mono-label text-on-surface-variant">Stockholm</span>
-                </div>
-                <h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Enterprise UX Designer</h3>
-                <p class="body-text text-on-surface-variant mt-sm max-w-xl">Craft intuitive interfaces for complex enterprise systems. Nordic functionalism experience preferred.</p>
-              </div>
-              <a href="/contact" class="mono-label font-bold text-primary flex items-center gap-sm hover:gap-md transition-all shrink-0">
-                Apply <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
+          <div class="p-6 glass-mid rounded-xl">
+            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">balance</span>
+            <h4 class="font-display text-headline-md font-semibold mb-2">Nordic Work-Life Balance</h4>
+            <p class="font-body text-body-sm text-on-surface-variant">Flexible hours, generous parental leave, and a culture that respects personal time.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-surface border-y border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-xxl gap-lg">
-          <div class="max-w-2xl">
-            <h2 class="text-4xl font-bold mb-lg">Why Visbyr</h2>
-          </div>
-          <div class="mono-label text-primary font-bold">[ 02 — Benefits ]</div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-          <div class="p-xl bg-white border border-outline-variant/30">
-            <span class="material-symbols-outlined text-primary mb-lg block text-3xl">workspace_premium</span>
-            <h4 class="text-xl font-bold mb-md">Ownership & Autonomy</h4>
-            <p class="font-sans text-on-surface-variant">Full project ownership from audit to deployment. No micromanagement — just trust and accountability.</p>
-          </div>
-          <div class="p-xl bg-white border border-outline-variant/30">
-            <span class="material-symbols-outlined text-primary mb-lg block text-3xl">self_improvement</span>
-            <h4 class="text-xl font-bold mb-md">Continuous Learning</h4>
-            <p class="font-sans text-on-surface-variant">Dedicated research time, conference budgets, and access to our proprietary training programs.</p>
-          </div>
-          <div class="p-xl bg-white border border-outline-variant/30">
-            <span class="material-symbols-outlined text-primary mb-lg block text-3xl">balance</span>
-            <h4 class="text-xl font-bold mb-md">Nordic Work-Life Balance</h4>
-            <p class="font-sans text-on-surface-variant">Flexible hours, generous parental leave, and a culture that respects personal time.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-y border-outline-variant/30">
-      <div class="max-w-max-width mx-auto text-center">
-        <h2 class="text-[clamp(2.5rem,8vw,5rem)] font-extrabold mb-lg leading-none">Don't see your role?</h2>
-        <p class="text-xl text-on-surface-variant body-text mb-xl max-w-2xl mx-auto">We are always interested in exceptional talent. Send us your portfolio and let's explore possibilities.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-xl">
-          <a href="/contact" class="bg-primary text-white px-xxl py-4 mono-label font-bold hover:brightness-110 transition-all inline-block text-center">
-            Get in Touch
-          </a>
-        </div>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low border-y border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto text-center">
+        <h2 class="font-display text-[clamp(2rem,6vw,3.5rem)] font-bold leading-none tracking-[-0.015em] mb-4">Don't see your role?</h2>
+        <p class="font-body text-body-base text-on-surface-variant mb-8 max-w-2xl mx-auto">We are always interested in exceptional talent. Send us your portfolio and let's explore possibilities.</p>
+        <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-8 py-4 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Get in Touch</a>
       </div>
     </section>
   </main>
