@@ -8,92 +8,61 @@ import SurgicalAccent from '../components/SurgicalAccent.astro';
 <BaseLayout title="Insights | Visbyr">
   <HeaderReact client:load />
   <main class="pt-20">
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-b border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex items-center gap-md mb-lg">
-          <span class="w-2 h-2 rounded-full bg-primary"></span>
-          <span class="mono-label text-on-surface-variant">Intelligence Hub</span>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
+          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Intelligence Hub</span>
         </div>
-        <h1 class="text-[clamp(3.5rem,10vw,6rem)] font-extrabold mb-xl leading-none max-w-4xl">
-          Insights & <span class="text-primary">Analysis.</span>
+        <h1 class="font-display text-[clamp(2.5rem,8vw,4rem)] font-bold leading-none tracking-[-0.015em] mb-4 max-w-3xl">
+          Insights & <span class="text-primary dark:text-cyber-cyan">Analysis.</span>
         </h1>
-        <p class="text-lg text-on-surface-variant max-w-2xl body-text">
+        <p class="font-body text-body-base text-on-surface-variant max-w-2xl leading-relaxed">
           Strategic whitepapers, market analysis, and technical deep-dives from the Visbyr research division.
         </p>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-xxl gap-lg">
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
           <div class="max-w-2xl">
             <SurgicalAccent />
-            <h2 class="text-5xl font-bold mb-lg mt-lg">Latest Publications</h2>
-            <p class="text-xl text-on-surface-variant body-text">Curated intelligence for enterprise decision-makers navigating the Nordic technology landscape.</p>
+            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">Latest Publications</h2>
+            <p class="font-body text-body-base text-on-surface-variant">Curated intelligence for enterprise decision-makers navigating the Nordic technology landscape.</p>
           </div>
-          <div class="mono-label text-primary font-bold">[ 01 — Repository ]</div>
+          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Repository ]</div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-xl border-t border-outline-variant/30 pt-xl">
-          <article class="group p-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-500">
-            <div class="flex items-center gap-md mb-lg">
-              <span class="mono-label text-primary bg-primary-fixed px-3 py-1">Cloud</span>
-              <span class="mono-label text-on-surface-variant">2024.11</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-md group-hover:text-primary transition-colors">Nordic Data Sovereignty in a Post-GDPR Era</h3>
-            <p class="body-text text-on-surface-variant mb-lg">An analysis of evolving data residency requirements and how Nordic enterprises are architecting compliant cloud infrastructure.</p>
-            <div class="flex items-center gap-sm mono-label font-bold text-primary">
-              Read Analysis <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </div>
-          </article>
-
-          <article class="group p-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-500">
-            <div class="flex items-center gap-md mb-lg">
-              <span class="mono-label text-primary bg-primary-fixed px-3 py-1">AI</span>
-              <span class="mono-label text-on-surface-variant">2024.10</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-md group-hover:text-primary transition-colors">Predictive Maintenance: Industrial IoT at Scale</h3>
-            <p class="body-text text-on-surface-variant mb-lg">How machine learning models achieve 89% accuracy in forecasting equipment failures across distributed manufacturing fleets.</p>
-            <div class="flex items-center gap-sm mono-label font-bold text-primary">
-              Read Analysis <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </div>
-          </article>
-
-          <article class="group p-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-500">
-            <div class="flex items-center gap-md mb-lg">
-              <span class="mono-label text-primary bg-primary-fixed px-3 py-1">Security</span>
-              <span class="mono-label text-on-surface-variant">2024.09</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-md group-hover:text-primary transition-colors">Zero-Trust Architecture for Distributed Enterprises</h3>
-            <p class="body-text text-on-surface-variant mb-xl">A technical whitepaper on implementing hardware-level authentication and end-to-end encrypted tunnels across organizational boundaries.</p>
-            <div class="flex items-center gap-sm mono-label font-bold text-primary">
-              Read Analysis <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </div>
-          </article>
-
-          <article class="group p-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-500">
-            <div class="flex items-center gap-md mb-lg">
-              <span class="mono-label text-primary bg-primary-fixed px-3 py-1">Strategy</span>
-              <span class="mono-label text-on-surface-variant">2024.08</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-md group-hover:text-primary transition-colors">The Case for Nordic Functionalism in Software Design</h3>
-            <p class="body-text text-on-surface-variant mb-xl">Why the principles of Scandinavian design — restraint, purpose, and clarity — produce more resilient and maintainable software systems.</p>
-            <div class="flex items-center gap-sm mono-label font-bold text-primary">
-              Read Analysis <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </div>
-          </article>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-outline-variant dark:border-white/[0.08] pt-6">
+          {
+            [
+              { tag: 'Cloud', date: '2024.11', title: 'Nordic Data Sovereignty in a Post-GDPR Era', desc: 'An analysis of evolving data residency requirements and how Nordic enterprises are architecting compliant cloud infrastructure.' },
+              { tag: 'AI', date: '2024.10', title: 'Predictive Maintenance: Industrial IoT at Scale', desc: 'How machine learning models achieve 89% accuracy in forecasting equipment failures across distributed manufacturing fleets.' },
+              { tag: 'Security', date: '2024.09', title: 'Zero-Trust Architecture for Distributed Enterprises', desc: 'A technical whitepaper on implementing hardware-level authentication and end-to-end encrypted tunnels across organizational boundaries.' },
+              { tag: 'Strategy', date: '2024.08', title: 'The Case for Nordic Functionalism in Software Design', desc: 'Why the principles of Scandinavian design — restraint, purpose, and clarity — produce more resilient and maintainable software systems.' },
+            ].map((p) => (
+              <article class="group glass-mid rounded-xl p-6 hover:shadow-ambient-sm transition-all ease-spring">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan bg-primary-fixed/30 dark:bg-cyber-cyan/15 border border-primary/10 dark:border-cyber-cyan/20 px-3 py-1 rounded-full">{p.tag}</span>
+                  <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">{p.date}</span>
+                </div>
+                <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">{p.title}</h3>
+                <p class="font-body text-body-sm text-on-surface-variant mb-4 leading-relaxed">{p.desc}</p>
+                <div class="flex items-center gap-2 font-label text-[12px] tracking-[0.02em] uppercase font-semibold text-primary dark:text-cyber-cyan">
+                  Read Analysis <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </div>
+              </article>
+            ))
+          }
         </div>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-on-surface text-white border-y border-outline-variant/30">
-      <div class="max-w-max-width mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-lg">Stay Informed</h2>
-        <p class="text-body-md opacity-80 mb-xl max-w-xl mx-auto">Receive strategic insights and technical analysis directly from our Stockholm research division.</p>
-        <div class="flex flex-col sm:flex-row gap-md justify-center">
-          <a href="/contact" class="bg-primary text-on-primary px-xl py-md mono-label hover:opacity-90 transition-all inline-block text-center">Subscribe to Insights</a>
-        </div>
-      </div>
+    <section class="py-12 md:py-16 px-4 md:px-6 bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface dark:text-mist-text rounded-xl mx-4 md:mx-auto max-w-[56rem] mb-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-3">Stay Informed</h2>
+      <p class="font-body text-body-base opacity-80 mb-6 max-w-xl mx-auto">Receive strategic insights and technical analysis directly from our Stockholm research division.</p>
+      <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-6 py-3 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Subscribe to Insights</a>
     </section>
   </main>
   <Footer />

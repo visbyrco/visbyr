@@ -8,117 +8,93 @@ import SurgicalAccent from '../components/SurgicalAccent.astro';
 <BaseLayout title="Philosophy | Visbyr">
   <HeaderReact client:load />
   <main class="pt-20">
-    <section class="relative py-xxl px-margin-mobile md:px-margin-desktop overflow-hidden border-b border-outline-variant/30">
-      <div class="max-w-max-width mx-auto">
-        <div class="asymmetric-grid gap-y-xl">
-          <div class="col-span-12 lg:col-span-8 flex flex-col justify-end pt-12 md:pt-24 order-2 lg:order-1">
-            <div class="flex items-center gap-md mb-lg">
-              <span class="w-2 h-2 rounded-full bg-primary"></span>
-              <span class="mono-label text-on-surface-variant">Our Philosophy</span>
+    <section class="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden border-b border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="asymmetric-grid gap-y-8">
+          <div class="col-span-12 lg:col-span-8 flex flex-col justify-end pt-8 md:pt-16 order-2 lg:order-1">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
+              <span class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant">Our Philosophy</span>
             </div>
-            <h1 class="text-[clamp(3.5rem,10vw,7rem)] font-extrabold mb-xl">
+            <h1 class="font-display text-[clamp(2.5rem,8vw,4.5rem)] font-bold leading-[0.95] tracking-[-0.015em] mb-6">
               Nordic <br />
-              <span class="text-primary italic font-light">Functionalism</span> <br />
+              <span class="text-primary dark:text-cyber-cyan italic font-light">Functionalism</span> <br />
               in Code
             </h1>
-            <div class="flex flex-col md:flex-row gap-xxl md:items-start border-t border-outline-variant/30 pt-xl">
-              <p class="max-w-md text-lg body-text text-on-surface-variant">
+            <div class="border-t border-outline-variant dark:border-white/[0.08] pt-6">
+              <p class="max-w-md font-body text-body-base text-on-surface-variant leading-relaxed">
                 We believe technology should serve clarity. Every system we build is guided by the principles of Nordic design — purposeful, restrained, and enduring.
               </p>
             </div>
           </div>
           <div class="col-span-12 lg:col-span-4 order-1 lg:order-2 flex justify-end">
-            <div class="relative w-full aspect-[4/5] lg:w-[400px] border border-outline-variant/30 p-2 bg-white shadow-2xl">
-              <img
-                class="w-full h-full object-cover grayscale brightness-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC23p5x0HlZapnFJd9HSAMfT4hRvRtyDc97SvMOOuPB-Z16xwCU1EHYDpM0S3jJOFlA4ajK5-fQ9cF6zw5nRjSjaVAyAW9X6SqNBWCnk34bOhGqsZnGe9dh5r3XJfCTS0OmEhGkKNJpyvAbVB0lyu2DhFRQJbnEO6SvyWVNAs6KMGdx2TYvgQsxvBHZYmxEK7v0YRuu6KS--WV4rh7gX7tl3AByMydT-ZDBS0FIJlZsnueFRRSZG9Iw"
-                alt="Nordic architectural minimalism"
-              />
-              <div class="absolute -top-4 -right-4 mono-label bg-primary text-white px-3 py-1">Manifesto</div>
+            <div class="relative w-full aspect-[4/5] lg:w-[360px] rounded-xl border border-outline-variant dark:border-white/[0.08] p-2 glass-mid overflow-visible">
+              <img class="w-full h-full object-cover grayscale brightness-105 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC23p5x0HlZapnFJd9HSAMfT4hRvRtyDc97SvMOOuPB-Z16xwCU1EHYDpM0S3jJOFlA4ajK5-fQ9cF6zw5nRjSjaVAyAW9X6SqNBWCnk34bOhGqsZnGe9dh5r3XJfCTS0OmEhGkKNJpyvAbVB0lyu2DhFRQJbnEO6SvyWVNAs6KMGdx2TYvgQsxvBHZYmxEK7v0YRuu6KS--WV4rh7gX7tl3AByMydT-ZDBS0FIJlZsnueFRRSZG9Iw" alt="Nordic architectural minimalism" />
+              <div class="absolute -top-3 -right-3 font-label text-[12px] tracking-[0.02em] uppercase bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-3 py-1 rounded-full">Manifesto</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white">
-      <div class="max-w-max-width mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-xxl gap-lg">
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
           <div class="max-w-2xl">
             <SurgicalAccent />
-            <h2 class="text-5xl font-bold mb-lg mt-lg">Core Principles</h2>
-            <p class="text-xl text-on-surface-variant body-text">The foundational tenets that govern every decision, architecture, and engagement at Visbyr.</p>
+            <h2 class="font-display text-display-lg md:text-[32px] font-bold tracking-[-0.015em] mt-4 mb-3">Core Principles</h2>
+            <p class="font-body text-body-base text-on-surface-variant">The foundational tenets that govern every decision, architecture, and engagement at Visbyr.</p>
           </div>
-          <div class="mono-label text-primary font-bold">[ 01 — Pillars ]</div>
+          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Pillars ]</div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 border-t border-outline-variant/30">
-          <div class="p-xl border-b md:border-r border-outline-variant/30 group hover:bg-surface-container-low transition-colors duration-500">
-            <div class="mono-label text-on-surface-variant mb-xl">Pillar.01</div>
-            <h3 class="text-3xl font-bold mb-lg">Precision</h3>
-            <p class="body-text text-on-surface-variant mb-xl">Every line of code is deliberate. We reject bloat, ambiguity, and unnecessary complexity. Systems should do exactly what they claim — nothing more, nothing less.</p>
-            <div class="flex gap-md pt-lg">
-              <div class="w-1.5 h-1.5 bg-primary"></div>
-              <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-              <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08]">
+          <div class="p-6 md:p-8 border-b md:border-r border-outline-variant dark:border-white/[0.08] glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors ease-spring">
+            <div class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mb-6">Pillar.01</div>
+            <h3 class="font-display text-headline-md font-semibold mb-3">Precision</h3>
+            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-6">Every line of code is deliberate. We reject bloat, ambiguity, and unnecessary complexity. Systems should do exactly what they claim — nothing more, nothing less.</p>
+            <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div></div>
           </div>
-          <div class="p-xl border-b border-outline-variant/30 group hover:bg-surface-container-low transition-colors duration-500">
-            <div class="mono-label text-on-surface-variant mb-xl">Pillar.02</div>
-            <h3 class="text-3xl font-bold mb-lg">Clarity</h3>
-            <p class="body-text text-on-surface-variant mb-xl">Interfaces should communicate, not confuse. We design for cognitive ease — reducing friction between human intent and machine response through transparent architecture.</p>
-            <div class="flex gap-md pt-lg">
-              <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-              <div class="w-1.5 h-1.5 bg-primary"></div>
-              <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-            </div>
+          <div class="p-6 md:p-8 border-b border-outline-variant dark:border-white/[0.08] glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors ease-spring">
+            <div class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mb-6">Pillar.02</div>
+            <h3 class="font-display text-headline-md font-semibold mb-3">Clarity</h3>
+            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-6">Interfaces should communicate, not confuse. We design for cognitive ease — reducing friction between human intent and machine response through transparent architecture.</p>
+            <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div></div>
           </div>
-          <div class="p-xl border-b md:border-r border-outline-variant/30 group hover:bg-surface-container-low transition-colors duration-500">
-            <div class="mono-label text-on-surface-variant mb-xl">Pillar.03</div>
-            <h3 class="text-3xl font-bold mb-lg">Sovereignty</h3>
-            <p class="body-text text-on-surface-variant mb-xl">Data belongs to its creators. We architect systems that respect Nordic data governance standards and ensure our clients maintain full control over their digital assets.</p>
-            <div class="flex gap-md pt-lg">
-              <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-              <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-              <div class="w-1.5 h-1.5 bg-primary"></div>
-            </div>
+          <div class="p-6 md:p-8 border-b md:border-r border-outline-variant dark:border-white/[0.08] glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors ease-spring">
+            <div class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mb-6">Pillar.03</div>
+            <h3 class="font-display text-headline-md font-semibold mb-3">Sovereignty</h3>
+            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-6">Data belongs to its creators. We architect systems that respect Nordic data governance standards and ensure our clients maintain full control over their digital assets.</p>
+            <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div></div>
           </div>
-          <div class="p-xl group hover:bg-surface-container-low transition-colors duration-500">
-            <div class="mono-label text-on-surface-variant mb-xl">Pillar.04</div>
-            <h3 class="text-3xl font-bold mb-lg">Sustainability</h3>
-            <p class="body-text text-on-surface-variant mb-xl">Efficient code is green code. We optimize for minimal resource consumption, ensuring our solutions scale without expanding their environmental footprint.</p>
-            <div class="flex gap-md pt-lg">
-              <div class="w-1.5 h-1.5 bg-primary"></div>
-              <div class="w-1.5 h-1.5 bg-primary"></div>
-              <div class="w-1.5 h-1.5 bg-outline-variant"></div>
-            </div>
+          <div class="p-6 md:p-8 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors ease-spring">
+            <div class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mb-6">Pillar.04</div>
+            <h3 class="font-display text-headline-md font-semibold mb-3">Sustainability</h3>
+            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-6">Efficient code is green code. We optimize for minimal resource consumption, ensuring our solutions scale without expanding their environmental footprint.</p>
+            <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-on-surface text-white">
-      <div class="max-w-4xl mx-auto flex flex-col gap-xl">
-        <span class="material-symbols-outlined text-primary text-5xl">format_quote</span>
-        <p class="text-3xl md:text-4xl font-light italic leading-tight">
-          "Good technology disappears. It should feel so natural, so inevitable, that the user forgets it exists — and that is when you know the design has <span class="text-primary not-italic font-bold">succeeded</span>."
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface dark:text-mist-text">
+      <div class="max-w-3xl mx-auto flex flex-col gap-6">
+        <span class="material-symbols-outlined text-cyber-cyan text-5xl">format_quote</span>
+        <p class="font-display text-2xl md:text-3xl font-light italic leading-tight">
+          "Good technology disappears. It should feel so natural, so inevitable, that the user forgets it exists — and that is when you know the design has <span class="text-cyber-cyan not-italic font-semibold">succeeded</span>."
         </p>
         <div>
-          <p class="mono-label font-bold text-white">Visbyr Design Manifesto</p>
-          <p class="mono-label text-white/50">Stockholm, 2024</p>
+          <p class="font-label text-[12px] tracking-[0.02em] uppercase text-white">Visbyr Design Manifesto</p>
+          <p class="font-label text-[12px] tracking-[0.02em] uppercase text-white/50">Stockholm, 2024</p>
         </div>
       </div>
     </section>
 
-    <section class="py-xxl px-margin-mobile md:px-margin-desktop bg-white border-y border-outline-variant/30">
-      <div class="max-w-max-width mx-auto text-center">
-        <div class="inline-block mono-label text-primary mb-xl border border-primary px-4 py-1.5">Engagement_Protocol</div>
-        <h2 class="text-[clamp(2.5rem,8vw,5rem)] font-extrabold mb-lg leading-none">Share our vision?</h2>
-        <p class="text-xl text-on-surface-variant body-text mb-xl max-w-2xl mx-auto">We are always looking for partners who value precision and purpose in their technology.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-xl">
-          <a href="/contact" class="bg-primary text-white px-xxl py-4 mono-label font-bold hover:brightness-110 transition-all inline-block text-center">
-            Start a Conversation
-          </a>
-        </div>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low border-y border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto text-center">
+        <div class="inline-flex font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-6 border border-primary/20 dark:border-cyber-cyan/20 px-4 py-1.5 rounded-full glass-mid">Engagement_Protocol</div>
+        <h2 class="font-display text-[clamp(2rem,6vw,3.5rem)] font-bold leading-none tracking-[-0.015em] mb-4">Share our vision?</h2>
+        <p class="font-body text-body-base text-on-surface-variant mb-8 max-w-2xl mx-auto">We are always looking for partners who value precision and purpose in their technology.</p>
+        <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-8 py-4 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Start a Conversation</a>
       </div>
     </section>
   </main>

@@ -3,78 +3,38 @@ import { useState } from 'react';
 export default function ContactForm() {
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
+  const labelCls = (key: string) =>
+    `font-label text-[12px] font-semibold tracking-[0.02em] uppercase transition-colors ease-spring ${focusedField === key ? 'text-primary' : 'text-on-surface-variant'}`;
+
+  const inputBase =
+    'w-full rounded-lg border bg-surface-container-lowest px-4 py-3 font-body text-body-base text-on-surface placeholder:text-on-surface-variant/60 input-focus-ring transition-all ease-spring dark:bg-white/[0.06] dark:border-white/[0.08] dark:text-mist-text';
+
   return (
-    <form className="space-y-xl" onSubmit={(e) => e.preventDefault()}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-lg">
-        <div className="flex flex-col gap-sm">
-          <label
-            className={`mono-label transition-colors ${
-              focusedField === 'identity' ? 'text-primary' : 'text-on-surface-variant'
-            }`}
-          >
-            Full Identity
-          </label>
-          <input
-            className="border-fine rounded-none p-md bg-surface input-focus-ring font-sans"
-            placeholder="Erik Andersson"
-            type="text"
-            onFocus={() => setFocusedField('identity')}
-            onBlur={() => setFocusedField(null)}
-          />
+    <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex flex-col gap-2">
+          <label className={labelCls('identity')}>Full Identity</label>
+          <input className={inputBase} placeholder="Erik Andersson" type="text" onFocus={() => setFocusedField('identity')} onBlur={() => setFocusedField(null)} />
         </div>
-        <div className="flex flex-col gap-sm">
-          <label
-            className={`mono-label transition-colors ${
-              focusedField === 'email' ? 'text-primary' : 'text-on-surface-variant'
-            }`}
-          >
-            Corporate Email
-          </label>
-          <input
-            className="border-fine rounded-none p-md bg-surface input-focus-ring font-sans"
-            placeholder="erik@enterprise.se"
-            type="email"
-            onFocus={() => setFocusedField('email')}
-            onBlur={() => setFocusedField(null)}
-          />
+        <div className="flex flex-col gap-2">
+          <label className={labelCls('email')}>Corporate Email</label>
+          <input className={inputBase} placeholder="erik@enterprise.se" type="email" onFocus={() => setFocusedField('email')} onBlur={() => setFocusedField(null)} />
         </div>
       </div>
-      <div className="flex flex-col gap-sm">
-        <label
-          className={`mono-label transition-colors ${
-            focusedField === 'subject' ? 'text-primary' : 'text-on-surface-variant'
-          }`}
-        >
-          Subject of Inquiry
-        </label>
-        <select
-          className="border-fine rounded-none p-md bg-surface input-focus-ring font-sans"
-          onFocus={() => setFocusedField('subject')}
-          onBlur={() => setFocusedField(null)}
-        >
+      <div className="flex flex-col gap-2">
+        <label className={labelCls('subject')}>Subject of Inquiry</label>
+        <select className={inputBase} onFocus={() => setFocusedField('subject')} onBlur={() => setFocusedField(null)}>
           <option>System Implementation</option>
           <option>Strategic Partnership</option>
           <option>Insight Access</option>
           <option>Technical Support</option>
         </select>
       </div>
-      <div className="flex flex-col gap-sm">
-        <label
-          className={`mono-label transition-colors ${
-            focusedField === 'brief' ? 'text-primary' : 'text-on-surface-variant'
-          }`}
-        >
-          Detailed Brief
-        </label>
-        <textarea
-          className="border-fine rounded-none p-md bg-surface input-focus-ring font-sans"
-          placeholder="Describe your operational requirements..."
-          rows={6}
-          onFocus={() => setFocusedField('brief')}
-          onBlur={() => setFocusedField(null)}
-        />
+      <div className="flex flex-col gap-2">
+        <label className={labelCls('brief')}>Detailed Brief</label>
+        <textarea className={inputBase} placeholder="Describe your operational requirements..." rows={6} onFocus={() => setFocusedField('brief')} onBlur={() => setFocusedField(null)} />
       </div>
-      <button className="bg-primary text-white px-xxl py-4 mono-label font-bold hover:brightness-110 transition-all w-full md:w-auto">
+      <button className="w-full md:w-auto rounded-lg bg-primary px-8 py-4 font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-primary transition-all ease-spring hover:shadow-bloom dark:bg-cyber-cyan dark:text-obsidian-black">
         Transmit Inquiry
       </button>
     </form>
