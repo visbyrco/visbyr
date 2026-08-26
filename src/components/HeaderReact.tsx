@@ -18,9 +18,10 @@ export default function HeaderReact() {
       }`}
     >
       <nav className="flex justify-between items-center px-4 md:px-6 max-w-[56rem] mx-auto h-20">
-        <div className="flex items-center gap-sm">
-          <img src="/visbyr-wide-logo.png" alt="Visbyr" className="w-auto h-9" />
-        </div>
+        <a href="/" className="flex items-center gap-2.5">
+          <img src="/chat.svg" alt="Visbyr" width="32" height="32" className="h-8 w-8 shrink-0" />
+          <span className="font-display font-bold text-[22px] tracking-[-0.015em] leading-none text-on-surface">Visbyr</span>
+        </a>
         <div className="hidden md:flex items-center gap-xl">
           <a className="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant hover:text-primary transition-colors ease-spring" href="/philosophy">
             Philosophy
