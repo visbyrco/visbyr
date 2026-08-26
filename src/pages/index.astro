@@ -5,178 +5,183 @@ import Footer from '../components/Footer.astro';
 import SurgicalAccent from '../components/SurgicalAccent.astro';
 ---
 
-<BaseLayout title="Visbyr | Nordic Tech Innovation">
+<BaseLayout title="Visbyr — Systems built in Stockholm">
   <HeaderReact client:load />
   <main class="pt-20">
     <!-- Hero -->
-    <section class="relative py-12 md:py-20 px-4 md:px-6 overflow-hidden border-b border-outline-variant dark:border-white/[0.08]">
+    <section class="relative py-10 md:py-16 px-4 md:px-6 overflow-hidden border-b border-outline-variant dark:border-white/[0.08]">
       <div class="max-w-[56rem] mx-auto">
-        <div class="asymmetric-grid gap-y-8">
-          <div class="col-span-12 lg:col-span-8 flex flex-col justify-end pt-8 md:pt-16 order-2 lg:order-1">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-              <span class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant">Swedish Precision</span>
+        <div class="asymmetric-grid gap-8 md:gap-10">
+          <div class="col-span-12 lg:col-span-7 flex flex-col justify-center pt-2 md:pt-10 order-2 lg:order-1">
+            <div class="flex items-center gap-2.5 mb-5">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></span>
+              <span class="font-label text-[11px] font-semibold tracking-[0.08em] uppercase text-on-surface-variant">Stockholm — Kungsgatan 18</span>
             </div>
-            <h1 class="font-display text-[clamp(2.5rem,8vw,4.5rem)] font-bold leading-[0.95] tracking-[-0.015em] mb-8">
-              The Future of <br />
-              <span class="text-primary dark:text-cyber-cyan italic font-light">Nordic Tech</span> <br />
-              Innovation
+            <h1 class="font-display text-[clamp(2.25rem,6.5vw,3.75rem)] font-bold leading-[0.96] tracking-[-0.02em] mb-5">
+              Systems that<br />
+              do exactly<br />
+              <span class="text-primary dark:text-cyber-cyan font-light italic">what they claim.</span>
             </h1>
-            <div class="flex flex-col md:flex-row gap-8 md:items-start border-t border-outline-variant dark:border-white/[0.08] pt-6">
-              <p class="max-w-md font-body text-body-base text-on-surface-variant leading-relaxed">
-                Streamlining complex workflows with surgical precision. We build the digital backbone for the world's most ambitious enterprises from our Stockholm studio.
-              </p>
-              <div class="flex flex-col gap-2">
-                <a href="/solutions" class="text-left font-label text-[12px] font-semibold tracking-[0.02em] uppercase group flex items-center gap-2 py-2 border-b border-transparent hover:border-primary dark:hover:border-cyber-cyan transition-all ease-spring">
-                  Explore Solutions <span class="material-symbols-outlined text-sm">north_east</span>
-                </a>
-                <a href="/case-studies" class="text-left font-label text-[12px] font-semibold tracking-[0.02em] uppercase group flex items-center gap-2 py-2 border-b border-transparent hover:border-primary dark:hover:border-cyber-cyan transition-all ease-spring">
-                  View Case Studies <span class="material-symbols-outlined text-sm">north_east</span>
-                </a>
+            <p class="max-w-[34rem] font-body text-[16px] leading-[1.7] text-on-surface-variant mb-8">
+              We are a small team in Stockholm. We audit what you have, replace what hurts, and keep what works. Cloud, data pipelines, and network — shipped without taking you offline.
+            </p>
+            <div class="flex flex-wrap gap-4 items-center border-t border-outline-variant/40 dark:border-white/[0.06] pt-6">
+              <a href="/solutions" class="inline-flex items-center gap-2 font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface hover:text-primary dark:hover:text-cyber-cyan transition-colors ease-spring">
+                Explore solutions <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+              <span class="hidden sm:block w-px h-4 bg-outline-variant/40 dark:bg-white/10"></span>
+              <a href="/case-studies" class="inline-flex items-center gap-2 font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant hover:text-on-surface transition-colors ease-spring">
+                Case studies <span class="material-symbols-outlined text-[16px]">north_east</span>
+              </a>
+              <a href="/chat" class="ml-0 sm:ml-2 inline-flex items-center gap-1.5 rounded-full border border-outline-variant dark:border-white/10 px-3.5 py-1.5 font-mono text-[11px] tracking-[0.04em] text-on-surface-variant hover:border-primary/30 hover:text-primary dark:hover:text-cyber-cyan transition-colors">
+                chat.visbyr.com <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-5 order-1 lg:order-2">
+            <div class="relative rounded-2xl border border-outline-variant dark:border-white/[0.08] bg-surface-container-lowest dark:bg-surface-container p-2.5">
+              <div class="overflow-hidden rounded-xl aspect-[4/5] bg-surface-container">
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC23p5x0HlZapnFJd9HSAMfT4hRvRtyDc97SvMOOuPB-Z16xwCU1EHYDpM0S3jJOFlA4ajK5-fQ9cF6zw5nRjSjaVAyAW9X6SqNBWCnk34bOhGqsZnGe9dh5r3XJfCTS0OmEhGkKNJpyvAbVB0lyu2DhFRQJbnEO6SvyWVNAs6KMGdx2TYvgQsxvBHZYmxEK7v0YRuu6KS--WV4rh7gX7tl3AByMydT-ZDBS0FIJlZsnueFRRSZG9Iw"
+                  alt="Stockholm studio interior, daylight, concrete and wood"
+                  loading="eager"
+                />
+              </div>
+              <div class="flex items-center justify-between px-1 pt-2.5 pb-0.5">
+                <span class="font-mono text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/60">Kungsgatan 18 — Stockholm</span>
+                <span class="font-mono text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/60">59.3345° N / 18.0638° E</span>
               </div>
             </div>
           </div>
-          <div class="col-span-12 lg:col-span-4 order-1 lg:order-2 flex justify-end">
-            <div class="relative w-full aspect-[4/5] lg:w-[360px] rounded-xl border border-outline-variant dark:border-white/[0.08] p-2 glass-mid dark:glass-mid overflow-visible">
-              <img
-                class="w-full h-full object-cover grayscale brightness-105 rounded-lg"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC23p5x0HlZapnFJd9HSAMfT4hRvRtyDc97SvMOOuPB-Z16xwCU1EHYDpM0S3jJOFlA4ajK5-fQ9cF6zw5nRjSjaVAyAW9X6SqNBWCnk34bOhGqsZnGe9dh5r3XJfCTS0OmEhGkKNJpyvAbVB0lyu2DhFRQJbnEO6SvyWVNAs6KMGdx2TYvgQsxvBHZYmxEK7v0YRuu6KS--WV4rh7gX7tl3AByMydT-ZDBS0FIJlZsnueFRRSZG9Iw"
-                alt="Minimalist Stockholm architectural office"
-              />
-              <div class="absolute -top-3 -right-3 font-label text-[12px] font-semibold tracking-[0.02em] uppercase bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-3 py-1 rounded-full shadow-bloom">Est. 2024</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof strip — replaces gray placeholder bars -->
+    <section class="bg-surface-container-lowest dark:bg-surface-container-low py-6 px-4 md:px-6 border-b border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+          <span class="font-mono text-[10px] tracking-[0.12em] uppercase text-on-surface-variant/50 shrink-0">Selected work</span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8 flex-1 lg:ml-8">
+            <div class="flex items-baseline gap-3 border-l border-outline-variant/30 dark:border-white/[0.06] pl-4">
+              <span class="font-display text-[22px] font-bold tracking-tight text-on-surface">42%</span>
+              <span class="font-body text-[13px] leading-tight text-on-surface-variant">lower infra cost — <span class="text-on-surface">Svea Logistics, 14 sites</span></span>
+            </div>
+            <div class="flex items-baseline gap-3 border-l border-outline-variant/30 dark:border-white/[0.06] pl-4">
+              <span class="font-display text-[22px] font-bold tracking-tight text-on-surface">89%</span>
+              <span class="font-body text-[13px] leading-tight text-on-surface-variant">failure prediction — <span class="text-on-surface">2,400 sensors</span></span>
+            </div>
+            <div class="flex items-baseline gap-3 border-l border-outline-variant/30 dark:border-white/[0.06] pl-4">
+              <span class="font-display text-[22px] font-bold tracking-tight text-on-surface">&lt;1ms</span>
+              <span class="font-body text-[13px] leading-tight text-on-surface-variant">auth latency — <span class="text-on-surface">32 bank branches</span></span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trusted Partners -->
-    <section class="bg-surface-container-lowest dark:bg-surface-container-low py-8 px-4 md:px-6 border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-        <span class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant opacity-60">Trusted Partners</span>
-        <div class="flex flex-wrap justify-center items-center gap-8 opacity-20 grayscale scale-90">
-          <div class="h-3 w-20 bg-on-surface rounded-sm"></div>
-          <div class="h-3 w-28 bg-on-surface rounded-sm"></div>
-          <div class="h-3 w-24 bg-on-surface rounded-sm"></div>
-          <div class="h-3 w-32 bg-on-surface rounded-sm"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Engineered Solutions -->
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
+    <!-- Capabilities -->
+    <section class="py-14 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
       <div class="max-w-[56rem] mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
-          <div class="max-w-2xl">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+          <div class="max-w-[36rem]">
             <SurgicalAccent />
-            <h2 class="font-display text-display-lg md:text-[32px] font-bold tracking-[-0.015em] mt-4 mb-3">Precision Engineered Systems</h2>
-            <p class="font-body text-body-base text-on-surface-variant leading-relaxed">Modular integration layers designed to scale with your organization's inherent complexity. Each component operates in perfect synchronicity.</p>
+            <h2 class="font-display text-[28px] md:text-[32px] font-bold tracking-[-0.02em] mt-4 mb-3 leading-none">Engineering, not theater</h2>
+            <p class="font-body text-[15px] leading-relaxed text-on-surface-variant">Three places we spend most of our time. Pick the problem you have now. The rest can wait.</p>
           </div>
-          <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Capabilities ]</div>
+          <span class="hidden md:inline font-mono text-[10px] tracking-[0.12em] uppercase text-on-surface-variant/40">Stockholm studio · Est. 2024</span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08]">
-          <div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-outline-variant dark:border-white/[0.08] group glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors duration-500 ease-spring">
-            <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant mb-6">Architecture.01</div>
-            <h3 class="font-display text-headline-md font-semibold mb-3">Cloud Infrastructure</h3>
-            <p class="font-body text-body-sm text-on-surface-variant mb-6 leading-relaxed">Scalable, low-latency infrastructure optimized for the Nordic regulatory landscape and performance requirements.</p>
-            <a class="group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors ease-spring flex items-center gap-2 font-label text-[12px] font-semibold tracking-[0.02em] uppercase" href="/solutions">
-              Documentation <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </a>
-          </div>
-          <div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-outline-variant dark:border-white/[0.08] group glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors duration-500 ease-spring">
-            <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant mb-6">Intelligence.02</div>
-            <h3 class="font-display text-headline-md font-semibold mb-3">AI-Driven Analytics</h3>
-            <p class="font-body text-body-sm text-on-surface-variant mb-6 leading-relaxed">Turn raw data into strategic foresight with our proprietary machine learning models built on local expertise.</p>
-            <a class="group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors ease-spring flex items-center gap-2 font-label text-[12px] font-semibold tracking-[0.02em] uppercase" href="/solutions">
-              Model Architecture <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </a>
-          </div>
-          <div class="p-6 md:p-8 group glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors duration-500 ease-spring">
-            <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant mb-6">Defense.03</div>
-            <h3 class="font-display text-headline-md font-semibold mb-3">Secure Networking</h3>
-            <p class="font-body text-body-sm text-on-surface-variant mb-6 leading-relaxed">Zero-trust architecture ensuring your sensitive intellectual property remains impenetrable across all touchpoints.</p>
-            <a class="group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors ease-spring flex items-center gap-2 font-label text-[12px] font-semibold tracking-[0.02em] uppercase" href="/solutions">
-              Security Audit <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </a>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 rounded-2xl overflow-hidden border border-outline-variant dark:border-white/[0.08] bg-surface-container-lowest dark:bg-surface-container-low">
+          <a href="/solutions#cloud" class="group p-7 md:p-8 border-b md:border-b-0 md:border-r border-outline-variant/40 dark:border-white/[0.06] hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-surface-container dark:bg-white/[0.06] border border-outline-variant/30 dark:border-white/[0.06] flex items-center justify-center mb-6 group-hover:border-primary/20 dark:group-hover:border-cyber-cyan/20 transition-colors">
+              <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">cloud_done</span>
+            </div>
+            <h3 class="font-display text-[18px] font-semibold tracking-tight mb-2.5">Cloud infrastructure</h3>
+            <p class="font-body text-[14px] leading-relaxed text-on-surface-variant mb-5">Hybrid and multi-cloud that respects data residency. Auto-scaling that actually triggers. We migrate live systems without a maintenance window.</p>
+            <span class="inline-flex items-center gap-1.5 font-label text-[11px] tracking-[0.06em] uppercase text-on-surface-variant group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">Docs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </a>
+          <a href="/solutions#ai" class="group p-7 md:p-8 border-b md:border-b-0 md:border-r border-outline-variant/40 dark:border-white/[0.06] hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-surface-container dark:bg-white/[0.06] border border-outline-variant/30 dark:border-white/[0.06] flex items-center justify-center mb-6 group-hover:border-primary/20 dark:group-hover:border-cyber-cyan/20 transition-colors">
+              <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">analytics</span>
+            </div>
+            <h3 class="font-display text-[18px] font-semibold tracking-tight mb-2.5">Analytics that earns trust</h3>
+            <p class="font-body text-[14px] leading-relaxed text-on-surface-variant mb-5">We instrument first, then model. You see the query, the data, and the confidence interval — not a black box with a percentage.</p>
+            <span class="inline-flex items-center gap-1.5 font-label text-[11px] tracking-[0.06em] uppercase text-on-surface-variant group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">Model notes <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </a>
+          <a href="/solutions#networking" class="group p-7 md:p-8 hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-surface-container dark:bg-white/[0.06] border border-outline-variant/30 dark:border-white/[0.06] flex items-center justify-center mb-6 group-hover:border-primary/20 dark:group-hover:border-cyber-cyan/20 transition-colors">
+              <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">verified_user</span>
+            </div>
+            <h3 class="font-display text-[18px] font-semibold tracking-tight mb-2.5">Secure networks</h3>
+            <p class="font-body text-[14px] leading-relaxed text-on-surface-variant mb-5">Zero-trust perimeters with hardware keys and encrypted tunnels. Audit logs you can actually read. Latency under a millisecond.</p>
+            <span class="inline-flex items-center gap-1.5 font-label text-[11px] tracking-[0.06em] uppercase text-on-surface-variant group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">Security audit <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Testimonial -->
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface dark:text-mist-text">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
-        <div class="w-48 h-64 flex-shrink-0 rounded-xl overflow-hidden p-1 glass-mid bg-white/10 dark:bg-white/[0.06] border border-white/10">
-          <img
-            class="w-full h-full object-cover grayscale brightness-90 rounded-lg"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA112QztJkpg-qQlRMqE6sATzF6Bzy4pkQOzYKj2WRvbriR3gaIsvvkKB3iu0EeqhwCHPlATQgEjHDBi9ztui-_MnuQdBYatZ0ghfCXa9kINcgN_Dv-oOVxXPIsK3nZWtMLpM2oU_Nd4sl_5Lc6ybW19E7diTv5TIFPGEpgY09dKzzlDHA6hTVBWL78ze0IAuPBza6lItSN2_zddGDC6mg7g0E95LD72TzJyD3ILfA5rmJh6eTBJ0pP"
-            alt="Swedish technology executive"
-          />
-        </div>
-        <div class="space-y-4">
-          <span class="material-symbols-outlined text-cyber-cyan text-5xl">format_quote</span>
-          <p class="font-display text-2xl md:text-3xl font-light italic leading-tight">
-            "Visbyr didn't just provide a tool; they redefined our entire operational framework. Their commitment to <span class="text-cyber-cyan not-italic font-semibold">Nordic functionalism</span> is evident in every line of code."
+    <!-- Quote — editorial, not stock photo theater -->
+    <section class="px-4 md:px-6 bg-inverse-surface dark:bg-[#0b0f10] text-inverse-on-surface dark:text-mist-text">
+      <div class="max-w-[56rem] mx-auto py-12 md:py-14 flex flex-col md:flex-row gap-8 md:gap-10 items-start border-y border-white/5 -mx-4 md:mx-auto md:rounded-xl px-4 md:px-8">
+        <div class="hidden md:block w-px self-stretch bg-white/10 shrink-0"></div>
+        <div class="flex-1 min-w-0">
+          <p class="font-display text-[22px] md:text-[26px] font-light leading-[1.35] tracking-[-0.015em] mb-6">
+            “We cut infrastructure spend by 42% in eight weeks. No downtime, no surprise rewrite. The Visbyr team maps what you have before they change anything — that is why it worked.”
           </p>
-          <div>
-            <p class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-white">Anders Lindström</p>
-            <p class="font-label text-[12px] tracking-[0.02em] uppercase text-white/50">CTO, Svea Dynamics</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center font-mono text-[11px] tracking-wide text-white">AL</div>
+            <div>
+              <p class="font-label text-[11px] tracking-[0.06em] uppercase text-white leading-none">Anders Lindström</p>
+              <p class="font-body text-[13px] text-white/60 leading-tight mt-1">CTO, Svea Dynamics — 2,400 sensors, Stockholm</p>
+            </div>
           </div>
+        </div>
+        <div class="md:w-[240px] shrink-0 rounded-xl bg-white/[0.04] border border-white/10 p-4">
+          <p class="font-mono text-[10px] tracking-[0.08em] uppercase text-white/40 mb-3">Svea Dynamics result</p>
+          <div class="space-y-3">
+            <div class="flex justify-between items-baseline"><span class="font-body text-[13px] text-white/60">Cost reduction</span><span class="font-display font-bold text-white">42%</span></div>
+            <div class="flex justify-between items-baseline"><span class="font-body text-[13px] text-white/60">Prediction accuracy</span><span class="font-display font-bold text-white">89%</span></div>
+            <div class="flex justify-between items-baseline"><span class="font-body text-[13px] text-white/60">Downtime during migration</span><span class="font-display font-bold text-cyber-cyan">0 min</span></div>
+          </div>
+          <a href="/case-studies" class="mt-4 inline-flex items-center gap-1.5 font-label text-[11px] tracking-[0.06em] uppercase text-white/70 hover:text-cyber-cyan transition-colors">Read the case <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a>
         </div>
       </div>
     </section>
 
     <!-- Visbyr Method -->
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background overflow-hidden">
+    <section class="py-14 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background overflow-hidden">
       <div class="max-w-[56rem] mx-auto">
-        <div class="asymmetric-grid rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08]">
-          <div class="col-span-12 lg:col-span-4 p-6 lg:p-8 bg-surface-container-low dark:bg-surface-container lg:sticky lg:top-20 h-fit">
+        <div class="rounded-2xl overflow-hidden border border-outline-variant dark:border-white/[0.08] flex flex-col lg:flex-row">
+          <div class="lg:w-[300px] shrink-0 p-7 lg:p-8 bg-surface-container-low dark:bg-surface-container border-b lg:border-b-0 lg:border-r border-outline-variant dark:border-white/[0.08]">
             <SurgicalAccent />
-            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">The Visbyr <br />Method</h2>
-            <p class="font-body text-body-base text-on-surface-variant mb-6 leading-relaxed">A measured, deliberate transition from legacy systems to digital excellence.</p>
-            <div class="font-mono text-[10px] tracking-[0.1em] uppercase text-on-surface-variant opacity-40">Reference: SE-STHLM-24</div>
+            <h2 class="font-display text-[28px] md:text-[32px] font-bold tracking-[-0.02em] mt-4 mb-3 leading-none">The Visbyr<br />method</h2>
+            <p class="font-body text-[14px] leading-relaxed text-on-surface-variant mb-6">We work in three passes. Short audit, careful integration, then we stay around to keep it healthy.</p>
+            <p class="font-mono text-[10px] tracking-[0.1em] uppercase text-on-surface-variant/40">Stockholm · 2–12 weeks per pass</p>
           </div>
-          <div class="col-span-12 lg:col-span-8 border-t lg:border-t-0 lg:border-l border-outline-variant dark:border-white/[0.08] divide-y divide-outline-variant/30 dark:divide-white/[0.06]">
-            <div class="p-6 lg:p-8 hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors ease-spring">
-              <div class="flex flex-col md:flex-row gap-6">
-                <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan shrink-0 mt-1">Phase_01</div>
-                <div class="space-y-3">
-                  <h4 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Audit & Discovery</h4>
-                  <p class="font-body text-body-base text-on-surface-variant max-w-xl leading-relaxed">We map your current ecosystem to identify bottlenecks and latent opportunities for optimization using precision auditing tools.</p>
-                  <div class="flex gap-2 pt-3">
-                    <div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div>
-                    <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-                    <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-                  </div>
-                </div>
+          <div class="flex-1 divide-y divide-outline-variant/30 dark:divide-white/[0.06]">
+            <div class="p-7 lg:p-8 flex gap-5 md:gap-7">
+              <span class="font-mono text-[12px] tracking-[0.08em] text-primary dark:text-cyber-cyan mt-1 shrink-0">01</span>
+              <div class="space-y-2 min-w-0">
+                <h4 class="font-display text-[20px] font-semibold tracking-tight">Audit & discovery</h4>
+                <p class="font-body text-[14px] leading-relaxed text-on-surface-variant max-w-xl">We map your current stack — integrations, data flows, and where time actually goes. You get a map and a short list of what to fix first. No 40-page deck.</p>
+                <p class="font-mono text-[11px] tracking-[0.04em] text-on-surface-variant/60 pt-1">2–4 weeks · architecture map, baseline report, roadmap</p>
               </div>
             </div>
-            <div class="p-6 lg:p-8 hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors ease-spring">
-              <div class="flex flex-col md:flex-row gap-6">
-                <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan shrink-0 mt-1">Phase_02</div>
-                <div class="space-y-3">
-                  <h4 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Modular Integration</h4>
-                  <p class="font-body text-body-base text-on-surface-variant max-w-xl leading-relaxed">Our engineers deploy targeted solutions that integrate seamlessly with your existing stack without downtime or operational friction.</p>
-                  <div class="flex gap-2 pt-3">
-                    <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-                    <div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div>
-                    <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-                  </div>
-                </div>
+            <div class="p-7 lg:p-8 flex gap-5 md:gap-7">
+              <span class="font-mono text-[12px] tracking-[0.08em] text-primary dark:text-cyber-cyan mt-1 shrink-0">02</span>
+              <div class="space-y-2 min-w-0">
+                <h4 class="font-display text-[20px] font-semibold tracking-tight">Modular integration</h4>
+                <p class="font-body text-[14px] leading-relaxed text-on-surface-variant max-w-xl">We ship one module at a time, behind feature flags. Each piece runs alongside what you have until you trust it. No big-bang cutover.</p>
+                <p class="font-mono text-[11px] tracking-[0.04em] text-on-surface-variant/60 pt-1">4–12 weeks · tested modules, docs, no downtime</p>
               </div>
             </div>
-            <div class="p-6 lg:p-8 hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors ease-spring">
-              <div class="flex flex-col md:flex-row gap-6">
-                <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan shrink-0 mt-1">Phase_03</div>
-                <div class="space-y-3">
-                  <h4 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Optimization & Scale</h4>
-                  <p class="font-body text-body-base text-on-surface-variant max-w-xl leading-relaxed">Continuous monitoring and AI-assisted updates ensure your system remains at peak performance in an ever-evolving market.</p>
-                  <div class="flex gap-2 pt-3">
-                    <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-                    <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-                    <div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div>
-                  </div>
-                </div>
+            <div class="p-7 lg:p-8 flex gap-5 md:gap-7">
+              <span class="font-mono text-[12px] tracking-[0.08em] text-primary dark:text-cyber-cyan mt-1 shrink-0">03</span>
+              <div class="space-y-2 min-w-0">
+                <h4 class="font-display text-[20px] font-semibold tracking-tight">Stay in shape</h4>
+                <p class="font-body text-[14px] leading-relaxed text-on-surface-variant max-w-xl">Dashboards, quarterly reviews, and a private channel. We watch latency and cost so small issues do not become outages.</p>
+                <p class="font-mono text-[11px] tracking-[0.04em] text-on-surface-variant/60 pt-1">Ongoing · dashboards, reviews, 24/7 channel</p>
               </div>
             </div>
           </div>
@@ -184,19 +189,23 @@ import SurgicalAccent from '../components/SurgicalAccent.astro';
       </div>
     </section>
 
-    <!-- CTA — composer pill -->
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low border-y border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto text-center">
-        <div class="inline-flex font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-6 border border-primary/20 dark:border-cyber-cyan/20 px-4 py-1.5 rounded-full glass-mid">Engagement_Protocol</div>
-        <h2 class="font-display text-[clamp(2rem,6vw,3.5rem)] font-bold leading-none tracking-[-0.015em] mb-4">Ready to evolve your <br />digital landscape?</h2>
-        <p class="font-body text-body-base text-on-surface-variant mb-8 max-w-2xl mx-auto leading-relaxed">Join the leading Swedish firms leveraging Visbyr to outpace the global market through Nordic engineering.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <button class="rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-8 py-4 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">
-            Book a Demo
-          </button>
-          <button class="rounded-full border border-outline-variant dark:border-white/[0.12] text-on-surface px-8 py-4 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:bg-surface-container-high dark:hover:bg-white/[0.06] transition-all ease-spring">
-            Contact Sales
-          </button>
+    <!-- CTA -->
+    <section class="py-14 md:py-20 px-4 md:px-6 bg-surface-container-low dark:bg-surface-container-low border-t border-outline-variant dark:border-white/[0.08]">
+      <div class="max-w-[56rem] mx-auto">
+        <div class="rounded-2xl border border-outline-variant dark:border-white/[0.08] bg-surface-container-lowest dark:bg-surface-container p-8 md:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div class="max-w-xl">
+            <p class="font-mono text-[10px] tracking-[0.12em] uppercase text-on-surface-variant/60 mb-3">Start with an audit</p>
+            <h2 class="font-display text-[30px] md:text-[36px] font-bold leading-[0.95] tracking-[-0.02em] mb-3">Want to see where<br />you stand?</h2>
+            <p class="font-body text-[15px] leading-relaxed text-on-surface-variant">Book a 45-minute call. We will look at your stack and tell you what we would do first. No sales deck.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+            <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-7 py-3.5 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">
+              Book a call
+            </a>
+            <a href="/contact" class="inline-flex items-center justify-center rounded-full border border-outline-variant dark:border-white/[0.12] text-on-surface px-7 py-3.5 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:bg-surface-container-high dark:hover:bg-white/[0.06] transition-colors ease-spring">
+              Contact sales
+            </a>
+          </div>
         </div>
       </div>
     </section>

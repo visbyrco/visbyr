@@ -123,9 +123,9 @@
   }
 }
 
-/* Material symbols */
+/* Material symbols — weight 400 reads better at small sizes */
 .material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 /* Typography helpers */
@@ -187,30 +187,42 @@
 
 /* Glass elevation — mid (cards, bubbles) */
 .glass-mid {
-  background: var(--surface-container);
+  background: var(--surface-container-lowest);
   border: 1px solid var(--outline-variant);
 }
 .dark .glass-mid {
-  background: rgba(29, 32, 34, 0.72);
+  background: rgba(24, 28, 29, 0.68);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-color: rgba(255, 255, 255, 0.08);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+}
+
+/* Flat card — no glass, just surface + hairline. Use where glass is too much. */
+.card-flat {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+}
+.dark .card-flat {
+  background: var(--surface-container-low);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Glass top (header, composer, modals) */
 .glass-top {
-  background: var(--surface-container-lowest);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--outline-variant);
-  box-shadow: 0 16px 48px -6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 8px 24px -12px rgba(0, 0, 0, 0.12);
 }
 .dark .glass-top {
-  background: rgba(29, 32, 34, 0.88);
+  background: rgba(16, 20, 21, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: none;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
 }
 
 /* Bloom for active primary */
@@ -221,18 +233,16 @@
   box-shadow: 0 0 24px rgba(0, 219, 233, 0.25);
 }
 
-/* 2% monochrome grain on glass in dark */
-.dark .glass-mid,
+/* Subtle grain on header glass only — not every card. Cards looked noisy. */
 .dark .glass-top {
   position: relative;
 }
-.dark .glass-mid::after,
 .dark .glass-top::after {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.02;
+  opacity: 0.015;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
   border-radius: inherit;
 }
