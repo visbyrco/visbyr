@@ -1,0 +1,75 @@
+---
+const cols = [
+  {
+    title: 'Studio',
+    links: [
+      { href: '/philosophy', label: 'Philosophy' },
+      { href: '/process', label: 'Process' },
+      { href: '/careers', label: 'Careers' },
+    ],
+  },
+  {
+    title: 'Work',
+    links: [
+      { href: '/solutions', label: 'Solutions' },
+      { href: '/case-studies', label: 'Case studies' },
+      { href: '/chat', label: 'Visbyr Chat' },
+    ],
+  },
+  {
+    title: 'Connect',
+    links: [
+      { href: '/contact', label: 'Contact' },
+      { href: '/insights', label: 'Notes' },
+      { href: 'https://chat.visbyr.com', label: 'chat.visbyr.com', external: true },
+    ],
+  },
+];
+---
+
+<footer class="border-t border-hairline">
+  <div class="max-w-page mx-auto px-5 md:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div class="md:col-span-5 space-y-4">
+        <a href="/" class="inline-flex items-center gap-2.5 text-ink">
+          <svg viewBox="0 0 32 32" width="24" height="24" class="shrink-0" role="img" aria-label="Visbyr">
+            <rect x="2" y="2" width="28" height="28" rx="6" fill="currentColor" opacity="0.07" />
+            <path d="M9 11 L16 22 L23 11 H19.2 L16 17.4 L12.8 11 Z" fill="currentColor" />
+          </svg>
+          <span class="text-[17px] font-semibold tracking-[-0.02em] leading-none">Visbyr</span>
+        </a>
+        <p class="text-[14px] text-muted leading-relaxed max-w-[16rem]">
+          Small engineering studio in Stockholm. Cloud, data, and network work for teams that need it to keep running.
+        </p>
+        <p class="font-mono text-[11px] tracking-[0.02em] text-faint">
+          Kungsgatan 18, 111 35 Stockholm<br />
+          +46 8 123 45 67 · hello@visbyr.com
+        </p>
+      </div>
+      <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+        {cols.map((c) => (
+          <div class="flex flex-col gap-2.5">
+            <span class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint">{c.title}</span>
+            {c.links.map((l) => (
+              <a
+                class="text-[14px] text-muted hover:text-ink transition-colors"
+                href={l.href}
+                target={l.external ? '_blank' : undefined}
+                rel={l.external ? 'noopener' : undefined}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-hairline flex flex-col md:flex-row justify-between gap-3">
+      <p class="font-mono text-[11px] tracking-[0.02em] text-faint">© 2026 Visbyr AB — Stockholm</p>
+      <div class="flex gap-5">
+        <a class="text-[13px] text-faint hover:text-muted transition-colors" href="/legal">Legal</a>
+        <a class="text-[13px] text-faint hover:text-muted transition-colors" href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>

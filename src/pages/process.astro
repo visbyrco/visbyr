@@ -1,116 +1,71 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
-import SurgicalAccent from '../components/SurgicalAccent.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import CtaSection from '../components/CtaSection.astro';
 ---
 
-<BaseLayout title="Process | Visbyr">
-  <HeaderReact client:load />
-  <main class="pt-20">
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Methodology</span>
+<BaseLayout title="Process | Visbyr" description="How Visbyr works: a short audit, careful integration, then ongoing care. Three passes, 2–12 weeks each.">
+  <SiteHeader />
+  <main class="pt-16">
+    <PageHeader
+      n="02"
+      label="Process"
+      title="Three passes, no surprises"
+      lede="A short audit, careful integration, then we stay around to keep it healthy. Every engagement follows the same shape."
+    />
+
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <div class="border-t border-hairline">
+          {[
+            {
+              n: '01',
+              title: 'Audit & discovery',
+              dur: '2–4 weeks',
+              body: 'We begin by mapping what you already have: every integration point, the data flows, where time actually goes. You get a map and a short list of what to fix first — not a 40-page deck.',
+              deliverables: 'Architecture map · Performance baseline · Roadmap',
+            },
+            {
+              n: '02',
+              title: 'Modular integration',
+              dur: '4–12 weeks',
+              body: 'We ship one module at a time, behind feature flags. Each piece is built, tested, and validated on its own before it touches the broader system, so nothing goes down.',
+              deliverables: 'Deployed modules · Integration test suite · Documentation',
+            },
+            {
+              n: '03',
+              title: 'Optimization & scale',
+              dur: 'Ongoing',
+              body: 'We watch latency and cost so small issues do not become outages. Quarterly reviews and a private channel keep the system healthy as your organization grows.',
+              deliverables: 'Performance dashboards · Quarterly reviews · 24/7 channel',
+            },
+          ].map((p) => (
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-10 py-10 border-b border-hairline">
+              <div class="md:col-span-4">
+                <p class="font-mono text-[12px] tracking-[0.08em] text-accent mb-3">{p.n}</p>
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-semibold tracking-[-0.03em] leading-tight">{p.title}</h2>
+                <p class="mt-3 text-[14px] text-muted">{p.dur}</p>
+              </div>
+              <div class="md:col-span-8 space-y-5">
+                <p class="text-[16px] leading-relaxed text-muted max-w-[38rem]">{p.body}</p>
+                <p class="text-[14px] text-ink"><span class="text-faint">Deliverables — </span>{p.deliverables}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        <h1 class="font-display text-[clamp(2.5rem,8vw,4rem)] font-bold leading-none tracking-[-0.015em] mb-4 max-w-3xl">
-          The Visbyr <span class="text-primary dark:text-cyber-cyan">Process.</span>
-        </h1>
-        <p class="font-body text-body-base text-on-surface-variant max-w-2xl leading-relaxed">
-          A measured, deliberate methodology that transforms legacy complexity into digital excellence. Every engagement follows a proven three-phase framework.
-        </p>
-      </div>
-    </section>
 
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
-          <div class="max-w-2xl">
-            <SurgicalAccent />
-            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">Engagement Framework</h2>
-            <p class="font-body text-body-base text-on-surface-variant">From initial audit to sustained optimization — a structured path to operational transformation.</p>
-          </div>
-          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Phases ]</div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08] divide-y divide-outline-variant dark:divide-white/[0.08]">
-          <div class="p-6 md:p-8 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.03] transition-colors ease-spring">
-            <div class="flex flex-col md:flex-row gap-6">
-              <div class="md:w-1/4">
-                <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan font-semibold mb-2">Phase_01</div>
-                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Audit & Discovery</h3>
-                <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mt-1">Duration: 2–4 weeks</p>
-              </div>
-              <div class="md:w-3/4 space-y-4">
-                <p class="font-body text-body-base text-on-surface-variant leading-relaxed">We begin with a comprehensive assessment of your existing technology ecosystem. Our engineers map every integration point, identify bottlenecks, and uncover latent opportunities for optimization.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">System Architecture Map</p></div>
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Performance Baseline Report</p></div>
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Optimization Roadmap</p></div>
-                </div>
-                <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6 md:p-8 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.03] transition-colors ease-spring">
-            <div class="flex flex-col md:flex-row gap-6">
-              <div class="md:w-1/4">
-                <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan font-semibold mb-2">Phase_02</div>
-                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Modular Integration</h3>
-                <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mt-1">Duration: 4–12 weeks</p>
-              </div>
-              <div class="md:w-3/4 space-y-4">
-                <p class="font-body text-body-base text-on-surface-variant leading-relaxed">Our engineers deploy targeted solutions that integrate seamlessly with your existing stack. Each module is built, tested, and validated independently before being connected to the broader system — ensuring zero downtime.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Deployed Solution Modules</p></div>
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Integration Test Suite</p></div>
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Documentation Package</p></div>
-                </div>
-                <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6 md:p-8 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.03] transition-colors ease-spring">
-            <div class="flex flex-col md:flex-row gap-6">
-              <div class="md:w-1/4">
-                <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan font-semibold mb-2">Phase_03</div>
-                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Optimization & Scale</h3>
-                <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant mt-1">Duration: Ongoing</p>
-              </div>
-              <div class="md:w-3/4 space-y-4">
-                <p class="font-body text-body-base text-on-surface-variant leading-relaxed">Continuous monitoring and AI-assisted updates ensure your system remains at peak performance. We provide proactive maintenance, quarterly reviews, and strategic guidance as your organization evolves.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Performance Dashboards</p></div>
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">Quarterly Strategy Reviews</p></div>
-                  <div class="p-3 glass-mid rounded-lg"><p class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-1">Deliverable</p><p class="font-body text-body-sm">24/7 Support Channel</p></div>
-                </div>
-                <div class="flex gap-2 pt-2"><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div><div class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></div></div>
-              </div>
-            </div>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 py-10">
+          <div class="md:border-l border-hairline pl-5"><p class="text-[26px] font-semibold tracking-[-0.02em] leading-none">98%</p><p class="mt-2 text-[14px] text-muted">client retention</p></div>
+          <div class="md:border-l border-hairline pl-5"><p class="text-[26px] font-semibold tracking-[-0.02em] leading-none">42%</p><p class="mt-2 text-[14px] text-muted">average cost reduction</p></div>
+          <div class="md:border-l border-hairline pl-5"><p class="text-[26px] font-semibold tracking-[-0.02em] leading-none">0 min</p><p class="mt-2 text-[14px] text-muted">downtime during integration</p></div>
         </div>
       </div>
     </section>
 
-    <section class="py-12 px-4 md:px-6 bg-surface-container-low dark:bg-surface-container border-y border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-        <div class="p-6"><p class="font-display text-4xl font-bold text-primary dark:text-cyber-cyan mb-1">98%</p><p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Client Retention Rate</p></div>
-        <div class="p-6"><p class="font-display text-4xl font-bold text-primary dark:text-cyber-cyan mb-1">42%</p><p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Avg. Cost Reduction</p></div>
-        <div class="p-6"><p class="font-display text-4xl font-bold text-primary dark:text-cyber-cyan mb-1">&lt;1ms</p><p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Integration Downtime</p></div>
-      </div>
-    </section>
-
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low border-y border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto text-center">
-        <div class="inline-flex font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan mb-6 border border-primary/20 dark:border-cyber-cyan/20 px-4 py-1.5 rounded-full glass-mid">Engagement_Protocol</div>
-        <h2 class="font-display text-[clamp(2rem,6vw,3.5rem)] font-bold leading-none tracking-[-0.015em] mb-4">Begin your transformation.</h2>
-        <p class="font-body text-body-base text-on-surface-variant mb-8 max-w-2xl mx-auto">Schedule a discovery session with our engineering team to explore how the Visbyr process applies to your organization.</p>
-        <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-8 py-4 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Start Phase 01</a>
-      </div>
-    </section>
+    <CtaSection title="Start with pass 01" body="Book a discovery session. We look at your stack, then tell you honestly whether the Visbyr method fits." cta="Book a call" />
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>

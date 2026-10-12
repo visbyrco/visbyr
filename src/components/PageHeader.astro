@@ -1,0 +1,17 @@
+---
+// Consistent page opener used on every subpage.
+const { n, label, title, lede } = Astro.props;
+---
+
+<section class="border-b border-hairline">
+  <div class="max-w-page mx-auto px-5 md:px-8 pt-32 md:pt-40 pb-12 md:pb-16">
+    <div class="flex items-baseline gap-3 mb-6">
+      {n && <span class="font-mono text-[11px] tracking-[0.08em] text-faint">{n}</span>}
+      <span class="eyebrow">{label}</span>
+    </div>
+    <h1 class="text-[clamp(2.25rem,5.5vw,3.75rem)] font-semibold leading-[1.02] tracking-[-0.03em] max-w-[20ch] text-balance">
+      {title}
+    </h1>
+    {lede && <p class="mt-6 max-w-[38rem] text-[17px] leading-relaxed text-muted">{lede}</p>}
+  </div>
+</section>

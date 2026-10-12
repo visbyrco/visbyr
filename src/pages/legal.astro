@@ -1,44 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
-import SurgicalAccent from '../components/SurgicalAccent.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="Legal | Visbyr">
-  <HeaderReact client:load />
-  <main class="pt-20">
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-3xl mx-auto">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Legal</span>
-        </div>
-        <h1 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-3">Terms of Service.</h1>
-        <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Last updated: January 2024</p>
-      </div>
-    </section>
+  <SiteHeader />
+  <main class="pt-16">
+    <PageHeader label="Legal" title="Terms of service" lede="Last updated January 2024." />
 
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface dark:bg-background">
-      <div class="max-w-3xl mx-auto space-y-8">
-        {
-          [
-            { n: '1', t: 'Acceptance of Terms', p: 'By accessing or using Visbyr\'s services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services. These terms apply to all visitors, users, and clients of the Visbyr platform.' },
-            { n: '2', t: 'Description of Services', p: 'Visbyr provides enterprise technology solutions including cloud infrastructure architecture, AI-driven analytics, and secure networking services. All services are provided on a contractual basis and are subject to the terms of individual service agreements.' },
-            { n: '3', t: 'Intellectual Property', p: 'All content, designs, code, and methodologies developed by Visbyr remain the intellectual property of Visbyr Nordic Functionalism AB unless otherwise specified in a service agreement. Client-specific deliverables are governed by the terms of the respective contract.' },
-            { n: '4', t: 'Limitation of Liability', p: 'Visbyr shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services. Our total liability shall not exceed the fees paid by you for the specific service giving rise to the claim.' },
-            { n: '5', t: 'Governing Law', p: 'These terms shall be governed by and construed in accordance with the laws of Sweden. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the Swedish courts.' },
-            { n: '6', t: 'Contact', p: 'For legal inquiries, please contact us at our Stockholm office or via the contact form on our website.' },
-          ].map((s) => (
-            <div class="glass-mid rounded-xl p-6">
-              <SurgicalAccent />
-              <h2 class="font-display text-xl font-semibold mt-4 mb-3">{s.n}. {s.t}</h2>
-              <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">{s.p}</p>
-            </div>
-          ))
-        }
+    <section class="border-t border-hairline">
+      <div class="max-w-[42rem] mx-auto px-5 md:px-8 py-14 md:py-20">
+        {[
+          ['1', 'Acceptance of terms', 'By accessing or using Visbyr\'s services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services. These terms apply to all visitors, users, and clients of the Visbyr platform.'],
+          ['2', 'Description of services', 'Visbyr provides engineering services including cloud infrastructure architecture, analytics, and secure networking. All services are provided on a contractual basis and are subject to the terms of individual service agreements.'],
+          ['3', 'Intellectual property', 'Content, designs, code, and methodologies developed by Visbyr remain the property of Visbyr Nordic Functionalism AB unless otherwise specified in a service agreement. Client-specific deliverables are governed by the terms of the respective contract.'],
+          ['4', 'Limitation of liability', 'Visbyr shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services. Our total liability shall not exceed the fees paid by you for the specific service giving rise to the claim.'],
+          ['5', 'Governing law', 'These terms shall be governed by and construed in accordance with the laws of Sweden. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the Swedish courts.'],
+          ['6', 'Contact', 'For legal inquiries, please contact us at our Stockholm office or through the contact form on this site.'],
+        ].map(([n, t, p]) => (
+          <div class="py-8 border-b border-hairline first:pt-0">
+            <h2 class="text-[19px] font-semibold tracking-[-0.02em] mb-3"><span class="font-mono text-[12px] text-faint mr-3">{n}</span>{t}</h2>
+            <p class="text-[15px] leading-relaxed text-muted">{p}</p>
+          </div>
+        ))}
       </div>
     </section>
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>

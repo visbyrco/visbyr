@@ -1,44 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
-import SurgicalAccent from '../components/SurgicalAccent.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
-<BaseLayout title="Privacy Policy | Visbyr">
-  <HeaderReact client:load />
-  <main class="pt-20">
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-3xl mx-auto">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Privacy</span>
-        </div>
-        <h1 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-3">Privacy Policy.</h1>
-        <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Last updated: January 2024</p>
-      </div>
-    </section>
+<BaseLayout title="Privacy | Visbyr">
+  <SiteHeader />
+  <main class="pt-16">
+    <PageHeader label="Privacy" title="Privacy policy" lede="Last updated January 2024." />
 
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface dark:bg-background">
-      <div class="max-w-3xl mx-auto space-y-8">
-        {
-          [
-            { n: '1', t: 'Data Collection', p: 'We collect information you provide directly, such as when you fill out contact forms, subscribe to insights, or engage our services. This may include your name, email address, company name, and the content of your communications.' },
-            { n: '2', t: 'Use of Information', p: 'We use collected information to respond to inquiries, provide services, send strategic insights and updates, and improve our offerings. We do not sell or share your personal data with third parties for marketing purposes.' },
-            { n: '3', t: 'Data Security', p: 'We implement industry-standard security measures to protect your data, including encryption in transit and at rest. Our infrastructure is hosted within Nordic data centers compliant with EU data sovereignty requirements.' },
-            { n: '4', t: 'Your Rights', p: 'Under GDPR, you have the right to access, rectify, erase, or port your personal data. You may also object to processing or request restriction of processing. To exercise these rights, please contact us through our Stockholm office.' },
-            { n: '5', t: 'Data Retention', p: 'We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, or as required by law. Client data is retained according to the terms of individual service agreements.' },
-            { n: '6', t: 'Contact', p: 'For privacy-related inquiries or to exercise your data rights, please contact our team in Stockholm.' },
-          ].map((s) => (
-            <div class="glass-mid rounded-xl p-6">
-              <SurgicalAccent />
-              <h2 class="font-display text-xl font-semibold mt-4 mb-3">{s.n}. {s.t}</h2>
-              <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">{s.p}</p>
-            </div>
-          ))
-        }
+    <section class="border-t border-hairline">
+      <div class="max-w-[42rem] mx-auto px-5 md:px-8 py-14 md:py-20">
+        {[
+          ['1', 'Data collection', 'We collect information you provide directly, such as when you fill out contact forms or engage our services. This may include your name, email address, company name, and the content of your communications.'],
+          ['2', 'Use of information', 'We use collected information to respond to inquiries, provide services, and improve our offerings. We do not sell or share your personal data with third parties for marketing purposes.'],
+          ['3', 'Data security', 'We implement standard security measures to protect your data, including encryption in transit and at rest. Our infrastructure is hosted within Nordic data centers that meet EU data residency requirements.'],
+          ['4', 'Your rights', 'Under GDPR, you have the right to access, rectify, erase, or port your personal data. You may also object to processing or request restriction of processing. To exercise these rights, contact us through our Stockholm office.'],
+          ['5', 'Data retention', 'We retain personal data only as long as necessary for the purposes it was collected, or as required by law. Client data is retained according to the terms of individual service agreements.'],
+          ['6', 'Contact', 'For privacy-related inquiries or to exercise your data rights, please contact our team in Stockholm.'],
+        ].map(([n, t, p]) => (
+          <div class="py-8 border-b border-hairline first:pt-0">
+            <h2 class="text-[19px] font-semibold tracking-[-0.02em] mb-3"><span class="font-mono text-[12px] text-faint mr-3">{n}</span>{t}</h2>
+            <p class="text-[15px] leading-relaxed text-muted">{p}</p>
+          </div>
+        ))}
       </div>
     </section>
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>

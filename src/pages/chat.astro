@@ -1,319 +1,170 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import ArrowUpRight from '../components/ArrowUpRight.astro';
+import ArrowRight from '../components/ArrowRight.astro';
 ---
 
-<BaseLayout title="Visbyr Chat — One chat, every model">
-  <HeaderReact client:load />
-  <main class="pt-20">
+<BaseLayout title="Visbyr Chat — One chat, every model" description="Multi-provider AI chat. Bring your own keys from OpenAI, Anthropic, Google, xAI, or any OpenAI-compatible endpoint.">
+  <SiteHeader />
+  <main class="pt-16">
     <!-- Hero -->
-    <section class="relative overflow-hidden border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto px-4 md:px-6 py-12 md:py-20">
-        <div class="asymmetric-grid gap-6">
-          <!-- Left: copy -->
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-12 md:py-20">
+        <div class="grid-12 gap-8 md:gap-12">
           <div class="col-span-12 lg:col-span-7 flex flex-col justify-center">
-            <div class="flex items-center gap-2 mb-5">
-              <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan animate-pulse"></span>
-              <span class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant">Visbyr Chat — Live at chat.visbyr.com</span>
-            </div>
-
-            <h1 class="font-display text-[clamp(2.5rem,7vw,4rem)] font-bold leading-[0.95] tracking-[-0.015em] mb-6">
+            <p class="eyebrow mb-6">Visbyr Chat — live at chat.visbyr.com</p>
+            <h1 class="text-[clamp(2.5rem,6vw,4.25rem)] font-semibold leading-[1.0] tracking-[-0.03em] mb-7">
               One chat.<br />
-              <span class="text-primary dark:text-cyber-cyan">Every model.</span>
+              <em class="not-italic italic text-accent">Every model.</em>
             </h1>
-
-            <p class="font-body text-body-base text-on-surface-variant leading-relaxed max-w-xl mb-8">
+            <p class="text-[17px] leading-relaxed text-muted max-w-[34rem] mb-9">
               Visbyr Chat is a multi-provider AI chat that does not lock you in. Bring your own keys from OpenAI, Anthropic, Google, xAI, or any OpenAI-compatible endpoint, pick the best model for the job, and switch mid-conversation without losing context.
             </p>
-
-            <div class="flex flex-wrap gap-3 mb-8">
-              <a href="https://chat.visbyr.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-7 py-3.5 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">
-                Open chat.visbyr.com
-                <span class="material-symbols-outlined text-[16px]">north_east</span>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 pt-6 border-t border-hairline">
+              <a href="https://chat.visbyr.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-accent text-on-accent px-5 py-2.5 text-[13px] font-medium rounded-[3px] hover:bg-accent-strong transition-colors">
+                Open chat.visbyr.com <ArrowUpRight />
               </a>
-              <a href="#how-it-works" class="inline-flex items-center gap-2 rounded-full border border-outline-variant dark:border-white/[0.12] text-on-surface px-7 py-3.5 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:bg-surface-container-high dark:hover:bg-white/[0.06] transition-all ease-spring">
-                How it works
+              <a href="#how-it-works" class="inline-flex items-center gap-2 text-[14px] text-muted hover:text-ink transition-colors">
+                How it works <ArrowRight />
               </a>
             </div>
-
-            <div class="flex flex-wrap gap-2">
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-outline-variant dark:border-white/[0.08] bg-surface-container-lowest dark:bg-white/[0.04] px-3 py-1.5 font-label text-[11px] tracking-[0.02em] uppercase text-on-surface-variant">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan"></span> Encrypted keys
-              </span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-outline-variant dark:border-white/[0.08] bg-surface-container-lowest dark:bg-white/[0.04] px-3 py-1.5 font-label text-[11px] tracking-[0.02em] uppercase text-on-surface-variant">
-                <span class="w-1.5 h-1.5 rounded-full bg-electric-purple"></span> Resumable streams
-              </span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-outline-variant dark:border-white/[0.08] bg-surface-container-lowest dark:bg-white/[0.04] px-3 py-1.5 font-label text-[11px] tracking-[0.02em] uppercase text-on-surface-variant">
-                <span class="w-1.5 h-1.5 rounded-full bg-tertiary dark:bg-tertiary-fixed"></span> Your data stays yours
-              </span>
-            </div>
+            <p class="mt-6 font-mono text-[12px] tracking-[0.02em] text-faint">Encrypted keys · resumable streams · your data stays yours</p>
           </div>
 
-          <!-- Right: composer preview -->
-          <div class="col-span-12 lg:col-span-5 lg:pl-4">
-            <div class="glass-mid rounded-xl p-3 md:p-4">
-              <!-- fake window chrome -->
-              <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-outline-variant dark:bg-white/20"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-outline-variant dark:bg-white/20"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-primary/40 dark:bg-cyber-cyan/40"></span>
-                </div>
-                <span class="font-mono text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/60">chat.visbyr.com</span>
+          <!-- Composer preview -->
+          <div class="col-span-12 lg:col-span-5">
+            <div class="border border-hairline bg-card">
+              <div class="flex items-center justify-between px-4 py-2.5 border-b border-hairline">
+                <span class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint">chat.visbyr.com</span>
+                <span class="font-mono text-[11px] text-faint">GPT-5</span>
               </div>
-
-              <!-- conversation mock -->
-              <div class="space-y-3 mb-4">
+              <div class="p-4 space-y-3">
                 <div class="flex justify-end">
-                  <div class="max-w-[85%] rounded-xl rounded-tr-sm bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-4 py-2.5 font-body text-[14px] leading-relaxed">
+                  <div class="max-w-[85%] bg-accent text-on-accent px-4 py-2.5 text-[14px] leading-relaxed rounded-[3px]">
                     Compare Claude 4.5 and GPT-5 for this codebase?
                   </div>
                 </div>
-                <div class="flex gap-2">
-                  <div class="w-6 h-6 rounded-full bg-surface-container-high dark:bg-white/[0.08] flex items-center justify-center shrink-0 mt-0.5">
-                    <span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_awesome</span>
-                  </div>
-                  <div class="flex-1 space-y-2">
-                    <div class="glass-mid rounded-xl rounded-tl-sm px-4 py-3">
-                      <p class="font-body text-[14px] leading-relaxed text-on-surface">
-                        Switched to <span class="font-semibold">Claude 4.5 Sonnet</span> — it is stronger on large refactors. Want me to scan the repo and propose an artifact for the diff?
-                      </p>
-                      <div class="mt-3 flex items-center gap-2">
-                        <span class="font-label text-[10px] tracking-[0.08em] uppercase px-2 py-1 rounded-full bg-secondary-container dark:bg-electric-purple/20 text-on-secondary-container dark:text-electric-purple border border-secondary-fixed-dim dark:border-electric-purple/20">reasoning: medium</span>
-                        <span class="font-label text-[10px] tracking-[0.08em] uppercase px-2 py-1 rounded-full bg-surface-container-high dark:bg-white/[0.06] text-on-surface-variant">tools: on</span>
-                      </div>
-                    </div>
-                    <div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant/60">
-                      <span class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-cyber-cyan animate-pulse"></span> streaming — resumable if you reload
-                    </div>
-                  </div>
+                <div class="border border-hairline bg-wash px-4 py-3 rounded-[3px]">
+                  <p class="text-[14px] leading-relaxed">Switched to <span class="font-medium">Claude 4.5 Sonnet</span> — it is stronger on large refactors. Want me to scan the repo and propose a plan for the diff?</p>
+                  <p class="mt-3 font-mono text-[10px] tracking-[0.06em] uppercase text-faint">reasoning: medium · tools: on</p>
                 </div>
+                <p class="font-mono text-[11px] text-faint">streaming — resumable if you reload</p>
               </div>
-
-              <!-- composer bar -->
-              <div class="rounded-full border border-outline-variant dark:border-white/[0.08] bg-surface-container-lowest dark:bg-white/[0.06] dark:backdrop-blur-[12px] flex items-center gap-2 px-2 py-2 shadow-ambient-sm">
-                <button class="w-8 h-8 rounded-full bg-surface-container dark:bg-white/[0.08] flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[16px] text-on-surface-variant">add</span>
-                </button>
-                <span class="flex-1 font-body text-[14px] text-on-surface-variant/60 truncate">Ask anything…</span>
-                <span class="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-outline-variant dark:border-white/[0.08] bg-surface-container dark:bg-white/[0.06] px-3 py-1.5 font-label text-[11px] tracking-[0.02em] uppercase text-on-surface-variant">
-                  <span class="w-2 h-2 rounded-full bg-electric-purple"></span> GPT-5
-                </span>
-                <span class="w-8 h-8 rounded-full bg-primary dark:bg-cyber-cyan flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[16px] text-on-primary dark:text-obsidian-black">arrow_upward</span>
+              <div class="mx-4 mb-4 flex items-center gap-2 border border-hairline bg-background rounded-full pl-4 pr-2 py-2">
+                <span class="flex-1 text-[14px] text-faint truncate">Ask anything…</span>
+                <span class="hidden sm:inline font-mono text-[11px] text-faint border border-hairline px-2 py-1 rounded-full">/</span>
+                <span class="w-7 h-7 bg-accent text-on-accent flex items-center justify-center rounded-full shrink-0">
+                  <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" stroke-linecap="square" /></svg>
                 </span>
               </div>
-
-              <div class="flex items-center justify-between mt-3 px-1">
-                <span class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/50">Press / for commands</span>
-                <span class="font-mono text-[10px] text-on-surface-variant/40">resumable-stream · Redis</span>
-              </div>
             </div>
-
-            <!-- provider strip under card -->
-            <div class="mt-3 flex flex-wrap gap-1.5 justify-center lg:justify-start">
-              <span class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/50 py-1">Works with</span>
-              <span class="font-mono text-[11px] px-2 py-1 rounded-full bg-surface-container dark:bg-white/[0.06] border border-outline-variant/30 dark:border-white/[0.06] text-on-surface-variant">OpenAI</span>
-              <span class="font-mono text-[11px] px-2 py-1 rounded-full bg-surface-container dark:bg-white/[0.06] border border-outline-variant/30 dark:border-white/[0.06] text-on-surface-variant">Anthropic</span>
-              <span class="font-mono text-[11px] px-2 py-1 rounded-full bg-surface-container dark:bg-white/[0.06] border border-outline-variant/30 dark:border-white/[0.06] text-on-surface-variant">Google</span>
-              <span class="font-mono text-[11px] px-2 py-1 rounded-full bg-surface-container dark:bg-white/[0.06] border border-outline-variant/30 dark:border-white/[0.06] text-on-surface-variant">xAI</span>
-              <span class="font-mono text-[11px] px-2 py-1 rounded-full border border-dashed border-outline-variant dark:border-white/[0.12] text-on-surface-variant/70">+ any OpenAI-compatible</span>
-            </div>
+            <p class="mt-4 text-center lg:text-left font-mono text-[11px] tracking-[0.02em] text-faint">Works with OpenAI · Anthropic · Google · xAI · any OpenAI-compatible endpoint</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- What makes it Visbyr -->
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-10">
-          <div class="max-w-2xl">
-            <div class="surgical-accent mb-4"></div>
-            <h2 class="font-display text-display-lg md:text-[32px] font-bold tracking-[-0.015em] mb-3">Chat without the lock-in</h2>
-            <p class="font-body text-body-base text-on-surface-variant leading-relaxed">
-              Most chat apps pick a provider for you. Visbyr Chat lets you bring your own. Keys are encrypted, models are discovered from the catalog at <span class="font-mono text-[13px] bg-surface-container dark:bg-white/[0.06] px-1.5 py-0.5 rounded">models.dev</span>, and capabilities like vision, tools, and reasoning are shown before you send.
-            </p>
+    <!-- Why -->
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow n="01" label="Why Visbyr Chat" />
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-hairline mt-8">
+          <div class="py-8 md:pr-10 border-b md:border-b-0 md:border-r border-hairline">
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Keys stay encrypted</h3>
+            <p class="text-[15px] leading-relaxed text-muted mb-4">Add any provider with an encrypted API key. No proxy, no markup. Your key decrypts only when your request runs.</p>
+            <p class="font-mono text-[11px] tracking-[0.04em] text-faint">AES-GCM · ENCRYPTION_KEY</p>
           </div>
-          <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan shrink-0">[ 01 — Why Visbyr Chat ]</div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="glass-mid rounded-xl p-6 hover:shadow-ambient-sm transition-all ease-spring">
-            <div class="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-white/[0.06] flex items-center justify-center mb-5">
-              <span class="material-symbols-outlined text-primary dark:text-cyber-cyan">key</span>
-            </div>
-            <h3 class="font-display text-headline-md font-semibold mb-2">Keys stay encrypted</h3>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-3">Add any provider with an encrypted API key. No proxy, no markup. Your key decrypts only when your request runs.</p>
-            <span class="font-mono text-[11px] tracking-[0.06em] uppercase text-on-surface-variant/50">AES-GCM · ENCRYPTION_KEY</span>
+          <div class="py-8 md:px-10 border-b md:border-b-0 md:border-r border-hairline">
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Switch models mid-chat</h3>
+            <p class="text-[15px] leading-relaxed text-muted mb-4">Start on a fast model, switch to a reasoning model when it gets hard. The model selector follows your conversation, not the other way around.</p>
+            <p class="font-mono text-[11px] tracking-[0.04em] text-faint">Model catalog · live sync</p>
           </div>
-
-          <div class="glass-mid rounded-xl p-6 hover:shadow-ambient-sm transition-all ease-spring">
-            <div class="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-white/[0.06] flex items-center justify-center mb-5">
-              <span class="material-symbols-outlined text-primary dark:text-cyber-cyan">swap_horiz</span>
-            </div>
-            <h3 class="font-display text-headline-md font-semibold mb-2">Switch models mid-chat</h3>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-3">Start on a fast model, switch to a reasoning model when it gets hard. The model selector follows your conversation, not the other way around.</p>
-            <span class="font-mono text-[11px] tracking-[0.06em] uppercase text-on-surface-variant/50">model catalog · live sync</span>
-          </div>
-
-          <div class="glass-mid rounded-xl p-6 hover:shadow-ambient-sm transition-all ease-spring">
-            <div class="w-10 h-10 rounded-lg bg-surface-container-high dark:bg-white/[0.06] flex items-center justify-center mb-5">
-              <span class="material-symbols-outlined text-primary dark:text-cyber-cyan">stream</span>
-            </div>
-            <h3 class="font-display text-headline-md font-semibold mb-2">Streams that survive reloads</h3>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-3">Close the tab, lose Wi-Fi, come back. The stream resumes through Redis so you do not lose a long answer halfway through.</p>
-            <span class="font-mono text-[11px] tracking-[0.06em] uppercase text-on-surface-variant/50">resumable-stream · Redis</span>
+          <div class="py-8 md:pl-10">
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Streams that survive reloads</h3>
+            <p class="text-[15px] leading-relaxed text-muted mb-4">Close the tab, lose Wi-Fi, come back. The stream resumes through Redis so you do not lose a long answer halfway through.</p>
+            <p class="font-mono text-[11px] tracking-[0.04em] text-faint">resumable-stream · Redis</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Feature grid -->
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex items-center gap-3 mb-8">
-          <div class="surgical-accent"></div>
-          <span class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant">What you get</span>
+    <!-- What you get -->
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow n="02" label="What you get" />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 border-t border-hairline mt-8">
+          {[
+            ['Tools that actually do things', 'Web search, URL fetch, document write and edit, writing suggestions, and Python execution with Pyodide. All behind one model catalog.'],
+            ['Artifacts on the side', 'Code, text, sheets, and images live in a panel next to the chat. Edit with versioning, not by pasting back and forth.'],
+            ['Reasoning control', 'Pick effort per message — none, minimal, low, medium, high, max — and see it reflected in the model badge.'],
+            ['Real rich-text editing', 'Documents use ProseMirror, not a textarea. Code artifacts use CodeMirror with Shiki highlighting.'],
+            ['Mobile that keeps up', 'Custom keyboard handling, swipe actions, and a sidebar that becomes a sheet. It feels like an app, not a shrunken desktop.'],
+            ['Export and extras', 'Export chats to markdown, slash commands, custom themes, private chats, file attachments, and image paste.'],
+          ].map(([t, d]) => (
+            <div class="py-6 lg:py-8 border-b border-hairline">
+              <h3 class="text-[16px] font-semibold mb-2">{t}</h3>
+              <p class="text-[15px] leading-relaxed text-muted">{d}</p>
+            </div>
+          ))}
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="glass-mid rounded-xl p-6">
-            <h4 class="font-display text-[16px] font-semibold mb-2 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">construction</span>
-              Tools that actually do things
-            </h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Web search, URL fetch, weather, document write and edit, writing suggestions, and Python execution with Pyodide. All behind one model catalog.</p>
-          </div>
-          <div class="glass-mid rounded-xl p-6">
-            <h4 class="font-display text-[16px] font-semibold mb-2 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">article</span>
-              Artifacts on the side
-            </h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Code, text, sheets, and images live in a panel next to the chat. Edit with versioning, not by pasting back and forth.</p>
-          </div>
-          <div class="glass-mid rounded-xl p-6">
-            <h4 class="font-display text-[16px] font-semibold mb-2 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">psychology</span>
-              Reasoning control
-            </h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Pick effort per message — none, minimal, low, medium, high, xhigh, max — and see it reflected in the model badge.</p>
-          </div>
-          <div class="glass-mid rounded-xl p-6">
-            <h4 class="font-display text-[16px] font-semibold mb-2 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">edit_note</span>
-              ProseMirror editing
-            </h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Documents use a real rich-text editor, not a textarea. Code artifacts use CodeMirror with Shiki highlighting.</p>
-          </div>
-          <div class="glass-mid rounded-xl p-6">
-            <h4 class="font-display text-[16px] font-semibold mb-2 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">smartphone</span>
-              Mobile that keeps up
-            </h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Custom keyboard handling, swipe actions, and a sidebar that becomes a sheet. It feels like an app, not a shrunken desktop.</p>
-          </div>
-          <div class="glass-mid rounded-xl p-6">
-            <h4 class="font-display text-[16px] font-semibold mb-2 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">download</span>
-              Export and extras
-            </h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Export chats to markdown, slash commands, custom themes, private chats, file attachments, and image paste.</p>
-          </div>
-        </div>
-
-        <!-- tech strip -->
-        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div class="rounded-xl border border-outline-variant/40 dark:border-white/[0.06] bg-surface-container-low dark:bg-white/[0.03] px-4 py-3">
-            <div class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/60 mb-1">Stack</div>
-            <div class="font-mono text-[12px] text-on-surface">Next.js 16 · React 19 · AI SDK 7</div>
-          </div>
-          <div class="rounded-xl border border-outline-variant/40 dark:border-white/[0.06] bg-surface-container-low dark:bg-white/[0.03] px-4 py-3">
-            <div class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/60 mb-1">Auth</div>
-            <div class="font-mono text-[12px] text-on-surface">Clerk · private by default</div>
-          </div>
-          <div class="rounded-xl border border-outline-variant/40 dark:border-white/[0.06] bg-surface-container-low dark:bg-white/[0.03] px-4 py-3">
-            <div class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/60 mb-1">Data</div>
-            <div class="font-mono text-[12px] text-on-surface">Postgres · Drizzle ORM</div>
-          </div>
-          <div class="rounded-xl border border-outline-variant/40 dark:border-white/[0.06] bg-surface-container-low dark:bg-white/[0.03] px-4 py-3">
-            <div class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/60 mb-1">Cache</div>
-            <div class="font-mono text-[12px] text-on-surface">Redis · rate limit + resume</div>
-          </div>
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-8 border-t border-hairline">
+          {[
+            ['Stack', 'Next.js 16 · React 19 · AI SDK 7'],
+            ['Auth', 'Clerk · private by default'],
+            ['Data', 'Postgres · Drizzle ORM'],
+            ['Cache', 'Redis · rate limit + resume'],
+          ].map(([k, v]) => (
+            <div class="py-5 border-b border-hairline">
+              <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint mb-1.5">{k}</p>
+              <p class="font-mono text-[12px] text-ink">{v}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
 
-    <!-- Artifacts / Tools showcase — two column -->
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <!-- Artifacts -->
-          <div class="rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08] glass-mid p-6 md:p-7">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="w-2 h-2 rounded-full bg-electric-purple"></span>
-              <span class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant">Artifacts</span>
-              <span class="ml-auto font-mono text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/40">split view · 50vw</span>
-            </div>
-            <h3 class="font-display text-2xl font-bold tracking-[-0.015em] mb-3">Code and writing live next to the chat, not inside it</h3>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-6">
+    <!-- Artifacts / Tools -->
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12">
+          <div>
+            <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint mb-5">Artifacts</p>
+            <h3 class="text-[clamp(1.5rem,2.6vw,2rem)] font-semibold leading-[1.1] tracking-[-0.03em] mb-4">Code and writing live next to the chat, not inside it</h3>
+            <p class="text-[15px] leading-relaxed text-muted mb-7 max-w-[34rem]">
               When the model writes something worth keeping, it opens in a panel on the right. You read and edit there while the conversation stays readable on the left. Every change versions, so you can step back.
             </p>
-            <div class="grid grid-cols-2 gap-2 mb-6">
-              <div class="rounded-lg bg-surface-container-low dark:bg-white/[0.04] border border-outline-variant/30 dark:border-white/[0.06] p-3">
-                <div class="font-mono text-[11px] tracking-[0.06em] uppercase text-on-surface-variant/60 mb-1">Kinds</div>
-                <div class="font-body text-[14px] text-on-surface leading-relaxed">Code · Text · Sheet · Image</div>
+            <div class="border border-hairline bg-[#141819]">
+              <div class="flex items-center justify-between px-4 py-2 border-b border-white/10">
+                <span class="font-mono text-[11px] text-white/50">artifact.ts</span>
+                <span class="font-mono text-[10px] tracking-[0.08em] uppercase text-white/30">v3 · copy</span>
               </div>
-              <div class="rounded-lg bg-surface-container-low dark:bg-white/[0.04] border border-outline-variant/30 dark:border-white/[0.06] p-3">
-                <div class="font-mono text-[11px] tracking-[0.06em] uppercase text-on-surface-variant/60 mb-1">Editor</div>
-                <div class="font-body text-[14px] text-on-surface leading-relaxed">ProseMirror · CodeMirror · Shiki</div>
-              </div>
-            </div>
-            <!-- mini code block -->
-            <div class="rounded-lg overflow-hidden border border-outline-variant dark:border-white/[0.08] bg-obsidian-black">
-              <div class="flex items-center justify-between px-3 py-2 bg-white/[0.06] border-b border-white/[0.06]">
-                <span class="font-mono text-[11px] text-white/60">artifact.ts</span>
-                <span class="font-mono text-[10px] tracking-[0.08em] uppercase text-white/40">v3 · copy</span>
-              </div>
-              <pre class="font-mono text-[12px] leading-relaxed text-white/80 p-3 overflow-x-auto"><code>writeDocument(&#123; kind: "code", title: "parse-csv.ts" &#125;)
+              <pre class="font-mono text-[12px] leading-relaxed text-white/75 p-4 overflow-x-auto"><code>writeDocument(&#123; kind: "code", title: "parse-csv.ts" &#125;)
   // streams into the panel
   // you edit, it versions</code></pre>
             </div>
           </div>
-
-          <!-- Tools -->
-          <div class="rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08] glass-mid p-6 md:p-7">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-              <span class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-surface-variant">Tools</span>
-              <span class="ml-auto font-mono text-[10px] tracking-[0.08em] uppercase text-on-surface-variant/40">AI SDK · tool calling</span>
-            </div>
-            <h3 class="font-display text-2xl font-bold tracking-[-0.015em] mb-3">The model can search, fetch, calculate, and write files</h3>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed mb-6">
-              Tools are not demos. Web search and URL fetch for grounding, weather for context, Python for real compute, and document tools that target edits with find-and-replace.
+          <div>
+            <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint mb-5">Tools</p>
+            <h3 class="text-[clamp(1.5rem,2.6vw,2rem)] font-semibold leading-[1.1] tracking-[-0.03em] mb-4">The model can search, fetch, calculate, and write files</h3>
+            <p class="text-[15px] leading-relaxed text-muted mb-7 max-w-[34rem]">
+              Tools are not demos. Web search and URL fetch for grounding, Python for real compute, and document tools that target edits with find-and-replace.
             </p>
-            <div class="space-y-2">
-              <div class="flex items-center gap-3 rounded-lg bg-surface-container-low dark:bg-white/[0.04] border border-outline-variant/30 dark:border-white/[0.06] px-3 py-2.5">
-                <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">search</span>
-                <span class="font-mono text-[12px] text-on-surface">search-web</span>
-                <span class="ml-auto font-body text-[12px] text-on-surface-variant/60">ground answers</span>
-              </div>
-              <div class="flex items-center gap-3 rounded-lg bg-surface-container-low dark:bg-white/[0.04] border border-outline-variant/30 dark:border-white/[0.06] px-3 py-2.5">
-                <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">link</span>
-                <span class="font-mono text-[12px] text-on-surface">fetch-url</span>
-                <span class="ml-auto font-body text-[12px] text-on-surface-variant/60">read any page</span>
-              </div>
-              <div class="flex items-center gap-3 rounded-lg bg-surface-container-low dark:bg-white/[0.04] border border-outline-variant/30 dark:border-white/[0.06] px-3 py-2.5">
-                <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">code</span>
-                <span class="font-mono text-[12px] text-on-surface">run-python</span>
-                <span class="ml-auto font-body text-[12px] text-on-surface-variant/60">Pyodide in browser</span>
-              </div>
-              <div class="flex items-center gap-3 rounded-lg bg-surface-container-low dark:bg-white/[0.04] border border-outline-variant/30 dark:border-white/[0.06] px-3 py-2.5">
-                <span class="material-symbols-outlined text-[18px] text-primary dark:text-cyber-cyan">edit_document</span>
-                <span class="font-mono text-[12px] text-on-surface">write / edit-document</span>
-                <span class="ml-auto font-body text-[12px] text-on-surface-variant/60">versioned</span>
-              </div>
+            <div class="border-t border-hairline">
+              {[
+                ['search-web', 'ground answers'],
+                ['fetch-url', 'read any page'],
+                ['run-python', 'Pyodide in browser'],
+                ['write / edit-document', 'versioned'],
+              ].map(([cmd, note]) => (
+                <div class="flex items-center justify-between gap-4 py-3 border-b border-hairline">
+                  <span class="font-mono text-[12px] text-ink">{cmd}</span>
+                  <span class="text-[13px] text-faint">{note}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -321,41 +172,34 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- How it works -->
-    <section id="how-it-works" class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background border-y border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="asymmetric-grid rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08]">
-          <div class="col-span-12 lg:col-span-4 p-6 lg:p-8 bg-surface-container-low dark:bg-surface-container lg:sticky lg:top-20 h-fit">
-            <div class="surgical-accent mb-4"></div>
-            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-3">How it <br />works</h2>
-            <p class="font-body text-body-base text-on-surface-variant leading-relaxed mb-6">Three steps. No sales call.</p>
-            <div class="font-mono text-[10px] tracking-[0.1em] uppercase text-on-surface-variant opacity-40">chat.visbyr.com — auth required</div>
+    <section id="how-it-works" class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow n="03" label="How it works" />
+        <div class="grid-12 gap-8 md:gap-12 mt-8">
+          <div class="col-span-12 lg:col-span-4">
+            <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] tracking-[-0.03em]">Three steps.<br />No sales call.</h2>
+            <p class="mt-5 font-mono text-[11px] tracking-[0.04em] text-faint">chat.visbyr.com — auth required</p>
           </div>
-          <div class="col-span-12 lg:col-span-8 border-t lg:border-t-0 lg:border-l border-outline-variant dark:border-white/[0.08] divide-y divide-outline-variant/30 dark:divide-white/[0.06]">
-            <div class="p-6 lg:p-8 hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors ease-spring">
-              <div class="flex flex-col md:flex-row gap-6">
-                <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan shrink-0 mt-1">Step_01</div>
-                <div class="space-y-3">
-                  <h4 class="font-display text-xl md:text-2xl font-bold tracking-[-0.015em]">Sign in and add a provider</h4>
-                  <p class="font-body text-body-base text-on-surface-variant max-w-xl leading-relaxed">Chat needs an account. After sign-in, open Settings and add a provider. Paste an API key from OpenAI, Anthropic, Google, or xAI — or point a custom provider at any OpenAI-compatible base URL. Keys are encrypted with your <span class="font-mono text-[13px] bg-surface-container-low dark:bg-white/[0.06] px-1 py-0.5 rounded">ENCRYPTION_KEY</span>.</p>
-                </div>
+          <div class="col-span-12 lg:col-span-8 border-t border-hairline">
+            <div class="py-8 border-b border-hairline flex gap-6 md:gap-10">
+              <span class="font-mono text-[12px] tracking-[0.08em] text-accent shrink-0 mt-1.5">01</span>
+              <div>
+                <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-2.5">Sign in and add a provider</h3>
+                <p class="text-[15px] leading-relaxed text-muted max-w-[34rem]">After sign-in, open Settings and add a provider. Paste an API key from OpenAI, Anthropic, Google, or xAI — or point a custom provider at any OpenAI-compatible base URL. Keys are encrypted with your <span class="font-mono text-[13px]">ENCRYPTION_KEY</span>.</p>
               </div>
             </div>
-            <div class="p-6 lg:p-8 hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors ease-spring">
-              <div class="flex flex-col md:flex-row gap-6">
-                <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan shrink-0 mt-1">Step_02</div>
-                <div class="space-y-3">
-                  <h4 class="font-display text-xl md:text-2xl font-bold tracking-[-0.015em]">Pick a model, set how hard it should think</h4>
-                  <p class="font-body text-body-base text-on-surface-variant max-w-xl leading-relaxed">The catalog shows what each model can do — tools, vision, reasoning — and how much thinking it supports. Choose per message. Reasoning effort goes from none to max, and the badge in the composer tells you what is active.</p>
-                </div>
+            <div class="py-8 border-b border-hairline flex gap-6 md:gap-10">
+              <span class="font-mono text-[12px] tracking-[0.08em] text-accent shrink-0 mt-1.5">02</span>
+              <div>
+                <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-2.5">Pick a model, set how hard it should think</h3>
+                <p class="text-[15px] leading-relaxed text-muted max-w-[34rem]">The catalog shows what each model can do — tools, vision, reasoning — and how much thinking it supports. Choose per message; the badge in the composer tells you what is active.</p>
               </div>
             </div>
-            <div class="p-6 lg:p-8 hover:bg-surface-container dark:hover:bg-white/[0.03] transition-colors ease-spring">
-              <div class="flex flex-col md:flex-row gap-6">
-                <div class="font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan shrink-0 mt-1">Step_03</div>
-                <div class="space-y-3">
-                  <h4 class="font-display text-xl md:text-2xl font-bold tracking-[-0.015em]">Chat, build, export</h4>
-                  <p class="font-body text-body-base text-on-surface-variant max-w-xl leading-relaxed">Chat with streaming markdown, reasoning blocks, and code blocks with copy. When the model builds an artifact, refine it in place. When you are done, export the thread to markdown — or try <span class="font-mono text-[13px] bg-surface-container-low dark:bg-white/[0.06] px-1 py-0.5 rounded">DEMO_MODE=1</span> locally if you just want to look around.</p>
-                </div>
+            <div class="py-8 flex gap-6 md:gap-10">
+              <span class="font-mono text-[12px] tracking-[0.08em] text-accent shrink-0 mt-1.5">03</span>
+              <div>
+                <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-2.5">Chat, build, export</h3>
+                <p class="text-[15px] leading-relaxed text-muted max-w-[34rem]">Chat with streaming markdown, reasoning blocks, and code blocks with copy. When the model builds an artifact, refine it in place. When you are done, export the thread to markdown — or run <span class="font-mono text-[13px]">DEMO_MODE=1</span> locally if you just want to look around.</p>
               </div>
             </div>
           </div>
@@ -363,45 +207,38 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- For whom + final CTA -->
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          <div class="glass-mid rounded-xl p-6">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-3">person</span>
-            <h4 class="font-display text-headline-md font-semibold mb-2">Researchers</h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Keep one place for every provider. Switch to the cheapest model for skimming, the strongest for synthesis.</p>
+    <!-- For whom + CTA -->
+    <section>
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10 border-t border-hairline mb-14">
+          <div class="py-6 md:py-8 md:pr-10 border-b md:border-b-0 md:border-r border-hairline">
+            <h3 class="text-[16px] font-semibold mb-2">Researchers</h3>
+            <p class="text-[15px] leading-relaxed text-muted">Keep one place for every provider. Switch to the cheapest model for skimming, the strongest for synthesis.</p>
           </div>
-          <div class="glass-mid rounded-xl p-6">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-3">terminal</span>
-            <h4 class="font-display text-headline-md font-semibold mb-2">Developers</h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Artifacts keep code out of the scroll. Python runs in the browser. No context blown on pasted files.</p>
+          <div class="py-6 md:py-8 md:px-10 border-b md:border-b-0 md:border-r border-hairline">
+            <h3 class="text-[16px] font-semibold mb-2">Developers</h3>
+            <p class="text-[15px] leading-relaxed text-muted">Artifacts keep code out of the scroll. Python runs in the browser. No context blown on pasted files.</p>
           </div>
-          <div class="glass-mid rounded-xl p-6">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-3">shield</span>
-            <h4 class="font-display text-headline-md font-semibold mb-2">Teams that own their keys</h4>
-            <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Self-host with Docker Compose, Postgres, and Redis. Or run the demo with no external services at all.</p>
+          <div class="py-6 md:py-8 md:pl-10">
+            <h3 class="text-[16px] font-semibold mb-2">Teams that own their keys</h3>
+            <p class="text-[15px] leading-relaxed text-muted">Self-host with Docker Compose, Postgres, and Redis. Or run the demo with no external services at all.</p>
           </div>
         </div>
 
-        <div class="rounded-xl border border-outline-variant dark:border-white/[0.08] bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface dark:text-mist-text p-8 md:p-10 text-center">
-          <div class="inline-flex font-label text-[11px] font-semibold tracking-[0.02em] uppercase text-cyber-cyan border border-cyber-cyan/20 px-3 py-1 rounded-full mb-4">Try it</div>
-          <h2 class="font-display text-[clamp(1.75rem,5vw,2.5rem)] font-bold tracking-[-0.015em] leading-none mb-3">Start chatting at <span class="text-cyber-cyan">chat.visbyr.com</span></h2>
-          <p class="font-body text-body-base text-white/70 max-w-2xl mx-auto leading-relaxed mb-6">
-            Sign in, add a provider, pick a model. For a quick look without keys, run locally with <span class="font-mono text-[13px] bg-white/10 px-1.5 py-0.5 rounded text-white">DEMO_MODE=1 pnpm dev:demo</span>.
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-3">
-            <a href="https://chat.visbyr.com" target="_blank" rel="noopener noreferrer" class="rounded-full bg-cyber-cyan text-obsidian-black px-8 py-3.5 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">
-              Open Visbyr Chat
-            </a>
-            <a href="https://github.com" class="rounded-full border border-white/20 text-white px-8 py-3.5 font-label text-[12px] font-semibold tracking-[0.02em] uppercase hover:bg-white/10 transition-all ease-spring">
-              View source
-            </a>
+        <div class="border-t border-hairline pt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+          <div class="max-w-[34rem]">
+            <h2 class="text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.05] tracking-[-0.03em]">
+              Start chatting at <a href="https://chat.visbyr.com" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline underline-offset-4">chat.visbyr.com</a>
+            </h2>
+            <p class="mt-4 text-[16px] leading-relaxed text-muted">Sign in, add a provider, pick a model. For a quick look without keys, run locally with <span class="font-mono text-[13px]">DEMO_MODE=1 pnpm dev:demo</span>.</p>
           </div>
-          <p class="font-label text-[10px] tracking-[0.06em] uppercase text-white/40 mt-4">Apache 2.0 · Postgres · Redis optional · Hosted auth</p>
+          <div class="flex items-center gap-5 shrink-0">
+            <a href="https://chat.visbyr.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-accent text-on-accent px-6 py-3 text-[13px] font-medium rounded-[3px] hover:bg-accent-strong transition-colors">Open Visbyr Chat</a>
+            <span class="font-mono text-[11px] tracking-[0.02em] text-faint">Apache 2.0 · self-hostable</span>
+          </div>
         </div>
       </div>
     </section>
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>
