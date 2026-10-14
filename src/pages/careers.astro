@@ -1,101 +1,72 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
-import SurgicalAccent from '../components/SurgicalAccent.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import ArrowRight from '../components/ArrowRight.astro';
 ---
 
-<BaseLayout title="Careers | Visbyr">
-  <HeaderReact client:load />
-  <main class="pt-20">
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Join the Studio</span>
-        </div>
-        <h1 class="font-display text-[clamp(2.5rem,8vw,4rem)] font-bold leading-none tracking-[-0.015em] mb-4 max-w-3xl">
-          Build the <span class="text-primary dark:text-cyber-cyan">future</span> with us.
-        </h1>
-        <p class="font-body text-body-base text-on-surface-variant max-w-2xl leading-relaxed">
-          We are a collective of engineers, designers, and strategists united by a shared commitment to Nordic functionalism. If you believe technology should be purposeful, precise, and enduring — you belong here.
-        </p>
-      </div>
-    </section>
+<BaseLayout title="Careers | Visbyr" description="Open positions at the Visbyr studio in Stockholm. Cloud, ML, security, and design.">
+  <SiteHeader />
+  <main class="pt-16">
+    <PageHeader
+      n="05"
+      label="Careers"
+      title="Small team, high trust"
+      lede="We are eight engineers and designers in Stockholm who believe technology should be purposeful, precise, and enduring. You would own projects from audit to deployment."
+    />
 
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
-          <div class="max-w-2xl">
-            <SurgicalAccent />
-            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">Open Positions</h2>
-            <p class="font-body text-body-base text-on-surface-variant">Current opportunities at our Stockholm studio.</p>
-          </div>
-          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Roles ]</div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-outline-variant dark:border-white/[0.08] divide-y divide-outline-variant dark:divide-white/[0.08]">
-          {
-            [
-              { tag: 'Engineering', loc: 'Stockholm', title: 'Senior Cloud Infrastructure Engineer', desc: 'Design and implement scalable cloud architectures for enterprise clients across the Nordic region.' },
-              { tag: 'AI / ML', loc: 'Stockholm', title: 'Machine Learning Researcher', desc: 'Develop predictive models and neural architectures for industrial IoT and enterprise analytics.' },
-              { tag: 'Security', loc: 'Stockholm / Remote', title: 'Zero-Trust Security Architect', desc: 'Architect end-to-end encrypted systems and hardware-level authentication frameworks for distributed enterprises.' },
-              { tag: 'Design', loc: 'Stockholm', title: 'Enterprise UX Designer', desc: 'Craft intuitive interfaces for complex enterprise systems. Nordic functionalism experience preferred.' },
-            ].map((r) => (
-              <div class="p-6 glass-mid hover:bg-surface-container-high dark:hover:bg-white/[0.04] transition-colors ease-spring group">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div>
-                    <div class="flex items-center gap-3 mb-2">
-                      <span class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan bg-primary-fixed/30 dark:bg-cyber-cyan/15 px-3 py-1 rounded-full border border-primary/10 dark:border-cyber-cyan/20">{r.tag}</span>
-                      <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">{r.loc}</span>
-                    </div>
-                    <h3 class="font-display text-xl font-semibold group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">{r.title}</h3>
-                    <p class="font-body text-body-sm text-on-surface-variant mt-1 max-w-xl">{r.desc}</p>
-                  </div>
-                  <a href="/contact" class="font-label text-[12px] tracking-[0.02em] uppercase font-semibold text-primary dark:text-cyber-cyan flex items-center gap-2 hover:gap-3 transition-all shrink-0">
-                    Apply <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-                  </a>
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow label="Open positions" />
+        <div class="border-t border-hairline mt-8">
+          {[
+            { tag: 'Engineering', loc: 'Stockholm', title: 'Senior Cloud Infrastructure Engineer', desc: 'Design and run cloud architectures for enterprise clients across the Nordic region.' },
+            { tag: 'AI / ML', loc: 'Stockholm', title: 'Machine Learning Engineer', desc: 'Build predictive models for industrial IoT and enterprise analytics.' },
+            { tag: 'Security', loc: 'Stockholm / Remote', title: 'Zero-Trust Security Architect', desc: 'Design encrypted systems and hardware-key authentication for distributed enterprises.' },
+            { tag: 'Design', loc: 'Stockholm', title: 'Product Designer', desc: 'Design interfaces for complex systems. Restraint is the house style.' },
+          ].map((r) => (
+            <div class="group flex flex-col md:flex-row md:items-center justify-between gap-4 py-7 border-b border-hairline">
+              <div>
+                <div class="flex items-baseline gap-3 mb-1.5">
+                  <span class="font-mono text-[11px] tracking-[0.08em] uppercase text-accent">{r.tag}</span>
+                  <span class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint">{r.loc}</span>
                 </div>
+                <h3 class="text-[19px] font-semibold tracking-[-0.02em] group-hover:text-accent transition-colors">{r.title}</h3>
+                <p class="text-[15px] text-muted mt-1 max-w-[36rem]">{r.desc}</p>
               </div>
-            ))
-          }
+              <a href="/contact" class="inline-flex items-center gap-2 text-[14px] text-accent shrink-0 hover:text-ink transition-colors">
+                Apply <ArrowRight class="transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-low dark:bg-surface-container border-y border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
-          <h2 class="font-display text-2xl md:text-3xl font-bold tracking-[-0.015em]">Why Visbyr</h2>
-          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 02 — Benefits ]</div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="p-6 glass-mid rounded-xl">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">workspace_premium</span>
-            <h4 class="font-display text-headline-md font-semibold mb-2">Ownership & Autonomy</h4>
-            <p class="font-body text-body-sm text-on-surface-variant">Full project ownership from audit to deployment. No micromanagement — just trust and accountability.</p>
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow label="Why Visbyr" />
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-hairline mt-8">
+          <div class="py-8 md:pr-10 border-b md:border-b-0 md:border-r border-hairline">
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Ownership</h3>
+            <p class="text-[15px] leading-relaxed text-muted">Full project ownership from audit to deployment. No micromanagement — trust and accountability instead.</p>
           </div>
-          <div class="p-6 glass-mid rounded-xl">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">self_improvement</span>
-            <h4 class="font-display text-headline-md font-semibold mb-2">Continuous Learning</h4>
-            <p class="font-body text-body-sm text-on-surface-variant">Dedicated research time, conference budgets, and access to our proprietary training programs.</p>
+          <div class="py-8 md:px-10 border-b md:border-b-0 md:border-r border-hairline">
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Learning</h3>
+            <p class="text-[15px] leading-relaxed text-muted">Dedicated research time, a conference budget, and colleagues who will read your draft twice.</p>
           </div>
-          <div class="p-6 glass-mid rounded-xl">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-4 block text-3xl">balance</span>
-            <h4 class="font-display text-headline-md font-semibold mb-2">Nordic Work-Life Balance</h4>
-            <p class="font-body text-body-sm text-on-surface-variant">Flexible hours, generous parental leave, and a culture that respects personal time.</p>
+          <div class="py-8 md:pl-10">
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Balance</h3>
+            <p class="text-[15px] leading-relaxed text-muted">Flexible hours, generous parental leave, and a culture that respects personal time. Work ends at 17:00 more often than not.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-surface-container-low border-y border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto text-center">
-        <h2 class="font-display text-[clamp(2rem,6vw,3.5rem)] font-bold leading-none tracking-[-0.015em] mb-4">Don't see your role?</h2>
-        <p class="font-body text-body-base text-on-surface-variant mb-8 max-w-2xl mx-auto">We are always interested in exceptional talent. Send us your portfolio and let's explore possibilities.</p>
-        <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-8 py-4 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Get in Touch</a>
-      </div>
-    </section>
+    <CtaSection title="Don't see your role?" body="We are always interested in strong people. Send us your portfolio and we will read it — all of it, ourselves." cta="Get in touch" />
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>

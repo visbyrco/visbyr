@@ -1,41 +1,65 @@
 import { useState } from 'react';
 
 export default function ContactForm() {
-  const [focusedField, setFocusedField] = useState<string | null>(null);
+  const [sent, setSent] = useState(false);
+  const [focused, setFocused] = useState<string | null>(null);
 
   const labelCls = (key: string) =>
-    `font-label text-[12px] font-semibold tracking-[0.02em] uppercase transition-colors ease-spring ${focusedField === key ? 'text-primary' : 'text-on-surface-variant'}`;
+    `font-mono text-[11px] tracking-[0.08em] uppercase transition-colors ${focused === key ? 'text-accent' : 'text-faint'}`;
 
   const inputBase =
-    'w-full rounded-lg border bg-surface-container-lowest px-4 py-3 font-body text-body-base text-on-surface placeholder:text-on-surface-variant/60 input-focus-ring transition-all ease-spring dark:bg-white/[0.06] dark:border-white/[0.08] dark:text-mist-text';
+    'w-full rounded-[3px] border border-hairline bg-card px-3.5 py-3 text-[15px] text-ink placeholder:text-faint/70 input-quiet transition-colors dark:bg-wash';
+
+  if (sent) {
+    return (
+      <div className="border border-hairline bg-card p-8">
+        <p className="text-[17px] font-medium mb-2">Message sent.</p>
+        <p className="text-[15px] text-muted leading-relaxed">We read everything ourselves and reply within one business day. Usually faster.</p>
+      </div>
+    );
+  }
 
   return (
-    <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <form
+      className="space-y-6"
+      onSubmit={(e) => {
+        e.preventDefault();
+        setSent(true);
+      }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
-          <label className={labelCls('identity')}>Full Identity</label>
-          <input className={inputBase} placeholder="Erik Andersson" type="text" onFocus={() => setFocusedField('identity')} onBlur={() => setFocusedField(null)} />
+          <label className={labelCls('name')} htmlFor="cf-name">Name</label>
+          <input id="cf-name" className={inputBase} placeholder="Erik Andersson" type="text" onFocus={() => setFocused('name')} onBlur={() => setFocused(null)} />
         </div>
         <div className="flex flex-col gap-2">
-          <label className={labelCls('email')}>Corporate Email</label>
-          <input className={inputBase} placeholder="erik@enterprise.se" type="email" onFocus={() => setFocusedField('email')} onBlur={() => setFocusedField(null)} />
+          <label className={labelCls('email')} htmlFor="cf-email">Work email</label>
+          <input id="cf-email" className={inputBase} placeholder="erik@company.se" type="email" required onFocus={() => setFocused('email')} onBlur={() => setFocused(null)} />
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <label className={labelCls('subject')}>Subject of Inquiry</label>
-        <select className={inputBase} onFocus={() => setFocusedField('subject')} onBlur={() => setFocusedField(null)}>
-          <option>System Implementation</option>
-          <option>Strategic Partnership</option>
-          <option>Insight Access</option>
-          <option>Technical Support</option>
+        <label className={labelCls('subject')} htmlFor="cf-subject">What do you need?</label>
+        <select id="cf-subject" className={inputBase} onFocus={() => setFocused('subject')} onBlur={() => setFocused(null)}>
+          <option>A system audit</option>
+          <option>A cloud or data migration</option>
+          <option>A security review</option>
+          <option>Ongoing operations</option>
+          <option>Something else</option>
         </select>
       </div>
       <div className="flex flex-col gap-2">
-        <label className={labelCls('brief')}>Detailed Brief</label>
-        <textarea className={inputBase} placeholder="Describe your operational requirements..." rows={6} onFocus={() => setFocusedField('brief')} onBlur={() => setFocusedField(null)} />
+        <label className={labelCls('message')} htmlFor="cf-message">Message</label>
+        <textarea
+          id="cf-message"
+          className={inputBase}
+          placeholder="What does your stack look like today, and what hurts?"
+          rows={6}
+          onFocus={() => setFocused('message')}
+          onBlur={() => setFocused(null)}
+        />
       </div>
-      <button className="w-full md:w-auto rounded-lg bg-primary px-8 py-4 font-label text-[12px] font-semibold tracking-[0.02em] uppercase text-on-primary transition-all ease-spring hover:shadow-bloom dark:bg-cyber-cyan dark:text-obsidian-black">
-        Transmit Inquiry
+      <button className="inline-flex items-center bg-accent text-on-accent px-6 py-3 text-[13px] font-medium tracking-[0.01em] rounded-[3px] hover:bg-accent-strong transition-colors">
+        Send message
       </button>
     </form>
   );

@@ -4,38 +4,45 @@ Nordic tech enterprise landing page built with Astro, React, and Tailwind CSS.
 
 ## Tech Stack
 
-- **Framework:** Astro 5.15.5
-- **UI:** React 19.1.0
-- **Styling:** Tailwind CSS 3.4.19 with custom design tokens
-- **Typography:** Inter + JetBrains Mono (Google Fonts)
-- **Icons:** Material Symbols Outlined
+- **Framework:** Astro 5
+- **UI:** React 19 (only the contact form hydrates)
+- **Styling:** Tailwind CSS 3 with a small token set
+- **Typography:** Inter Tight + Geist Mono (Google Fonts)
 
 ## Design System
 
-Material Design 3-inspired tokens with Nordic aesthetic:
+See `DESIGN.md` for the full spec. Short version: quiet Nordic editorial.
 
-- **Primary:** `#0052ff` (Nordic Tech Blue)
-- **Surface:** `#f7f9fb` (cool-tinted off-white)
-- **Typography:** Inter (300-800), JetBrains Mono (400-500)
-- **Border radius:** 0px (sharp, angular aesthetic)
-- **Spacing:** xs (4px) → xxl (80px)
+- **Canvas:** `#f6f7f7` light / `#121515` dark
+- **Accent:** deep teal `#0d4a50` light / pale teal `#8fd2d6` dark
+- **Structure:** 1px hairline rules between sections and rows, 64rem content column
+- **Type:** Inter Tight (600 headings, 400 body) + Geist Mono for labels, stats, and code
+- **Icons:** inline SVG arrows only, no icon font
+- **Radii:** 3px on buttons and inputs, square everywhere else
+
+Dark mode follows `prefers-color-scheme` (class on `<html>`, set in `BaseLayout.astro`).
 
 ## Pages
 
-- **Landing** (`/`) - Editorial hero, solutions grid, testimonial, method phases
-- **Solutions** (`/solutions`) - Cloud infrastructure, AI analytics, secure networking
-- **Contact** (`/contact`) - Engagement form, Stockholm HQ, vision section
+- **Landing** (`/`) - editorial hero, proof strip, capabilities, quote, method phases
+- **Solutions** (`/solutions`) - cloud, analytics, networking with case summaries
+- **Contact** (`/contact`) - form, studio card, visit banner
+- **Chat** (`/chat`) - product page with composer mock
+- **Process** (`/process`) - three passes with deliverables
+- **Case studies** (`/case-studies`) - three rows with stats
+- **Insights** (`/insights`), **Philosophy** (`/philosophy`), **Careers** (`/careers`), **Legal** (`/legal`), **Privacy** (`/privacy`)
 
 ## Components
 
 | Component | Type | Purpose |
 |---|---|---|
-| `HeaderReact.tsx` | React | Scroll-aware frosted glass navigation |
-| `Footer.astro` | Astro | 3-column link grid with logo |
-| `ContactForm.tsx` | React | Focus-animated contact form |
-| `SecurityGraphic.tsx` | React | Animated concentric circles + lock |
-| `VisionSection.tsx` | React | Full-width image with hover scale |
-| `SurgicalAccent.astro` | Astro | Decorative blue accent bar |
+| `SiteHeader.astro` | Astro | Fixed nav, static markup (no hydration) |
+| `SiteFooter.astro` | Astro | 3-column link grid |
+| `PageHeader.astro` | Astro | Shared page opener (index, title, lede) |
+| `Eyebrow.astro` | Astro | Section label with index and rule |
+| `CtaSection.astro` | Astro | Shared end-of-page CTA |
+| `ArrowRight.astro` / `ArrowUpRight.astro` | Astro | Link arrows |
+| `ContactForm.tsx` | React | Contact form with sent state |
 
 ## Getting Started
 
@@ -58,19 +65,12 @@ npm run preview
 ```
 visbyr/
 ├── src/
-│   ├── components/     # React + Astro components
-│   ├── layouts/        # BaseLayout.astro
-│   ├── pages/          # index, solutions, contact
-│   ├── styles/         # global.css (orphaned)
-│   └── assets/         # (empty)
-├── public/             # Static assets (logos)
+│   ├── components/     # Shared components (see table above)
+│   ├── layouts/        # BaseLayout.astro (fonts, dark mode)
+│   ├── pages/          # One file per route
+│   └── styles/         # global.css (tokens + eyebrow/rule helpers)
+├── public/             # Favicon
 ├── astro.config.mjs
-├── tailwind.config.js  # Custom design tokens
+├── tailwind.config.js  # Token bindings
 └── package.json
 ```
-
-## Scripts
-
-- `npm run dev` - Start dev server
-- `npm run build` - Production build
-- `npm run preview` - Preview production build

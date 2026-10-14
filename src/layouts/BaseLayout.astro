@@ -2,8 +2,9 @@
 import '../styles/global.css';
 interface Props {
   title: string;
+  description?: string;
 }
-const { title } = Astro.props;
+const { title, description = 'Visbyr is a small engineering studio in Stockholm. Cloud, data, and network work for teams that need it to keep running.' } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -11,17 +12,12 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/chat.svg" />
-    <link rel="icon" type="image/svg+xml" href="/chat_rounded_1024.svg" sizes="1024x1024" />
-    <link rel="apple-touch-icon" href="/chat_rounded_1024.svg" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/chat_rounded_1024.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter+Tight:wght@400;500;600&family=Manrope:wght@600&family=Geist+Mono:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <script is:inline>
@@ -31,11 +27,7 @@ const { title } = Astro.props;
       m.addEventListener('change', apply);
     </script>
   </head>
-  <body class="antialiased bg-background text-on-surface selection:bg-primary selection:text-on-primary">
-    <!-- One quiet wash behind the header, not three floating blobs. Less AI, more calm. -->
-    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div class="absolute -top-40 left-1/2 h-[420px] w-[880px] -translate-x-1/2 rounded-full bg-surface-tint/[0.06] blur-[72px] dark:bg-cyber-cyan/[0.045]"></div>
-    </div>
+  <body class="antialiased bg-background text-ink">
     <slot />
   </body>
 </html>

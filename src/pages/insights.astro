@@ -1,69 +1,58 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
-import SurgicalAccent from '../components/SurgicalAccent.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import ArrowRight from '../components/ArrowRight.astro';
 ---
 
-<BaseLayout title="Insights | Visbyr">
-  <HeaderReact client:load />
-  <main class="pt-20">
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Intelligence Hub</span>
-        </div>
-        <h1 class="font-display text-[clamp(2.5rem,8vw,4rem)] font-bold leading-none tracking-[-0.015em] mb-4 max-w-3xl">
-          Insights & <span class="text-primary dark:text-cyber-cyan">Analysis.</span>
-        </h1>
-        <p class="font-body text-body-base text-on-surface-variant max-w-2xl leading-relaxed">
-          Strategic whitepapers, market analysis, and technical deep-dives from the Visbyr research division.
-        </p>
-      </div>
-    </section>
+<BaseLayout title="Notes | Visbyr" description="Writing from the Visbyr studio: data sovereignty, predictive maintenance, zero-trust architecture, and Nordic functionalism.">
+  <SiteHeader />
+  <main class="pt-16">
+    <PageHeader
+      n="07"
+      label="Notes"
+      title="Notes from the studio"
+      lede="What we are reading, testing, and arguing about. Short, technical, and written by the engineers doing the work."
+    />
 
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
-          <div class="max-w-2xl">
-            <SurgicalAccent />
-            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">Latest Publications</h2>
-            <p class="font-body text-body-base text-on-surface-variant">Curated intelligence for enterprise decision-makers navigating the Nordic technology landscape.</p>
-          </div>
-          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Repository ]</div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-outline-variant dark:border-white/[0.08] pt-6">
-          {
-            [
-              { tag: 'Cloud', date: '2024.11', title: 'Nordic Data Sovereignty in a Post-GDPR Era', desc: 'An analysis of evolving data residency requirements and how Nordic enterprises are architecting compliant cloud infrastructure.' },
-              { tag: 'AI', date: '2024.10', title: 'Predictive Maintenance: Industrial IoT at Scale', desc: 'How machine learning models achieve 89% accuracy in forecasting equipment failures across distributed manufacturing fleets.' },
-              { tag: 'Security', date: '2024.09', title: 'Zero-Trust Architecture for Distributed Enterprises', desc: 'A technical whitepaper on implementing hardware-level authentication and end-to-end encrypted tunnels across organizational boundaries.' },
-              { tag: 'Strategy', date: '2024.08', title: 'The Case for Nordic Functionalism in Software Design', desc: 'Why the principles of Scandinavian design — restraint, purpose, and clarity — produce more resilient and maintainable software systems.' },
-            ].map((p) => (
-              <article class="group glass-mid rounded-xl p-6 hover:shadow-ambient-sm transition-all ease-spring">
-                <div class="flex items-center gap-3 mb-4">
-                  <span class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan bg-primary-fixed/30 dark:bg-cyber-cyan/15 border border-primary/10 dark:border-cyber-cyan/20 px-3 py-1 rounded-full">{p.tag}</span>
-                  <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">{p.date}</span>
-                </div>
-                <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">{p.title}</h3>
-                <p class="font-body text-body-sm text-on-surface-variant mb-4 leading-relaxed">{p.desc}</p>
-                <div class="flex items-center gap-2 font-label text-[12px] tracking-[0.02em] uppercase font-semibold text-primary dark:text-cyber-cyan">
-                  Read Analysis <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-                </div>
-              </article>
-            ))
-          }
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow label="Writing" />
+        <div class="border-t border-hairline mt-8">
+          {[
+            { date: '2024.11', title: 'Data sovereignty after GDPR', desc: 'What evolving residency requirements actually ask of cloud architecture, and what we build to satisfy them.' },
+            { date: '2024.10', title: 'Predictive maintenance at scale', desc: 'How a failure-prediction model reaches 89% accuracy on an industrial fleet — and what it needs before it gets there.' },
+            { date: '2024.09', title: 'Zero-trust for distributed teams', desc: 'Hardware-key authentication and encrypted tunnels across organizational boundaries, in practice.' },
+            { date: '2024.08', title: 'Functionalism in software design', desc: 'Why restraint, purpose, and clarity produce more resilient systems. The case for building less.' },
+          ].map((p) => (
+            <article class="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[7rem_1fr_auto] gap-4 md:gap-8 items-baseline py-6 border-b border-hairline">
+              <span class="font-mono text-[12px] tracking-[0.04em] text-faint">{p.date}</span>
+              <div>
+                <h2 class="text-[19px] font-semibold tracking-[-0.02em] group-hover:text-accent transition-colors">{p.title}</h2>
+                <p class="text-[15px] leading-relaxed text-muted mt-1.5 max-w-[40rem]">{p.desc}</p>
+              </div>
+              <a href="/contact" class="inline-flex items-center gap-2 text-[14px] text-accent shrink-0" aria-label={`Request a copy: ${p.title}`}>
+                <span class="hidden sm:inline">Copy</span> <ArrowRight class="transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </article>
+          ))}
         </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface dark:text-mist-text rounded-xl mx-4 md:mx-auto max-w-[56rem] mb-8 text-center">
-      <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-3">Stay Informed</h2>
-      <p class="font-body text-body-base opacity-80 mb-6 max-w-xl mx-auto">Receive strategic insights and technical analysis directly from our Stockholm research division.</p>
-      <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-6 py-3 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Subscribe to Insights</a>
+    <section class="border-t border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <div class="max-w-[34rem]">
+          <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] font-semibold leading-[1.05] tracking-[-0.03em]">Get the next one first</h2>
+          <p class="mt-4 text-[16px] leading-relaxed text-muted">Write to us and we will add you to the list. A few notes a year, no newsletter theater.</p>
+          <a href="mailto:hello@visbyr.com?subject=Notes%20list" class="inline-flex items-center gap-2 mt-6 bg-accent text-on-accent px-6 py-3 text-[13px] font-medium rounded-[3px] hover:bg-accent-strong transition-colors">
+            Subscribe by email
+          </a>
+        </div>
+      </div>
     </section>
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>

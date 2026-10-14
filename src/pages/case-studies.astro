@@ -1,117 +1,79 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
-import SurgicalAccent from '../components/SurgicalAccent.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import CtaSection from '../components/CtaSection.astro';
+import ArrowRight from '../components/ArrowRight.astro';
 ---
 
-<BaseLayout title="Case Studies | Visbyr">
-  <HeaderReact client:load />
-  <main class="pt-20">
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface-container-lowest dark:bg-background border-b border-outline-variant dark:border-white/[0.08]">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Proven Results</span>
-        </div>
-        <h1 class="font-display text-[clamp(2.5rem,8vw,4rem)] font-bold leading-none tracking-[-0.015em] mb-4 max-w-3xl">
-          Case <span class="text-primary dark:text-cyber-cyan">Studies.</span>
-        </h1>
-        <p class="font-body text-body-base text-on-surface-variant max-w-2xl leading-relaxed">
-          Real outcomes from real engagements. See how Nordic enterprises have transformed their operations through Visbyr's precision-engineered solutions.
-        </p>
-      </div>
-    </section>
+<BaseLayout title="Case studies | Visbyr" description="Three recent Visbyr engagements: cloud migration, predictive maintenance, zero-trust networking.">
+  <SiteHeader />
+  <main class="pt-16">
+    <PageHeader
+      n="03"
+      label="Case studies"
+      title="Numbers from finished work"
+      lede="Three recent engagements. The figures come from the projects themselves, not from projections."
+    />
 
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-surface dark:bg-background">
-      <div class="max-w-[56rem] mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-10 gap-6">
-          <div class="max-w-2xl">
-            <SurgicalAccent />
-            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mt-4 mb-3">Client Engagements</h2>
-            <p class="font-body text-body-base text-on-surface-variant">Selected projects demonstrating measurable impact across industries.</p>
-          </div>
-          <div class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan">[ 01 — Portfolio ]</div>
-        </div>
-
-        <div class="space-y-6 border-t border-outline-variant dark:border-white/[0.08] pt-6">
-          <article class="group glass-mid rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start hover:shadow-ambient-sm transition-all ease-spring">
-            <div class="w-full md:w-1/3">
-              <div class="relative aspect-video overflow-hidden rounded-lg border border-outline-variant dark:border-white/[0.08]">
-                <img class="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNRY01VD2n53xWxyUnPTDo-J84OrNCLTcAmCBWlGVuwvIbNhsA7KdA0FcoM7WPyXcJ9Z7KzKpe-yXt3W7jEStN1SpugELHo4if0mm0mLtvoiwLQCRaAJxhXc7qdNlc8_SMnJMDmdYNiFEUOFXy3X9dAX-zr5qSCU4ah0VPN5fvJ0Nr77Q0_eTx1cXBPq8NigD01g9zifrSTrVQB5JiQjr4BZVJJnxwBv33ovnt3lD-daA6NJj72yuj" alt="Svea Logistics Hub" />
-                <div class="absolute top-2 left-2 font-label text-[10px] tracking-[0.02em] uppercase bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-2 py-0.5 rounded-full">Cloud</div>
+    <section class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow label="Selected work" />
+        <div class="border-t border-hairline mt-8">
+          {[
+            {
+              client: 'Svea Logistics Hub', industry: 'Logistics',
+              title: 'Automated cloud migration for a national logistics network',
+              body: 'Migrated a legacy on-premise logistics platform to a hybrid cloud architecture, with auto-scaling clusters and edge-native delivery across 14 Nordic distribution centers.',
+              stats: [['42%', 'cost reduction'], ['99.97%', 'uptime'], ['8 wk', 'migration']],
+              img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80&auto=format&fit=crop',
+              alt: 'Warehouse aisle, racking in perspective',
+            },
+            {
+              client: 'Svea Dynamics', industry: 'Manufacturing',
+              title: 'Predictive maintenance for an industrial fleet',
+              body: 'Machine learning models monitoring 2,400 industrial IoT sensors in real time, predicting equipment failures days ahead and cutting unplanned downtime by two thirds.',
+              stats: [['89%', 'prediction accuracy'], ['67%', 'downtime reduced'], ['2.4K', 'sensors monitored']],
+              img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop',
+              alt: 'Monitoring dashboard with live charts',
+            },
+            {
+              client: 'Norrköping Financial Group', industry: 'Finance',
+              title: 'Zero-trust network overhaul for a regional bank',
+              body: 'End-to-end encrypted tunnels and hardware-key authentication across 32 branch offices, with full zero-trust compliance reached within a single quarter.',
+              stats: [['<1ms', 'auth latency'], ['32', 'branches secured'], ['0', 'security incidents']],
+              img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop',
+              alt: 'Server room, structured cabling',
+            },
+          ].map((c) => (
+            <article class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 py-10 border-b border-hairline items-start">
+              <div class="md:col-span-3">
+                <div class="aspect-[4/3] overflow-hidden border border-hairline bg-wash">
+                  <img class="w-full h-full object-cover grayscale" src={c.img} alt={c.alt} loading="lazy" />
+                </div>
               </div>
-            </div>
-            <div class="w-full md:w-2/3 space-y-4">
-              <div class="flex items-center gap-2">
-                <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Svea Logistics Hub</span>
-                <span class="font-label text-[12px] text-on-surface-variant">—</span>
-                <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Logistics</span>
+              <div class="md:col-span-9">
+                <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint mb-2">{c.client} · {c.industry}</p>
+                <h2 class="text-[clamp(1.35rem,2.6vw,1.875rem)] font-semibold tracking-[-0.025em] leading-tight max-w-[28ch] mb-3">{c.title}</h2>
+                <p class="text-[15px] leading-relaxed text-muted max-w-[42rem] mb-6">{c.body}</p>
+                <div class="flex flex-wrap gap-x-10 gap-y-3 pt-4 border-t border-hairline">
+                  {c.stats.map(([v, l]) => (
+                    <div class="flex items-baseline gap-2.5">
+                      <span class="text-[20px] font-semibold tracking-[-0.02em]">{v}</span>
+                      <span class="text-[13px] text-muted">{l}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h3 class="font-display text-xl md:text-2xl font-semibold group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">Automated Cloud Migration for National Logistics Network</h3>
-              <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Migrated a legacy on-premise logistics platform to a hybrid cloud architecture, implementing auto-scaling clusters and edge-native delivery across 14 Nordic distribution centers.</p>
-              <div class="grid grid-cols-3 gap-4 pt-4 border-t border-outline-variant dark:border-white/[0.08]">
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">42%</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Cost Reduction</p></div>
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">99.97%</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Uptime Achieved</p></div>
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">8wk</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Migration Time</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="group glass-mid rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start hover:shadow-ambient-sm transition-all ease-spring">
-            <div class="w-full md:w-1/3">
-              <div class="relative aspect-video overflow-hidden rounded-lg border border-outline-variant dark:border-white/[0.08] bg-surface-container dark:bg-white/[0.03] flex items-center justify-center">
-                <span class="material-symbols-outlined text-on-surface-variant text-6xl">analytics</span>
-                <div class="absolute top-2 left-2 font-label text-[10px] tracking-[0.02em] uppercase bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-2 py-0.5 rounded-full">AI</div>
-              </div>
-            </div>
-            <div class="w-full md:w-2/3 space-y-4">
-              <div class="flex items-center gap-2">
-                <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Svea Dynamics</span>
-                <span class="font-label text-[12px] text-on-surface-variant">—</span>
-                <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Manufacturing</span>
-              </div>
-              <h3 class="font-display text-xl md:text-2xl font-semibold group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">AI-Driven Predictive Maintenance for Industrial Fleet</h3>
-              <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Deployed proprietary machine learning models to monitor 2,400+ industrial IoT sensors in real-time, achieving 89% accuracy in equipment failure prediction and reducing unplanned downtime by 67%.</p>
-              <div class="grid grid-cols-3 gap-4 pt-4 border-t border-outline-variant dark:border-white/[0.08]">
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">89%</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Prediction Accuracy</p></div>
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">67%</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Downtime Reduced</p></div>
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">2.4K</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Sensors Monitored</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="group glass-mid rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start hover:shadow-ambient-sm transition-all ease-spring">
-            <div class="w-full md:w-1/3">
-              <div class="relative aspect-video overflow-hidden rounded-lg border border-outline-variant dark:border-white/[0.08] bg-surface-container dark:bg-white/[0.03] flex items-center justify-center">
-                <span class="material-symbols-outlined text-on-surface-variant text-6xl">verified_user</span>
-                <div class="absolute top-2 left-2 font-label text-[10px] tracking-[0.02em] uppercase bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-2 py-0.5 rounded-full">Security</div>
-              </div>
-            </div>
-            <div class="w-full md:w-2/3 space-y-4">
-              <div class="flex items-center gap-2">
-                <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Norrköping Financial Group</span>
-                <span class="font-label text-[12px] text-on-surface-variant">—</span>
-                <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Finance</span>
-              </div>
-              <h3 class="font-display text-xl md:text-2xl font-semibold group-hover:text-primary dark:group-hover:text-cyber-cyan transition-colors">Zero-Trust Network Overhaul for Regional Bank</h3>
-              <p class="font-body text-body-sm text-on-surface-variant leading-relaxed">Implemented end-to-end encrypted tunnels and hardware-level authentication across 32 branch offices, achieving full zero-trust compliance within a single quarter.</p>
-              <div class="grid grid-cols-3 gap-4 pt-4 border-t border-outline-variant dark:border-white/[0.08]">
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">&lt;1ms</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Auth Latency</p></div>
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">32</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Branches Secured</p></div>
-                <div><p class="font-display text-2xl font-bold text-primary dark:text-cyber-cyan">0</p><p class="font-label text-[10px] tracking-[0.02em] uppercase text-on-surface-variant">Security Incidents</p></div>
-              </div>
-            </div>
-          </article>
+            </article>
+          ))}
         </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-16 px-4 md:px-6 bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface dark:text-mist-text rounded-xl mx-4 md:mx-auto max-w-[56rem] mb-8 text-center">
-      <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-3">Ready to be our next success story?</h2>
-      <p class="font-body text-body-base opacity-80 mb-6 max-w-xl mx-auto">Let's discuss how Visbyr can engineer a solution tailored to your organization's unique challenges.</p>
-      <a href="/contact" class="inline-block rounded-full bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-6 py-3 font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-all ease-spring">Start a Project</a>
-    </section>
+    <CtaSection title="Want numbers like these?" body="It starts with an audit. Book a 45-minute call and we will tell you what we would measure first." cta="Book a call" />
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>

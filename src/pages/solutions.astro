@@ -1,150 +1,132 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeaderReact from '../components/HeaderReact.tsx';
-import Footer from '../components/Footer.astro';
-import SecurityGraphic from '../components/SecurityGraphic.tsx';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import CtaSection from '../components/CtaSection.astro';
+import ArrowRight from '../components/ArrowRight.astro';
 ---
 
-<BaseLayout title="Visbyr | Advanced Solutions">
-  <HeaderReact client:load />
-  <main class="max-w-[56rem] mx-auto px-4 md:px-6 pt-28 pb-12">
-    <section class="mb-12 text-center md:text-left">
-      <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
-        <span class="w-2 h-2 rounded-full bg-primary dark:bg-cyber-cyan"></span>
-        <span class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Enterprise Solutions</span>
-      </div>
-      <h1 class="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold leading-[0.95] tracking-[-0.02em] mb-4 max-w-3xl">
-        Infrastructure that <span class="text-primary dark:text-cyber-cyan">stays up.</span>
-      </h1>
-      <p class="font-body text-[16px] leading-relaxed text-on-surface-variant max-w-2xl mb-8">
-        Cloud, data pipelines, and zero-trust networking. Built for teams that are tired of babysitting systems at midnight.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-        <a class="group p-6 glass-mid rounded-xl hover:shadow-ambient-sm transition-all ease-spring" href="#cloud">
-          <div class="w-12 h-12 bg-surface-container dark:bg-white/[0.06] rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-fixed dark:group-hover:bg-cyber-cyan/20 transition-colors">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan">cloud_done</span>
-          </div>
-          <h3 class="font-display text-headline-md font-semibold mb-1">Cloud Infrastructure</h3>
-          <p class="font-body text-body-sm text-on-surface-variant">Scalable, low-latency architectures designed for Nordic performance standards.</p>
-        </a>
-        <a class="group p-6 glass-mid rounded-xl hover:shadow-ambient-sm transition-all ease-spring" href="#ai">
-          <div class="w-12 h-12 bg-surface-container dark:bg-white/[0.06] rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-fixed dark:group-hover:bg-cyber-cyan/20 transition-colors">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan">analytics</span>
-          </div>
-          <h3 class="font-display text-headline-md font-semibold mb-1">AI-Driven Analytics</h3>
-          <p class="font-body text-body-sm text-on-surface-variant">Transforming raw telemetry into predictive business intelligence.</p>
-        </a>
-        <a class="group p-6 glass-mid rounded-xl hover:shadow-ambient-sm transition-all ease-spring" href="#networking">
-          <div class="w-12 h-12 bg-surface-container dark:bg-white/[0.06] rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-fixed dark:group-hover:bg-cyber-cyan/20 transition-colors">
-            <span class="material-symbols-outlined text-primary dark:text-cyber-cyan">verified_user</span>
-          </div>
-          <h3 class="font-display text-headline-md font-semibold mb-1">Secure Networking</h3>
-          <p class="font-body text-body-sm text-on-surface-variant">Zero-trust frameworks for distributed enterprise perimeters.</p>
-        </a>
-      </div>
-    </section>
+<BaseLayout title="Solutions | Visbyr" description="Cloud, data pipelines, and zero-trust networking. Built for teams that are tired of babysitting systems at midnight.">
+  <SiteHeader />
+  <main class="pt-16">
+    <PageHeader
+      n="01"
+      label="Solutions"
+      title="Infrastructure that stays up"
+      lede="Cloud, data pipelines, and zero-trust networking. Built for teams that are tired of babysitting systems at midnight."
+    />
 
-    <section class="py-12 border-t border-outline-variant dark:border-white/[0.08]" id="cloud">
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="w-full md:w-1/2">
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan block mb-2">Cloud Systems</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-4">High-Availability Cloud Architecture</h2>
-          <p class="font-body text-body-base text-on-surface-variant mb-6 leading-relaxed">
-            We deploy hybrid and multi-cloud strategies that prioritize data sovereignty and extreme uptime. Our Nordic-engineered frameworks ensure your infrastructure grows seamlessly with your demand.
-          </p>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-primary dark:text-cyber-cyan text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-              <div class="font-body text-body-sm"><strong>Auto-Scaling Clusters:</strong> Respond to load spikes in milliseconds without manual intervention.</div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-primary dark:text-cyber-cyan text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-              <div class="font-body text-body-sm"><strong>Edge-Native Delivery:</strong> Minimize latency with localized computing nodes across Europe.</div>
-            </li>
-          </ul>
-          <a href="/contact" class="inline-flex rounded-full border border-outline-variant dark:border-white/[0.12] text-on-surface px-6 py-2.5 font-label text-[12px] tracking-[0.02em] uppercase hover:bg-surface-container dark:hover:bg-white/[0.06] transition-colors">Explore documentation</a>
-        </div>
-        <div class="w-full md:w-1/2">
-          <div class="rounded-xl border border-outline-variant dark:border-white/[0.08] bg-surface-container-low dark:bg-white/[0.03] p-6">
-            <p class="font-label text-[10px] tracking-[0.12em] uppercase text-primary/60 dark:text-cyber-cyan/60 mb-3">Case study — Svea Logistics Hub</p>
-            <p class="font-body text-[14px] leading-relaxed text-on-surface-variant mb-4">Migrated 3 warehouses off a single on-prem cluster. Automated the parts that kept breaking at 4am. 42% lower ops cost after 6 months.</p>
-            <div class="flex gap-4 pt-4 border-t border-outline-variant dark:border-white/[0.06]">
-              <div><p class="font-display text-lg font-semibold">42%</p><p class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant">Cost reduction</p></div>
-              <div><p class="font-display text-lg font-semibold">11 days</p><p class="font-label text-[10px] tracking-[0.08em] uppercase text-on-surface-variant">Migration</p></div>
+    <!-- Cloud -->
+    <section id="cloud" class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow label="Cloud" />
+        <div class="grid-12 gap-8 md:gap-12 mt-8">
+          <div class="col-span-12 lg:col-span-7">
+            <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.08] tracking-[-0.03em] mb-5 max-w-[24ch]">Cloud architecture that holds under load</h2>
+            <p class="text-[16px] leading-relaxed text-muted max-w-[36rem] mb-6">
+              Hybrid and multi-cloud built around data residency rules. We migrate live systems without a maintenance window, then set auto-scaling that actually triggers when traffic arrives.
+            </p>
+            <ul class="space-y-2.5 text-[15px] leading-relaxed text-muted max-w-[36rem] mb-8">
+              <li class="flex gap-3"><span class="font-mono text-[12px] text-accent mt-0.5 shrink-0">—</span>Auto-scaling clusters that respond to load spikes without manual intervention.</li>
+              <li class="flex gap-3"><span class="font-mono text-[12px] text-accent mt-0.5 shrink-0">—</span>Edge-native delivery from compute nodes placed across Europe.</li>
+              <li class="flex gap-3"><span class="font-mono text-[12px] text-accent mt-0.5 shrink-0">—</span>Nothing ships until it runs next to your current system and you trust it.</li>
+            </ul>
+            <a href="/contact" class="inline-flex items-center gap-2 text-[14px] text-accent hover:text-ink transition-colors">Talk to us about a migration <ArrowRight /></a>
+          </div>
+          <div class="col-span-12 lg:col-span-5">
+            <div class="border border-hairline bg-card">
+              <p class="px-5 py-3 border-b border-hairline font-mono text-[11px] tracking-[0.08em] uppercase text-faint">Case — Svea Logistics Hub</p>
+              <div class="p-5">
+                <p class="text-[15px] leading-relaxed text-muted">Migrated 3 warehouses off a single on-prem cluster. Automated the parts that kept breaking at 4am.</p>
+                <div class="flex gap-10 mt-5 pt-5 border-t border-hairline">
+                  <div><p class="text-[22px] font-semibold tracking-[-0.02em] leading-none">42%</p><p class="mt-1.5 text-[13px] text-muted">Cost reduction</p></div>
+                  <div><p class="text-[22px] font-semibold tracking-[-0.02em] leading-none">11 days</p><p class="mt-1.5 text-[13px] text-muted">Migration</p></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-12 border-t border-outline-variant dark:border-white/[0.08]" id="ai">
-      <div class="text-center mb-8">
-        <span class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan block mb-2">Predictive Intelligence</span>
-        <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em]">AI-Driven Decision Analytics</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4">
-        <div class="md:col-span-2 md:row-span-2 glass-mid rounded-xl p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="font-display text-headline-md font-semibold mb-3">Advanced Neural Telemetry</h3>
-            <p class="font-body text-body-sm text-on-surface-variant mb-6">Our AI models process millions of data points per second to identify patterns invisible to traditional monitoring tools.</p>
+    <!-- Analytics -->
+    <section id="ai" class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow label="Analytics" />
+        <div class="grid-12 gap-8 md:gap-12 mt-8">
+          <div class="col-span-12 lg:col-span-7">
+            <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.08] tracking-[-0.03em] mb-5 max-w-[24ch]">Analytics you can check yourself</h2>
+            <p class="text-[16px] leading-relaxed text-muted max-w-[36rem] mb-8">
+              We instrument first, then model. You see the query, the data, and the confidence interval — never a black box with a percentage on it.
+            </p>
+            <div class="border-t border-hairline">
+              <div class="py-5 border-b border-hairline">
+                <p class="text-[15px]"><span class="font-medium">Instrumentation before modeling.</span> <span class="text-muted">If the sensors are wrong, the model is wrong. We fix the data first.</span></p>
+              </div>
+              <div class="py-5 border-b border-hairline">
+                <p class="text-[15px]"><span class="font-medium">Every number traceable.</span> <span class="text-muted">Each figure links back to the query and dataset that produced it.</span></p>
+              </div>
+              <div class="py-5">
+                <p class="text-[15px]"><span class="font-medium">Alerts that mean something.</span> <span class="text-muted">The pipeline pages you at 3am when it matters, and stays quiet when it does not.</span></p>
+              </div>
+            </div>
           </div>
-          <div class="w-full rounded-lg border border-outline-variant dark:border-white/[0.06] bg-surface-container-low dark:bg-white/[0.03] p-4 font-mono text-[11px] leading-5 text-on-surface-variant">
-            <p class="text-primary dark:text-cyber-cyan">telemetry.ingest — 2.4M events/s</p>
-            <p>p95 latency 11ms → model.predict() → action.dispatch</p>
-            <p class="opacity-60 mt-2">No dashboard theater. Just the pipeline that pages you at 3am or doesn't.</p>
+          <div class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+            <div class="border border-hairline bg-card">
+              <p class="px-5 py-3 border-b border-hairline font-mono text-[11px] tracking-[0.08em] uppercase text-faint">Case — Svea Dynamics</p>
+              <div class="p-5">
+                <p class="text-[15px] leading-relaxed text-muted">Predictive maintenance for an industrial fleet. Failures flagged days before they happen.</p>
+                <div class="flex gap-10 mt-5 pt-5 border-t border-hairline">
+                  <div><p class="text-[22px] font-semibold tracking-[-0.02em] leading-none">89%</p><p class="mt-1.5 text-[13px] text-muted">Failure prediction</p></div>
+                  <div><p class="text-[22px] font-semibold tracking-[-0.02em] leading-none">2,400</p><p class="mt-1.5 text-[13px] text-muted">Sensors monitored</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="border border-hairline p-5 font-mono text-[12px] leading-6 text-muted bg-wash">
+              <p><span class="text-accent">telemetry.ingest</span> — 2.4M events/s</p>
+              <p>p95 latency 11ms → model.predict() → action.dispatch</p>
+            </div>
           </div>
-        </div>
-        <div class="md:col-span-2 bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black rounded-xl p-6 flex flex-col justify-center shadow-bloom-soft">
-          <h4 class="font-display text-headline-md font-bold mb-1">89% Accuracy</h4>
-          <p class="font-body text-body-sm opacity-80">In predictive maintenance forecasting for industrial IoT fleets.</p>
-        </div>
-        <div class="glass-mid rounded-xl p-4 hover:border-primary dark:hover:border-cyber-cyan/30 transition-all ease-spring">
-          <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-3">insights</span>
-          <h4 class="font-label text-[12px] tracking-[0.02em] uppercase font-semibold mb-1">Real-time Flux</h4>
-          <p class="font-body text-body-sm text-on-surface-variant">Live stream analytics with zero window buffering.</p>
-        </div>
-        <div class="glass-mid rounded-xl p-4 hover:border-primary dark:hover:border-cyber-cyan/30 transition-all ease-spring">
-          <span class="material-symbols-outlined text-primary dark:text-cyber-cyan mb-3">hub</span>
-          <h4 class="font-label text-[12px] tracking-[0.02em] uppercase font-semibold mb-1">Model Mesh</h4>
-          <p class="font-body text-body-sm text-on-surface-variant">Interconnected neural nodes for distributed learning.</p>
         </div>
       </div>
     </section>
 
-    <section class="py-12 border-t border-outline-variant dark:border-white/[0.08] mb-12" id="networking">
-      <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
-        <div class="w-full md:w-1/2">
-          <span class="font-label text-[12px] tracking-[0.02em] uppercase text-primary dark:text-cyber-cyan block mb-2">Secure Core</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-4">Zero-Trust Network Perimeter</h2>
-          <p class="font-body text-body-base text-on-surface-variant mb-6 leading-relaxed">
-            Security is not a layer; it is the foundation. Visbyr employs end-to-end encrypted tunnels and hardware-level authentication to protect your most sensitive data transfers.
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-            <div class="p-4 glass-mid rounded-lg">
-              <p class="font-display text-headline-md font-bold text-primary dark:text-cyber-cyan">AES-256</p>
-              <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Post-Quantum Encryption</p>
+    <!-- Networking -->
+    <section id="networking" class="border-b border-hairline">
+      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+        <Eyebrow label="Networking" />
+        <div class="grid-12 gap-8 md:gap-12 mt-8">
+          <div class="col-span-12 lg:col-span-7">
+            <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.08] tracking-[-0.03em] mb-5 max-w-[24ch]">Zero-trust networking, measured in milliseconds</h2>
+            <p class="text-[16px] leading-relaxed text-muted max-w-[36rem] mb-8">
+              Security is not a layer on top. End-to-end encrypted tunnels, hardware-key authentication, and audit logs a human can read.
+            </p>
+            <div class="flex gap-10 mb-8">
+              <div><p class="font-mono text-[15px] text-accent">AES-256</p><p class="mt-1.5 text-[13px] text-muted">Encrypted tunnels</p></div>
+              <div><p class="font-mono text-[15px] text-accent">&lt;1ms</p><p class="mt-1.5 text-[13px] text-muted">Auth handshake</p></div>
+              <div><p class="font-mono text-[15px] text-accent">32</p><p class="mt-1.5 text-[13px] text-muted">Bank branches secured</p></div>
             </div>
-            <div class="p-4 glass-mid rounded-lg">
-              <p class="font-display text-headline-md font-bold text-primary dark:text-cyber-cyan">&lt;1ms</p>
-              <p class="font-label text-[12px] tracking-[0.02em] uppercase text-on-surface-variant">Auth Handshake Latency</p>
+            <a href="/contact" class="inline-flex items-center gap-2 text-[14px] text-accent hover:text-ink transition-colors">Ask for a security review <ArrowRight /></a>
+          </div>
+          <div class="col-span-12 lg:col-span-5">
+            <div class="border border-hairline bg-card">
+              <p class="px-5 py-3 border-b border-hairline font-mono text-[11px] tracking-[0.08em] uppercase text-faint">Case — Norrköping Financial Group</p>
+              <div class="p-5">
+                <p class="text-[15px] leading-relaxed text-muted">Full zero-trust rollout across 32 branch offices in one quarter. Zero security incidents since.</p>
+                <div class="flex gap-10 mt-5 pt-5 border-t border-hairline">
+                  <div><p class="text-[22px] font-semibold tracking-[-0.02em] leading-none">1 quarter</p><p class="mt-1.5 text-[13px] text-muted">Rollout</p></div>
+                  <div><p class="text-[22px] font-semibold tracking-[-0.02em] leading-none">0</p><p class="mt-1.5 text-[13px] text-muted">Incidents</p></div>
+                </div>
+              </div>
             </div>
           </div>
-          <a href="/contact" class="inline-flex bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-6 py-2.5 rounded-full font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-colors">Download whitepaper</a>
-        </div>
-        <div class="w-full md:w-1/2">
-          <SecurityGraphic client:load />
         </div>
       </div>
     </section>
 
-    <section class="bg-inverse-surface dark:bg-surface-container-lowest text-inverse-on-surface dark:text-mist-text py-12 px-6 text-center rounded-xl border border-white/5">
-      <h2 class="font-display text-3xl md:text-4xl font-bold tracking-[-0.015em] mb-3">Ready to optimize your infrastructure?</h2>
-      <p class="font-body text-body-base opacity-80 mb-6 max-w-xl mx-auto">Join the leading Nordic enterprises leveraging Visbyr's technical precision to drive global growth.</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="/contact" class="inline-flex items-center justify-center bg-primary dark:bg-cyber-cyan text-on-primary dark:text-obsidian-black px-6 py-3 rounded-full font-label text-[12px] tracking-[0.02em] uppercase hover:shadow-bloom transition-colors">Schedule a consult</a>
-        <a href="/solutions" class="inline-flex items-center justify-center border border-white/20 text-white px-6 py-3 rounded-full font-label text-[12px] tracking-[0.02em] uppercase hover:bg-white/10 transition-colors">View all services</a>
-      </div>
-    </section>
+    <CtaSection title="Not sure which one you need?" body="That is what the audit is for. Book a 45-minute call and we will tell you where we would start." cta="Book a call" />
   </main>
-  <Footer />
+  <SiteFooter />
 </BaseLayout>

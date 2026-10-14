@@ -1,0 +1,19 @@
+---
+// Shared end-of-page call to action. One version everywhere.
+const { title = 'Start with an audit', body = 'Book a 45-minute call. We look at your stack and tell you what we would fix first.', cta = 'Book a call' } = Astro.props;
+---
+
+<section class="border-t border-hairline">
+  <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+      <div class="max-w-[34rem]">
+        <h2 class="text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-[1.05] tracking-[-0.03em]">{title}</h2>
+        <p class="mt-4 text-[16px] leading-relaxed text-muted">{body}</p>
+      </div>
+      <div class="flex items-center gap-5 shrink-0">
+        <a href="/contact" class="inline-flex items-center bg-accent text-on-accent px-6 py-3 text-[13px] font-medium tracking-[0.01em] rounded-[3px] hover:bg-accent-strong transition-colors">{cta}</a>
+        <a href="/contact" class="text-[14px] text-muted hover:text-ink transition-colors">Or write to us</a>
+      </div>
+    </div>
+  </div>
+</section>

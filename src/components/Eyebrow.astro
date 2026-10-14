@@ -1,0 +1,10 @@
+---
+// Section eyebrow: small index + label. Use sparingly, once per section.
+const { n, label } = Astro.props;
+---
+
+<div class="flex items-baseline gap-3">
+  {n && <span class="font-mono text-[11px] tracking-[0.08em] text-faint">{n}</span>}
+  <span class="eyebrow">{label}</span>
+  <span class="flex-1 border-t border-hairline self-center mt-px" aria-hidden="true"></span>
+</div>
