@@ -91,7 +91,7 @@ Real photography only, mostly grayscale, always with a 1px hairline border and a
 
 ## Components
 
-Header: fixed, blurred background at 90% opacity, hairline bottom border, sentence-case links, one small teal button. No scroll-triggered effects.
+Header: floating, detached from the viewport edge. A rounded-full glass bar (85% background blur, hairline border, soft shadow) centered over the page with the logo, sentence-case links, and one teal CTA. Content scrolls beneath it.
 
 Buttons: two kinds. Primary is solid accent, 3px radius, 13px medium. Secondary is a plain text link with a small arrow SVG that nudges right on hover. No pills, no glow.
 

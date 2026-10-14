@@ -1,5 +1,5 @@
 ---
-// Static header — no hydration needed for a border.
+// Floating nav — detached from the viewport edge, glass over the page.
 const links = [
   { href: '/philosophy', label: 'Philosophy' },
   { href: '/solutions', label: 'Solutions' },
@@ -8,30 +8,30 @@ const links = [
 ];
 ---
 
-<header class="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur border-b border-hairline">
-  <nav class="max-w-page mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2.5 text-ink">
-      <svg viewBox="0 0 32 32" width="26" height="26" class="shrink-0" role="img" aria-label="Visbyr">
+<header class="fixed top-3 md:top-5 inset-x-4 md:left-1/2 md:right-auto md:inset-x-auto md:-translate-x-1/2 z-50 md:w-auto md:max-w-page">
+  <nav class="h-14 flex items-center justify-between md:justify-start md:gap-10 bg-background/85 backdrop-blur-md border border-hairline rounded-full pl-4 pr-2 shadow-[0_8px_30px_-12px_rgba(15,25,25,0.25)]">
+    <a href="/" class="flex items-center gap-2 text-ink shrink-0">
+      <svg viewBox="0 0 32 32" width="24" height="24" class="shrink-0" role="img" aria-label="Visbyr">
         <rect x="2" y="2" width="28" height="28" rx="6" fill="currentColor" opacity="0.07" />
         <path d="M9 11 L16 22 L23 11 H19.2 L16 17.4 L12.8 11 Z" fill="currentColor" />
       </svg>
-      <span class="text-[18px] font-semibold tracking-[-0.02em] leading-none">Visbyr</span>
+      <span class="text-[16px] font-semibold tracking-[-0.02em] leading-none">Visbyr</span>
     </a>
 
-    <div class="hidden md:flex items-center gap-7">
+    <div class="hidden md:flex items-center gap-6">
       {links.map((l) => (
         <a href={l.href} class="text-[14px] text-muted hover:text-ink transition-colors">{l.label}</a>
       ))}
     </div>
 
-    <div class="flex items-center gap-4">
-      <a href="/contact" class="hidden sm:inline-flex items-center bg-accent text-on-accent px-4 py-2 text-[13px] font-medium tracking-[0.01em] rounded-[3px] hover:bg-accent-strong transition-colors">
+    <div class="flex items-center gap-1.5">
+      <a href="/contact" class="hidden sm:inline-flex items-center bg-accent text-on-accent px-4 py-2 text-[13px] font-medium tracking-[0.01em] rounded-full hover:bg-accent-strong transition-colors">
         Book a call
       </a>
       <!-- Mobile menu -->
-      <details class="md:hidden relative">
-        <summary class="list-none cursor-pointer text-[13px] text-muted hover:text-ink select-none py-2 pl-2">Menu</summary>
-        <div class="absolute right-0 top-11 w-44 bg-card border border-hairline rounded-[3px] shadow-sm py-1 z-50">
+      <details class="sm:hidden relative">
+        <summary class="list-none cursor-pointer text-[13px] text-muted hover:text-ink select-none py-2 px-2.5">Menu</summary>
+        <div class="absolute right-0 top-11 w-44 bg-card border border-hairline rounded-xl shadow-[0_8px_30px_-12px_rgba(15,25,25,0.25)] py-1 z-50">
           {links.map((l) => (
             <a href={l.href} class="block px-4 py-2.5 text-[14px] text-ink hover:bg-wash">{l.label}</a>
           ))}
