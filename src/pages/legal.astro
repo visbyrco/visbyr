@@ -8,17 +8,15 @@ import PageHeader from '../components/PageHeader.astro';
 <BaseLayout title="Legal | Visbyr">
   <SiteHeader />
   <main class="pt-16">
-    <PageHeader label="Legal" title="Terms of service" lede="Last updated January 2024." />
+    <PageHeader label="Legal" title="Terms of service" lede="Last updated October 2026." />
 
     <section class="border-t border-hairline">
       <div class="max-w-[42rem] mx-auto px-5 md:px-8 py-14 md:py-20">
         {[
-          ['1', 'Acceptance of terms', 'By accessing or using Visbyr\'s services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services. These terms apply to all visitors, users, and clients of the Visbyr platform.'],
-          ['2', 'Description of services', 'Visbyr provides engineering services including cloud infrastructure architecture, analytics, and secure networking. All services are provided on a contractual basis and are subject to the terms of individual service agreements.'],
-          ['3', 'Intellectual property', 'Content, designs, code, and methodologies developed by Visbyr remain the property of Visbyr Nordic Functionalism AB unless otherwise specified in a service agreement. Client-specific deliverables are governed by the terms of the respective contract.'],
-          ['4', 'Limitation of liability', 'Visbyr shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services. Our total liability shall not exceed the fees paid by you for the specific service giving rise to the claim.'],
-          ['5', 'Governing law', 'These terms shall be governed by and construed in accordance with the laws of Sweden. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the Swedish courts.'],
-          ['6', 'Contact', 'For legal inquiries, please contact us at our Stockholm office or through the contact form on this site.'],
+          ['1', 'Who we are', 'Visbyr is a two-person software studio run by Vilhelm Gain and Timothy Wong. Our product is Visbyr Chat at chat.visbyr.com.'],
+          ['2', 'What we offer', 'We build software products. Visbyr Chat is our only product right now, and more is coming.'],
+          ['3', 'Intellectual property', 'Our code, designs, and writing belong to us unless we agree otherwise in writing.'],
+          ['4', 'Contact', 'Questions about these terms? Reach us through the contact page.'],
         ].map(([n, t, p]) => (
           <div class="py-8 border-b border-hairline first:pt-0">
             <h2 class="text-[19px] font-semibold tracking-[-0.02em] mb-3"><span class="font-mono text-[12px] text-faint mr-3">{n}</span>{t}</h2>

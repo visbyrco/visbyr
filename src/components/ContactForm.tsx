@@ -14,7 +14,7 @@ export default function ContactForm() {
     return (
       <div className="border border-hairline bg-card p-8">
         <p className="text-[17px] font-medium mb-2">Message sent.</p>
-        <p className="text-[15px] text-muted leading-relaxed">We read everything ourselves and reply within one business day. Usually faster.</p>
+        <p className="text-[15px] text-muted leading-relaxed">One of us reads everything and replies. Usually fast.</p>
       </div>
     );
   }
@@ -30,20 +30,18 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
           <label className={labelCls('name')} htmlFor="cf-name">Name</label>
-          <input id="cf-name" className={inputBase} placeholder="Erik Andersson" type="text" onFocus={() => setFocused('name')} onBlur={() => setFocused(null)} />
+          <input id="cf-name" className={inputBase} placeholder="Your name" type="text" onFocus={() => setFocused('name')} onBlur={() => setFocused(null)} />
         </div>
         <div className="flex flex-col gap-2">
-          <label className={labelCls('email')} htmlFor="cf-email">Work email</label>
-          <input id="cf-email" className={inputBase} placeholder="erik@company.se" type="email" required onFocus={() => setFocused('email')} onBlur={() => setFocused(null)} />
+          <label className={labelCls('email')} htmlFor="cf-email">Email</label>
+          <input id="cf-email" className={inputBase} placeholder="you@example.com" type="email" required onFocus={() => setFocused('email')} onBlur={() => setFocused(null)} />
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <label className={labelCls('subject')} htmlFor="cf-subject">What do you need?</label>
+        <label className={labelCls('subject')} htmlFor="cf-subject">What is it about?</label>
         <select id="cf-subject" className={inputBase} onFocus={() => setFocused('subject')} onBlur={() => setFocused(null)}>
-          <option>A system audit</option>
-          <option>A cloud or data migration</option>
-          <option>A security review</option>
-          <option>Ongoing operations</option>
+          <option>Visbyr Chat</option>
+          <option>A product idea</option>
           <option>Something else</option>
         </select>
       </div>
@@ -52,7 +50,7 @@ export default function ContactForm() {
         <textarea
           id="cf-message"
           className={inputBase}
-          placeholder="What does your stack look like today, and what hurts?"
+          placeholder="What is on your mind?"
           rows={6}
           onFocus={() => setFocused('message')}
           onBlur={() => setFocused(null)}

@@ -8,172 +8,95 @@ import ArrowRight from '../components/ArrowRight.astro';
 import ArrowUpRight from '../components/ArrowUpRight.astro';
 ---
 
-<BaseLayout title="Visbyr — Systems built in Stockholm">
+<BaseLayout title="Visbyr — Software products by two people">
   <SiteHeader />
   <main class="pt-16">
     <!-- Hero -->
     <section class="border-b border-hairline">
       <div class="max-w-page mx-auto px-5 md:px-8 py-12 md:py-20">
-        <div class="grid-12 gap-8 md:gap-12">
-          <div class="col-span-12 lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
-            <p class="eyebrow mb-6">Stockholm — Kungsgatan 18</p>
-            <h1 class="text-[clamp(2.5rem,6vw,4.25rem)] font-semibold leading-[1.0] tracking-[-0.03em] mb-7">
-              Systems that<br />
-              do exactly<br />
-              <em class="not-italic font-normal italic text-accent">what they claim.</em>
-            </h1>
-            <p class="max-w-[32rem] text-[17px] leading-relaxed text-muted mb-10">
-              We are a small team in Stockholm. We audit what you have, replace what hurts, and keep what works. Cloud, data pipelines, and network — shipped without taking you offline.
-            </p>
-            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 pt-6 border-t border-hairline">
-              <a href="/solutions" class="inline-flex items-center gap-2 text-[14px] text-ink hover:text-accent transition-colors">
-                Explore solutions <ArrowRight />
-              </a>
-              <a href="/case-studies" class="inline-flex items-center gap-2 text-[14px] text-muted hover:text-ink transition-colors">
-                Case studies <ArrowRight />
-              </a>
-              <a href="/chat" class="inline-flex items-center gap-1.5 font-mono text-[12px] tracking-[0.02em] text-muted hover:text-ink transition-colors">
-                chat.visbyr.com <ArrowUpRight />
-              </a>
-            </div>
-          </div>
-          <div class="col-span-12 lg:col-span-5 order-1 lg:order-2">
-            <figure>
-              <div class="aspect-[4/5] overflow-hidden border border-hairline bg-wash">
-                <img
-                  class="w-full h-full object-cover"
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80&auto=format&fit=crop"
-                  alt="Studio interior, daylight through glass partitions"
-                  loading="eager"
-                />
-              </div>
-              <figcaption class="flex items-center justify-between pt-3 font-mono text-[11px] tracking-[0.04em] uppercase text-faint">
-                <span>Kungsgatan 18 — Stockholm</span>
-                <span>59.3345° N / 18.0638° E</span>
-              </figcaption>
-            </figure>
+        <div class="max-w-[44rem]">
+          <p class="eyebrow mb-6">Visbyr — software products</p>
+          <h1 class="text-[clamp(2.5rem,6vw,4.25rem)] font-semibold leading-[1.0] tracking-[-0.03em] mb-7">
+            Two people building<br />
+            <em class="not-italic font-normal italic text-accent">software that works.</em>
+          </h1>
+          <p class="max-w-[32rem] text-[17px] leading-relaxed text-muted mb-10">
+            Visbyr is Vilhelm Gain and Timothy Wong. We build software products. Visbyr Chat is live now, and more is coming.
+          </p>
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-3 pt-6 border-t border-hairline">
+            <a href="/chat" class="inline-flex items-center gap-2 text-[14px] text-ink hover:text-accent transition-colors">
+              Meet Visbyr Chat <ArrowRight />
+            </a>
+            <a href="/contact" class="inline-flex items-center gap-2 text-[14px] text-muted hover:text-ink transition-colors">
+              Say hello <ArrowRight />
+            </a>
+            <a href="https://chat.visbyr.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-mono text-[12px] tracking-[0.02em] text-muted hover:text-ink transition-colors">
+              chat.visbyr.com <ArrowUpRight />
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Proof strip -->
-    <section class="border-b border-hairline bg-wash">
-      <div class="max-w-page mx-auto px-5 md:px-8 py-8">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10">
-          <div class="sm:border-l border-hairline pl-5">
-            <p class="text-[26px] font-semibold tracking-[-0.02em] leading-none">42%</p>
-            <p class="mt-2 text-[14px] leading-snug text-muted">lower infra cost — <span class="text-ink">Svea Logistics, 14 sites</span></p>
-          </div>
-          <div class="sm:border-l border-hairline pl-5">
-            <p class="text-[26px] font-semibold tracking-[-0.02em] leading-none">89%</p>
-            <p class="mt-2 text-[14px] leading-snug text-muted">failure prediction — <span class="text-ink">2,400 sensors</span></p>
-          </div>
-          <div class="sm:border-l border-hairline pl-5">
-            <p class="text-[26px] font-semibold tracking-[-0.02em] leading-none">&lt;1ms</p>
-            <p class="mt-2 text-[14px] leading-snug text-muted">auth latency — <span class="text-ink">32 bank branches</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Capabilities -->
+    <!-- Product -->
     <section class="border-b border-hairline">
       <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-24">
-        <Eyebrow n="01" label="Capabilities" />
+        <Eyebrow n="01" label="Product" />
         <div class="max-w-[36rem] mt-6 mb-12">
-          <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] tracking-[-0.03em]">Engineering, not theater</h2>
-          <p class="mt-4 text-[16px] leading-relaxed text-muted">Three places we spend most of our time. Pick the problem you have now. The rest can wait.</p>
+          <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] tracking-[-0.03em]">One live product, more coming</h2>
+          <p class="mt-4 text-[16px] leading-relaxed text-muted">Chat is our only product right now. We use it ourselves and keep improving it.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-hairline">
-          <a href="/solutions#cloud" class="group py-8 md:pr-10 border-b md:border-b-0 md:border-r border-hairline">
+        <div class="grid grid-cols-1 md:grid-cols-2 border-t border-hairline">
+          <a href="/chat" class="group py-8 md:pr-10 border-b md:border-b-0 md:border-r border-hairline">
             <p class="font-mono text-[11px] tracking-[0.08em] text-faint mb-5">a.</p>
-            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Cloud infrastructure</h3>
-            <p class="text-[15px] leading-relaxed text-muted mb-6">Hybrid and multi-cloud that respects data residency. Auto-scaling that actually triggers. We migrate live systems without a maintenance window.</p>
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Visbyr Chat</h3>
+            <p class="text-[15px] leading-relaxed text-muted mb-6">One chat for every model. Bring your own keys, switch models mid-conversation, keep your context.</p>
             <span class="inline-flex items-center gap-2 text-[14px] text-accent">Read more <ArrowRight class="transition-transform group-hover:translate-x-0.5" /></span>
           </a>
-          <a href="/solutions#ai" class="group py-8 md:px-10 border-b md:border-b-0 md:border-r border-hairline">
+          <div class="py-8 md:pl-10">
             <p class="font-mono text-[11px] tracking-[0.08em] text-faint mb-5">b.</p>
-            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Analytics that earns trust</h3>
-            <p class="text-[15px] leading-relaxed text-muted mb-6">We instrument first, then model. You see the query, the data, and the confidence interval — not a black box with a percentage.</p>
-            <span class="inline-flex items-center gap-2 text-[14px] text-accent">Read more <ArrowRight class="transition-transform group-hover:translate-x-0.5" /></span>
-          </a>
-          <a href="/solutions#networking" class="group py-8 md:pl-10">
-            <p class="font-mono text-[11px] tracking-[0.08em] text-faint mb-5">c.</p>
-            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">Secure networks</h3>
-            <p class="text-[15px] leading-relaxed text-muted mb-6">Zero-trust perimeters with hardware keys and encrypted tunnels. Audit logs you can actually read. Latency under a millisecond.</p>
-            <span class="inline-flex items-center gap-2 text-[14px] text-accent">Read more <ArrowRight class="transition-transform group-hover:translate-x-0.5" /></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quote -->
-    <section class="bg-[#1a1e1f] text-[#e6eaeb] dark:bg-wash dark:text-ink border-b border-hairline">
-      <div class="max-w-page mx-auto px-5 md:px-8 py-16 md:py-24">
-        <div class="grid-12 gap-8 md:gap-12">
-          <div class="col-span-12 lg:col-span-8">
-            <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-[#8a9596] mb-8">Svea Dynamics — CTO</p>
-            <blockquote class="text-[clamp(1.5rem,2.6vw,2.125rem)] font-normal leading-[1.4] tracking-[-0.015em] max-w-[30ch]">
-              “We cut infrastructure spend by 42% in eight weeks. No downtime, no surprise rewrite. The Visbyr team maps what you have before they change anything — that is why it worked.”
-            </blockquote>
-            <p class="mt-8 text-[15px] text-[#9aa5a5]">Anders Lindström · CTO, Svea Dynamics — 2,400 sensors, Stockholm</p>
-          </div>
-          <div class="col-span-12 lg:col-span-4">
-            <div class="border-t border-white/15 dark:border-hairline pt-6 space-y-4">
-              <div class="flex justify-between items-baseline"><span class="text-[14px] text-[#9aa5a5] dark:text-muted">Cost reduction</span><span class="font-mono text-[15px]">42%</span></div>
-              <div class="flex justify-between items-baseline"><span class="text-[14px] text-[#9aa5a5] dark:text-muted">Prediction accuracy</span><span class="font-mono text-[15px]">89%</span></div>
-              <div class="flex justify-between items-baseline"><span class="text-[14px] text-[#9aa5a5] dark:text-muted">Downtime during migration</span><span class="font-mono text-[15px] text-[#8fd2d6] dark:text-accent">0 min</span></div>
-              <a href="/case-studies" class="inline-flex items-center gap-2 text-[14px] text-[#c8d0d1] dark:text-muted hover:text-white dark:hover:text-ink transition-colors pt-2">
-                Read the case <ArrowRight />
-              </a>
-            </div>
+            <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-3">What is next</h3>
+            <p class="text-[15px] leading-relaxed text-muted mb-6">More products are coming. Small, useful, and built the same way: by the two of us, for people who use them daily.</p>
+            <a href="/contact" class="inline-flex items-center gap-2 text-[14px] text-accent hover:text-ink transition-colors">Tell us what you need <ArrowRight /></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Method -->
-    <section class="border-b border-hairline">
+    <!-- People -->
+    <section id="people" class="border-b border-hairline scroll-mt-20">
       <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-24">
-        <Eyebrow n="02" label="Method" />
-        <div class="grid-12 gap-8 md:gap-12 mt-6">
-          <div class="col-span-12 lg:col-span-4">
-            <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] tracking-[-0.03em]">The Visbyr<br />method</h2>
-            <p class="mt-5 text-[16px] leading-relaxed text-muted max-w-[24rem]">We work in three passes. Short audit, careful integration, then we stay around to keep it healthy.</p>
-            <p class="mt-8 font-mono text-[11px] tracking-[0.04em] text-faint">Stockholm · 2–12 weeks per pass</p>
+        <Eyebrow n="02" label="People" />
+        <div class="max-w-[36rem] mt-6 mb-12">
+          <h2 class="text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] tracking-[-0.03em]">The whole team</h2>
+          <p class="mt-4 text-[16px] leading-relaxed text-muted">Two people. No office, no account managers. You talk to whoever does the work.</p>
+        </div>
+        <div class="border-t border-hairline">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 py-7 border-b border-hairline">
+            <div>
+              <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-accent mb-1.5">Founder</p>
+              <h3 class="text-[19px] font-semibold tracking-[-0.02em]">Vilhelm Gain</h3>
+              <p class="text-[15px] text-muted mt-1 max-w-[36rem]">Started Visbyr. Works across product and engineering.</p>
+            </div>
+            <a href="https://github.com/VilhelmGain" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14px] text-accent shrink-0 hover:text-ink transition-colors">
+              github.com/VilhelmGain <ArrowUpRight />
+            </a>
           </div>
-          <div class="col-span-12 lg:col-span-8 border-t border-hairline">
-            <div class="py-8 border-b border-hairline flex gap-6 md:gap-10">
-              <span class="font-mono text-[12px] tracking-[0.08em] text-accent shrink-0 mt-1.5">01</span>
-              <div>
-                <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-2.5">Audit &amp; discovery</h3>
-                <p class="text-[15px] leading-relaxed text-muted max-w-[34rem] mb-3">We map your current stack — integrations, data flows, and where time actually goes. You get a map and a short list of what to fix first. No 40-page deck.</p>
-                <p class="font-mono text-[11px] tracking-[0.02em] text-faint">2–4 weeks · architecture map, baseline report, roadmap</p>
-              </div>
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 py-7 border-b border-hairline">
+            <div>
+              <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-accent mb-1.5">Engineer</p>
+              <h3 class="text-[19px] font-semibold tracking-[-0.02em]">Timothy Wong</h3>
+              <p class="text-[15px] text-muted mt-1 max-w-[36rem]">Writes most of the code across our projects.</p>
             </div>
-            <div class="py-8 border-b border-hairline flex gap-6 md:gap-10">
-              <span class="font-mono text-[12px] tracking-[0.08em] text-accent shrink-0 mt-1.5">02</span>
-              <div>
-                <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-2.5">Modular integration</h3>
-                <p class="text-[15px] leading-relaxed text-muted max-w-[34rem] mb-3">We ship one module at a time, behind feature flags. Each piece runs alongside what you have until you trust it. No big-bang cutover.</p>
-                <p class="font-mono text-[11px] tracking-[0.02em] text-faint">4–12 weeks · tested modules, docs, no downtime</p>
-              </div>
-            </div>
-            <div class="py-8 flex gap-6 md:gap-10">
-              <span class="font-mono text-[12px] tracking-[0.08em] text-accent shrink-0 mt-1.5">03</span>
-              <div>
-                <h3 class="text-[19px] font-semibold tracking-[-0.02em] mb-2.5">Stay in shape</h3>
-                <p class="text-[15px] leading-relaxed text-muted max-w-[34rem] mb-3">Dashboards, quarterly reviews, and a private channel. We watch latency and cost so small issues do not become outages.</p>
-                <p class="font-mono text-[11px] tracking-[0.02em] text-faint">Ongoing · dashboards, reviews, 24/7 channel</p>
-              </div>
-            </div>
+            <a href="https://github.com/timothy0509" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14px] text-accent shrink-0 hover:text-ink transition-colors">
+              github.com/timothy0509 <ArrowUpRight />
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <CtaSection />
+    <CtaSection title="Say hello" body="Questions about Visbyr Chat, or an idea for what we should build next? Write to us and one of us answers." cta="Contact us" />
   </main>
   <SiteFooter />
 </BaseLayout>

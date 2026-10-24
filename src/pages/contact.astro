@@ -7,14 +7,13 @@ import ContactForm from '../components/ContactForm.tsx';
 import ArrowUpRight from '../components/ArrowUpRight.astro';
 ---
 
-<BaseLayout title="Contact | Visbyr" description="Talk to the engineers at Visbyr in Stockholm. Book a 45-minute call or write to us directly.">
+<BaseLayout title="Contact | Visbyr" description="Contact Visbyr: Vilhelm Gain and Timothy Wong. Write and one of us answers.">
   <SiteHeader />
   <main class="pt-16">
     <PageHeader
-      n="04"
       label="Contact"
-      title="Talk to the people who will do the work"
-      lede="One office in Stockholm. No account managers in between. Book a call or write to us, and an engineer answers."
+      title="Talk to whoever does the work"
+      lede="No office, no account managers. Write and one of us answers."
     />
 
     <section class="border-b border-hairline">
@@ -26,59 +25,34 @@ import ArrowUpRight from '../components/ArrowUpRight.astro';
 
           <div class="lg:col-span-5 space-y-10">
             <div>
-              <figure>
-                <div class="aspect-[16/10] overflow-hidden border border-hairline bg-wash">
-                  <img
-                    class="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80&auto=format&fit=crop"
-                    alt="The Visbyr studio, daylight, long work table"
-                    loading="lazy"
-                  />
+              <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint mb-4">People</p>
+              <div class="border-t border-hairline">
+                <div class="py-5 border-b border-hairline">
+                  <p class="text-[16px] font-semibold tracking-[-0.01em]">Vilhelm Gain</p>
+                  <p class="text-[14px] text-muted mt-0.5 mb-2">Founder — product and engineering</p>
+                  <a href="https://github.com/VilhelmGain" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[14px] text-accent hover:text-ink transition-colors">
+                    github.com/VilhelmGain <ArrowUpRight />
+                  </a>
                 </div>
-                <figcaption class="pt-3 font-mono text-[11px] tracking-[0.04em] uppercase text-faint">The studio — Kungsgatan 18</figcaption>
-              </figure>
-              <address class="not-italic mt-5 text-[15px] leading-relaxed text-muted">
-                Kungsgatan 18, 111 35<br />
-                Stockholm, Sweden
-              </address>
-              <p class="mt-3 space-x-1 text-[15px]">
-                <a class="text-ink hover:text-accent transition-colors" href="tel:+4681234567">+46 8 123 45 67</a>
-                <span class="text-faint"> · </span>
-                <a class="text-ink hover:text-accent transition-colors" href="mailto:hello@visbyr.com">hello@visbyr.com</a>
-              </p>
+                <div class="py-5 border-b border-hairline">
+                  <p class="text-[16px] font-semibold tracking-[-0.01em]">Timothy Wong</p>
+                  <p class="text-[14px] text-muted mt-0.5 mb-2">Engineer — writes most of the code</p>
+                  <a href="https://github.com/timothy0509" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[14px] text-accent hover:text-ink transition-colors">
+                    github.com/timothy0509 <ArrowUpRight />
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div class="border-t border-hairline pt-6 space-y-3.5">
-              <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint mb-4">Good to know</p>
-              <p class="text-[15px] text-muted leading-relaxed">We answer within one business day, 08:00 – 17:00 CET.</p>
-              <p class="text-[15px] text-muted leading-relaxed">For sensitive material, we can set up an encrypted channel before anything is shared.</p>
-              <a href="/insights" class="inline-flex items-center gap-2 text-[14px] text-accent hover:text-ink transition-colors pt-1">
-                Read our notes instead <ArrowUpRight />
-              </a>
+              <p class="font-mono text-[11px] tracking-[0.08em] uppercase text-faint mb-4">Direct</p>
+              <p class="text-[15px]">
+                <a class="text-ink hover:text-accent transition-colors" href="mailto:hello@visbyr.com">hello@visbyr.com</a>
+              </p>
+              <p class="text-[15px] text-muted leading-relaxed">Prefer email? That works too. It reaches both of us.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Studio banner -->
-    <section class="border-b border-hairline">
-      <div class="max-w-page mx-auto px-5 md:px-8 py-14 md:py-20">
-        <figure class="relative overflow-hidden border border-hairline">
-          <img
-            class="w-full aspect-[16/10] md:aspect-[21/9] object-cover"
-            src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1400&q=80&auto=format&fit=crop"
-            alt="Calm daylight interior of the Visbyr studio"
-            loading="lazy"
-          />
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end">
-            <div class="p-6 md:p-10 max-w-xl">
-              <h2 class="text-white text-[clamp(1.5rem,3vw,2.125rem)] font-semibold tracking-[-0.03em] leading-tight">Come by, the coffee is decent</h2>
-              <p class="text-white/75 text-[15px] mt-3 leading-relaxed">We keep a guest desk for client sessions. An hour at our table beats a week of video calls.</p>
-              <a href="mailto:hello@visbyr.com" class="inline-block mt-5 bg-white text-[#171b1c] px-5 py-2.5 text-[13px] font-medium rounded-[3px] hover:bg-[#e8ecec] transition-colors">Schedule a visit</a>
-            </div>
-          </figcaption>
-        </figure>
       </div>
     </section>
   </main>
