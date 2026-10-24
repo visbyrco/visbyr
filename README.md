@@ -1,6 +1,6 @@
 # Visbyr
 
-Nordic tech enterprise landing page built with Astro, React, and Tailwind CSS.
+Small two-person software studio site built with Astro, React, and Tailwind CSS. Vilhelm Gain (founder) and Timothy Wong. Visbyr Chat is the only product right now.
 
 ## Tech Stack
 
@@ -24,13 +24,10 @@ Dark mode follows `prefers-color-scheme` (class on `<html>`, set in `BaseLayout.
 
 ## Pages
 
-- **Landing** (`/`) - editorial hero, proof strip, capabilities, quote, method phases
-- **Solutions** (`/solutions`) - cloud, analytics, networking with case summaries
-- **Contact** (`/contact`) - form, studio card, visit banner
+- **Landing** (`/`) - hero, product, people (Vilhelm Gain, Timothy Wong)
 - **Chat** (`/chat`) - product page with composer mock
-- **Process** (`/process`) - three passes with deliverables
-- **Case studies** (`/case-studies`) - three rows with stats
-- **Insights** (`/insights`), **Philosophy** (`/philosophy`), **Careers** (`/careers`), **Legal** (`/legal`), **Privacy** (`/privacy`)
+- **Contact** (`/contact`) - form, people, direct email
+- **Legal** (`/legal`), **Privacy** (`/privacy`)
 
 ## Components
 

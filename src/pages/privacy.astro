@@ -8,17 +8,15 @@ import PageHeader from '../components/PageHeader.astro';
 <BaseLayout title="Privacy | Visbyr">
   <SiteHeader />
   <main class="pt-16">
-    <PageHeader label="Privacy" title="Privacy policy" lede="Last updated January 2024." />
+    <PageHeader label="Privacy" title="Privacy policy" lede="Last updated October 2026." />
 
     <section class="border-t border-hairline">
       <div class="max-w-[42rem] mx-auto px-5 md:px-8 py-14 md:py-20">
         {[
-          ['1', 'Data collection', 'We collect information you provide directly, such as when you fill out contact forms or engage our services. This may include your name, email address, company name, and the content of your communications.'],
-          ['2', 'Use of information', 'We use collected information to respond to inquiries, provide services, and improve our offerings. We do not sell or share your personal data with third parties for marketing purposes.'],
-          ['3', 'Data security', 'We implement standard security measures to protect your data, including encryption in transit and at rest. Our infrastructure is hosted within Nordic data centers that meet EU data residency requirements.'],
-          ['4', 'Your rights', 'Under GDPR, you have the right to access, rectify, erase, or port your personal data. You may also object to processing or request restriction of processing. To exercise these rights, contact us through our Stockholm office.'],
-          ['5', 'Data retention', 'We retain personal data only as long as necessary for the purposes it was collected, or as required by law. Client data is retained according to the terms of individual service agreements.'],
-          ['6', 'Contact', 'For privacy-related inquiries or to exercise your data rights, please contact our team in Stockholm.'],
+          ['1', 'What we collect', 'If you write to us, we get your name, email address, and whatever you put in the message. Nothing else.'],
+          ['2', 'What we do with it', 'We use it to answer you. We do not sell or share your details with anyone.'],
+          ['3', 'How long we keep it', 'We keep messages only as long as we need them to handle your request.'],
+          ['4', 'Contact', 'Questions about your data? Reach us through the contact page and we will sort it out.'],
         ].map(([n, t, p]) => (
           <div class="py-8 border-b border-hairline first:pt-0">
             <h2 class="text-[19px] font-semibold tracking-[-0.02em] mb-3"><span class="font-mono text-[12px] text-faint mr-3">{n}</span>{t}</h2>

@@ -1,10 +1,9 @@
 ---
 // Floating nav — detached from the viewport edge, glass over the page.
 const links = [
-  { href: '/philosophy', label: 'Philosophy' },
-  { href: '/solutions', label: 'Solutions' },
   { href: '/chat', label: 'Chat' },
-  { href: '/insights', label: 'Notes' },
+  { href: '/#people', label: 'People' },
+  { href: '/contact', label: 'Contact' },
 ];
 ---
 
@@ -25,8 +24,8 @@ const links = [
     </div>
 
     <div class="flex items-center gap-1.5">
-      <a href="/contact" class="hidden sm:inline-flex items-center bg-accent text-on-accent px-4 py-2 text-[13px] font-medium tracking-[0.01em] rounded-full hover:bg-accent-strong transition-colors">
-        Book a call
+      <a href="/chat" class="hidden sm:inline-flex items-center bg-accent text-on-accent px-4 py-2 text-[13px] font-medium tracking-[0.01em] rounded-full hover:bg-accent-strong transition-colors">
+        Try Chat
       </a>
       <!-- Mobile menu -->
       <details class="sm:hidden relative">
@@ -35,7 +34,7 @@ const links = [
           {links.map((l) => (
             <a href={l.href} class="block px-4 py-2.5 text-[14px] text-ink hover:bg-wash">{l.label}</a>
           ))}
-          <a href="/contact" class="block px-4 py-2.5 text-[14px] text-accent hover:bg-wash">Book a call</a>
+          <a href="/contact" class="block px-4 py-2.5 text-[14px] text-accent hover:bg-wash">Say hello</a>
         </div>
       </details>
     </div>
